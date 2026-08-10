@@ -1,29 +1,34 @@
-from datetime import datetime
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, status
+from fastapi.responses import JSONResponse
 from sqlalchemy.orm import Session
 from sqlalchemy import text
 from app.db.session import get_db
 from app.core.config import settings
-from app.schemas.schemas import HealthResponse
 
 router = APIRouter(prefix="/health", tags=["Health & Status"])
 
-@router.get("", response_model=HealthResponse)
-def health_check(db: Session = Depends(get_db)):
-    db_status = "unhealthy"
+@router.get("", status_code=status.HTTP_200_OK)
+def health_check():
+    return {
+        "status": "ok",
+        "service": "BHARATOS Backend",
+        "version": "1.0.0"
+    }
+
+@router.get("/ready")
+def readiness_check(db: Session = Depends(get_db)):
     try:
+        # Perform simple SELECT 1 database query check
         db.execute(text("SELECT 1"))
-        db_status = "healthy"
+        return {
+            "status": "ready",
+            "database": "connected"
+        }
     except Exception:
-        db_status = "error"
-
-    supabase_status = "configured" if settings.SUPABASE_URL else "missing"
-    env_status = "valid"
-
-    return HealthResponse(
-        status="active",
-        database=db_status,
-        supabase=supabase_status,
-        env_config=env_status,
-        timestamp=datetime.utcnow()
-    )
+        return JSONResponse(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            content={
+                "status": "not_ready",
+                "database": "unavailable"
+            }
+        )

@@ -1,7 +1,13 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from pydantic import BaseModel, Field
-from typing import Optional, List, Any
+from typing import Optional, List, Any, Dict
 from app.ai.gateway import ai_gateway
+from app.dependencies.auth import get_current_user
+from app.db.session import get_db
+from app.models.models import User
+from sqlalchemy.orm import Session
+from app.agents.schemas import AgentResponse
+from app.agents.orchestrator import AIOrchestrator
 
 router = APIRouter(prefix="/ai", tags=["Multi-Agent AI System"])
 
@@ -25,10 +31,7 @@ class TriageResponse(BaseModel):
 
 class ChatRequest(BaseModel):
     message: str = Field(..., example="What is the available ICU bed capacity in Visakhapatnam hospitals?")
-
-class ChatResponse(BaseModel):
-    reply: str
-    sources: List[str]
+    history: Optional[List[Dict[str, str]]] = None
 
 @router.post("/triage", response_model=TriageResponse)
 def run_ai_triage(request: TriageRequest):
@@ -44,9 +47,23 @@ def run_ai_triage(request: TriageRequest):
             detail=f"AI Gateway processing failed: {str(e)}"
         )
 
-@router.post("/chat", response_model=ChatResponse)
-def handle_ai_chat(request: ChatRequest):
-    return ChatResponse(
-        reply="Visakhapatnam healthcare telemetry: King George Hospital (KGH) has 142 open beds (8 ICU), VIMS Super Specialty has 94 open beds (15 ICU).",
-        sources=["VMC Telemetry Network", "KGH Emergency Registry"]
-    )
+@router.post("/chat", response_model=AgentResponse)
+def handle_ai_chat(
+    request: ChatRequest,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    try:
+        return AIOrchestrator.run(
+            db=db,
+            user=current_user,
+            message=request.message,
+            history=request.history
+        )
+    except HTTPException as he:
+        raise he
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"AI Orchestrator failed: {str(e)}"
+        )

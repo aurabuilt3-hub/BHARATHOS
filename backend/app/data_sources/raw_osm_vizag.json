@@ -1,0 +1,4474 @@
+[
+  {
+    "type": "node",
+    "id": 923938721,
+    "lat": 17.7348024,
+    "lon": 83.2812926,
+    "tags": {
+      "amenity": "police"
+    }
+  },
+  {
+    "type": "node",
+    "id": 1474046817,
+    "lat": 17.7224616,
+    "lon": 83.3094001,
+    "tags": {
+      "amenity": "hospital",
+      "name": "Visakha Homeo Clinic"
+    }
+  },
+  {
+    "type": "node",
+    "id": 1474440233,
+    "lat": 17.7426752,
+    "lon": 83.3145614,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "D.No: 54-13-6, Beside S.B.I., Seethammadhara junction.",
+      "addr:postcode": "530013",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:email": "info@nikithahospital.com",
+      "contact:mobile": "8912501501, 9849127287",
+      "contact:phone": "0891-2501501, 2719797, 2719696",
+      "fax": "0891-2526338,",
+      "healthcare": "hospital",
+      "name": "Nikitha Hospital",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData",
+      "website": "http://www.nikithahospital.com/"
+    }
+  },
+  {
+    "type": "node",
+    "id": 2332948921,
+    "lat": 17.7436298,
+    "lon": 83.3146125,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Seethammadhara Jn",
+      "addr:postcode": "530013",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "emergency": "yes",
+      "name": "Padmaja Hospital - Seethammadhara",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 3265317980,
+    "lat": 17.739081,
+    "lon": 83.3229595,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Jyothi Nursing Home"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4267548789,
+    "lat": 17.7362275,
+    "lon": 83.2713316,
+    "tags": {
+      "addr:postcode": "530008",
+      "amenity": "hospital",
+      "name": "Durga Nursing Home",
+      "opening_hours": "24/7",
+      "phone": "0891 255 8037"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4446452868,
+    "lat": 17.7442772,
+    "lon": 83.2257172,
+    "tags": {
+      "addr:city": "Visakhapatnam",
+      "addr:postcode": "530027",
+      "addr:street": "Araku-Visakhapatnam Road, Near State Bank ATM, Gopalapatam, Nad Junction, Gopalapatnam, Dungalavanipalem,",
+      "amenity": "police",
+      "name": "Gopalapatnam Police Station",
+      "phone": "+91 891 252 0933"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4446457746,
+    "lat": 17.6296866,
+    "lon": 83.0909269,
+    "tags": {
+      "addr:city": "Vishakapatnam",
+      "addr:postcode": "530027",
+      "addr:street": "Visakhapatnam",
+      "amenity": "police",
+      "name": "Parawada Police Station",
+      "phone": "+91 8933229533 ,+91 9440796082"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4541095944,
+    "lat": 17.7375272,
+    "lon": 83.3071191,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 50-50-33/2, Ballayasastry Layout",
+      "addr:postcode": "530013",
+      "addr:state": "Andhra Pradesh",
+      "addr:street": "NH5 Gurudwara line",
+      "amenity": "hospital",
+      "contact:phone": "08912727234; 2711444;",
+      "description": "Speciality in Orthopaedics and Gynaecology.",
+      "name": "Rama Hospitals",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4568276771,
+    "lat": 17.7824442,
+    "lon": 83.2706719,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "kalavathi hospital"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4568465189,
+    "lat": 17.7568569,
+    "lon": 83.3309144,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 11-113/1, Hanumanthawaka Junction",
+      "addr:postcode": "530040",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "check_date": "2026-04-14",
+      "contact:phone": "891- 6714000; 0891-86714055; 0891-6714066",
+      "name": "LV Prasad Eye Hospital",
+      "source": "OpenGovernmentData",
+      "website": "https://www.lvpei.org"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4635870145,
+    "lat": 17.7404353,
+    "lon": 83.3080536,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 50 - 53 - 14, Gurudwara Lane, Seethammadhara, Beside A. P.E.P. D. C. L Corporation Ltd",
+      "addr:postcode": "530013",
+      "addr:state": "Andhra Pradesh",
+      "addr:street": "Gurudwara",
+      "amenity": "hospital",
+      "contact:mobile": "08912827777",
+      "contact:phone": "2535063",
+      "emergency": "yes",
+      "healthcare": "hospital",
+      "name": "KIMS (formerly Queens NRI Hospital)",
+      "opening_hours": "24/7",
+      "operator": "Chalsani Group",
+      "source": "OpenGovernmentData",
+      "website": "https://www.queensnrihospital.com/"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4799206480,
+    "lat": 17.7147802,
+    "lon": 83.307414,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Sri Venkateshwara Nursing Hospital"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4801326526,
+    "lat": 17.7154685,
+    "lon": 83.3086985,
+    "tags": {
+      "addr:city": "visakhapatnam",
+      "addr:postcode": "530002",
+      "addr:street": "Nowroji Street",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Amulya Hospitals"
+    }
+  },
+  {
+    "type": "node",
+    "id": 4896583363,
+    "lat": 17.7288521,
+    "lon": 83.3056846,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 27-1-104, 6th Lane, Dwarakanagar",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "08912764748;",
+      "name": "Kala Hospital",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5080788437,
+    "lat": 17.6898203,
+    "lon": 83.2381269,
+    "tags": {
+      "amenity": "hospital"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5080788438,
+    "lat": 17.6894856,
+    "lon": 83.2381055,
+    "tags": {
+      "amenity": "hospital"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5080788439,
+    "lat": 17.6895392,
+    "lon": 83.2377058,
+    "tags": {
+      "amenity": "hospital"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5080788440,
+    "lat": 17.6894958,
+    "lon": 83.2369816,
+    "tags": {
+      "amenity": "hospital"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5080788441,
+    "lat": 17.689023,
+    "lon": 83.2363406,
+    "tags": {
+      "amenity": "hospital"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5080788450,
+    "lat": 17.6896287,
+    "lon": 83.236405,
+    "tags": {
+      "amenity": "hospital"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5621265135,
+    "lat": 17.6680242,
+    "lon": 83.2078233,
+    "tags": {
+      "amenity": "fire_station",
+      "name": "Pedda Gantyada Fore Station"
+    }
+  },
+  {
+    "type": "node",
+    "id": 5798458939,
+    "lat": 17.7236037,
+    "lon": 83.2984784,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Dr. VJs Cosmetic Surgery& Hair Transplantation Centre"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6628808944,
+    "lat": 17.7113427,
+    "lon": 83.3120581,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Zilla Parishad Juction, Gokhale Rd, Beside Spencer's, Port Officers Quarters",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "check_date": "2024-07-04",
+      "healthcare": "hospital",
+      "name": "St. Joseph's Hospital",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6628820476,
+    "lat": 17.710893,
+    "lon": 83.3118425,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "shantiniketan mental health centre",
+      "name:te": "\u0c36\u0c3e\u0c02\u0c24\u0c3f\u0c28\u0c3f\u0c15\u0c47\u0c24\u0c02 \u0c2e\u0c46\u0c02\u0c1f\u0c32\u0c4d \u0c39\u0c46\u0c32\u0c4d\u0c24\u0c4d \u0c38\u0c46\u0c02\u0c1f\u0c30\u0c4d"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6628861067,
+    "lat": 17.7120173,
+    "lon": 83.3146963,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Mycure hospital"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6628946789,
+    "lat": 17.7141226,
+    "lon": 83.3143316,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Surya skin care"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6629033364,
+    "lat": 17.7100754,
+    "lon": 83.3109627,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "D.No: 14-37-29/1,Krishna Nagar, Maharanipeta, Z.P Junction, Visakhpatnam.",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:email": "krishnaivf@hotmail.com",
+      "contact:mobile": "96039 10004",
+      "contact:phone": "0891- 2538194 / 95",
+      "healthcare": "hospital",
+      "name": "Krishna Hospital",
+      "name:te": "\u0c15\u0c43\u0c37\u0c4d\u0c23 \u0c39\u0c3e\u0c38\u0c4d\u0c2a\u0c3f\u0c1f\u0c32\u0c4d",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData",
+      "website": "https://krishnaivf.com/"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6629035082,
+    "lat": 17.7149198,
+    "lon": 83.3128724,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Aaradhya fertility centre"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6629036947,
+    "lat": 17.7086688,
+    "lon": 83.3109667,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "D.No: 15-13-6, Krishna Nagar Road",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Sagar Durga Hospital",
+      "name:te": "\u0c38\u0c3e\u0c17\u0c30\u0c4d \u0c26\u0c41\u0c30\u0c4d\u0c17 \u0c39\u0c3e\u0c38\u0c4d\u0c2a\u0c3f\u0c1f\u0c32\u0c4d",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6629071967,
+    "lat": 17.7090399,
+    "lon": 83.3111357,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 15 -12-18/A, Krishna Nagar, Zillaparishad Junction",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "0891-2718315",
+      "healthcare": "hospital",
+      "name": "Shri Venkataramana Hospital",
+      "name:te": "\u0c36\u0c4d\u0c30\u0c40 \u0c35\u0c46\u0c02\u0c15\u0c1f\u0c30\u0c2e\u0c23 \u0c39\u0c3e\u0c38\u0c4d\u0c2a\u0c3f\u0c1f\u0c32\u0c4d",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6629428979,
+    "lat": 17.7070739,
+    "lon": 83.3090178,
+    "tags": {
+      "amenity": "hospital",
+      "name": "ABC hospital",
+      "name:te": "\u0c0f\u0c2c\u0c40\u0c38\u0c40 \u0c39\u0c3e\u0c38\u0c4d\u0c2a\u0c3f\u0c1f\u0c32\u0c4d"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6629457613,
+    "lat": 17.7075645,
+    "lon": 83.3089749,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Apex hospital",
+      "name:te": "\u0c0f\u0c2a\u0c46\u0c15\u0c4d\u0c38\u0c4d \u0c39\u0c3e\u0c38\u0c4d\u0c2a\u0c3f\u0c1f\u0c32\u0c4d"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6629460182,
+    "lat": 17.7078558,
+    "lon": 83.3087882,
+    "tags": {
+      "amenity": "hospital",
+      "name": "Usa hospital",
+      "name:te": "\u0c09\u0c37 \u0c39\u0c3e\u0c38\u0c4d\u0c2a\u0c3f\u0c1f\u0c32\u0c4d"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6635493113,
+    "lat": 17.7082343,
+    "lon": 83.3104939,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 15-12-1, Krishna Nagar, Maharani Peta",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "08912784545",
+      "emergency": "yes",
+      "healthcare": "hospital",
+      "name": "Simhadri Hospital",
+      "name:te": "\u0c38\u0c3f\u0c02\u0c39\u0c3e\u0c26\u0c4d\u0c30\u0c3f \u0c39\u0c3e\u0c38\u0c4d\u0c2a\u0c3f\u0c1f\u0c32\u0c4d",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6635506599,
+    "lat": 17.7082036,
+    "lon": 83.3099146,
+    "tags": {
+      "amenity": "hospital",
+      "emergency": "yes",
+      "name": "Apollow pharmacy",
+      "name:te": "\u0c05\u0c2a\u0c4b\u0c32\u0c4a \u0c2b\u0c3e\u0c30\u0c4d\u0c2e\u0c38\u0c40"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6635515144,
+    "lat": 17.7076415,
+    "lon": 83.3111377,
+    "tags": {
+      "amenity": "hospital",
+      "emergency": "yes",
+      "name": "Nature cure hospital",
+      "name:te": "\u0c28\u0c47\u0c1a\u0c30\u0c4d \u0c15\u0c4d\u0c2f\u0c42\u0c30\u0c4d \u0c39\u0c3e\u0c38\u0c4d\u0c2a\u0c3f\u0c1f\u0c32\u0c4d"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6635545548,
+    "lat": 17.7076108,
+    "lon": 83.308198,
+    "tags": {
+      "amenity": "hospital",
+      "emergency": "yes",
+      "healthcare": "hospital",
+      "name": "Life  medical centre",
+      "name:te": "\u0c32\u0c48\u0c2b\u0c4d  \u0c2e\u0c46\u0c21\u0c3f\u0c15\u0c32\u0c4d \u0c38\u0c46\u0c02\u0c1f\u0c30\u0c4d"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6635549621,
+    "lat": 17.7079072,
+    "lon": 83.3093781,
+    "tags": {
+      "amenity": "hospital",
+      "emergency": "yes",
+      "healthcare": "hospital",
+      "name": "Doctors care medical centre",
+      "name:te": "\u0c21\u0c3e\u0c15\u0c4d\u0c1f\u0c30\u0c4d\u0c38\u0c4d \u0c15\u0c47\u0c30\u0c4d \u0c2e\u0c46\u0c21\u0c3f\u0c15\u0c32\u0c4d \u0c38\u0c46\u0c02\u0c1f\u0c30\u0c4d"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6635561459,
+    "lat": 17.7081218,
+    "lon": 83.3094103,
+    "tags": {
+      "amenity": "hospital",
+      "emergency": "yes",
+      "name": "Sriddha hospital",
+      "name:te": "\u0c38\u0c4d\u0c30\u0c3f\u0c26\u0c4d\u0c27 \u0c39\u0c3e\u0c38\u0c4d\u0c2a\u0c3f\u0c1f\u0c32\u0c4d"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6711948950,
+    "lat": 17.7636985,
+    "lon": 83.3082425,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Pinnacle",
+      "name:te": "\u0c2a\u0c3f\u0c28\u0c4d\u0c28\u0c3e\u0c15\u0c3f\u0c32\u0c4d"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6711993032,
+    "lat": 17.7624241,
+    "lon": 83.3078726,
+    "tags": {
+      "amenity": "hospital",
+      "check_date": "2025-08-30",
+      "healthcare": "hospital",
+      "name": "Q1 Hospitals"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6712009588,
+    "lat": 17.7620819,
+    "lon": 83.3116458,
+    "tags": {
+      "amenity": "hospital",
+      "name": "GIMS"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6755526826,
+    "lat": 17.7067706,
+    "lon": 83.3090204,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 16-1-5, Coastal Battery Road, Maharznipeta",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Apex Hospital",
+      "name:te": "\u0c0f\u0c2a\u0c46\u0c15\u0c4d\u0c38\u0c4d \u0c39\u0c3e\u0c38\u0c4d\u0c2a\u0c3f\u0c1f\u0c32\u0c4d",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6758443699,
+    "lat": 17.7440297,
+    "lon": 83.3354643,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Sector VI Bus Stop, Mvp Colony",
+      "addr:postcode": "530014",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Dj Clinic",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6758468632,
+    "lat": 17.6861622,
+    "lon": 83.0016124,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Opp: R.T.C. Complex, Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "226099",
+      "name": "Ramyasai Nursing Home",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6758665270,
+    "lat": 17.7277139,
+    "lon": 83.295486,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "D.No: 43-1424/4 and 43-14/4/2 (1st Floor), Sai Krishna Complex, Main Road, Railway New Colony, Visakhapatnam",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "8912790000",
+      "name": "Vision Care Centre (Super Speciality Eye Hospital)",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6758677177,
+    "lat": 17.7300554,
+    "lon": 83.3075653,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 50-17-62, Rajendra Nagar, Near Seethammapeta Junction",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "08912701258",
+      "name": "Apoorva Hospital",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6758686628,
+    "lat": 17.7273371,
+    "lon": 83.3047865,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 47 - 9 - 32, 3ird Lane, Dwaraka Nagar",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "8912755875",
+      "name": "Anapoorna Hospital",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6758705097,
+    "lat": 17.7269219,
+    "lon": 83.304584,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Pavan Paradise, Near Diamond Park, Dwaraka Nagar",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "08912550550",
+      "name": "Maxivision Super Speciality Eye Hospitals",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6758710664,
+    "lat": 17.7363435,
+    "lon": 83.307247,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 1, Sree Balaji Chambers, Seethammapeta Main Road, Gurudwara Junction",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "8912552690",
+      "name": "Care Dental Hospital",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6758717165,
+    "lat": 17.7325361,
+    "lon": 83.3309823,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 8-4-32, Doctors Colony, Near Visakha Eye Hospital, Pedawaltair",
+      "addr:postcode": "530017",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "0891-2755908",
+      "name": "M.G.R. Hospital",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6758735188,
+    "lat": 17.7092414,
+    "lon": 83.3041777,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 18-01-03, K.G.H. Down, Maharanipeta, Jagadamba Junction",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "8912793636",
+      "healthcare": "hospital",
+      "name": "Rhea Hospital",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6758743207,
+    "lat": 17.7109406,
+    "lon": 83.3117884,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Opp. St. Joseph's Hospital , Maharanipeta",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "healthcare:speciality": "orthopaedics",
+      "name": "Adarsha Orthopaedic Center",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6758772439,
+    "lat": 17.7162921,
+    "lon": 83.3041039,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 29-2-36, Jail Road",
+      "addr:postcode": "530020",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Prabha Clinic and Nursing Home",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6758784627,
+    "lat": 17.7071258,
+    "lon": 83.3089118,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 16-1-4, K G H Beach Road, Maharanipet",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "8912706963",
+      "name": "Mythri Nursing Home",
+      "name:te": "\u0c2e\u0c48\u0c24\u0c4d\u0c30\u0c3f \u0c28\u0c30\u0c4d\u0c38\u0c3f\u0c02\u0c17\u0c4d \u0c39\u0c4b\u0c2e\u0c4d",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6758813629,
+    "lat": 17.6825514,
+    "lon": 83.2063977,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Kailashnagar , Kanithi Road, Gajuwaka",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Gowtami Hospital",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6761009918,
+    "lat": 17.7499948,
+    "lon": 83.2187018,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 9-333/1, Ground Floor Of Union Bank, Beside Sankara Theatre, Gopalapatnam",
+      "addr:postcode": "530027",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Satyam Hospital",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6761017583,
+    "lat": 17.7278327,
+    "lon": 83.3031356,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 47-7-43, 4th line, Dwaraka Nagar, Nehru Bazar, Diamond Park Road, Dondaparthy",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:mobile": "8916692104",
+      "contact:phone": "08912798631",
+      "name": "Venkatarama Hospital",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6761020424,
+    "lat": 17.752968,
+    "lon": 83.2173438,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Opp. Raitubazar, Gopalapatnam, Tailors Colony",
+      "addr:postcode": "530027",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "check_date": "2025-03-30",
+      "contact:phone": "08912520822",
+      "name": "SR Hospital",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6761040532,
+    "lat": 17.7379611,
+    "lon": 83.3055443,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "G1-10-16, Dwaraka Nagar Colony, Vizag",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Good Health New Central Hospital",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6761060209,
+    "lat": 17.7332163,
+    "lon": 83.2790163,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Kancharapalem",
+      "addr:postcode": "530008",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "2558518",
+      "name": "Dr Rama Rao Hospital",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6761079196,
+    "lat": 17.7106199,
+    "lon": 83.3030283,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "# 18-1-15,16, KGH Down, Near KGH Down Road, Maharani Peta, Jagadamba Junction, Visakhapatnam",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:mobile": "92466 55454",
+      "email": "vijethahospitalvsp@gmail.com",
+      "fax": "0891 2714332",
+      "healthcare": "hospital",
+      "name": "Vijetha Hospital",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData",
+      "website": "https://www.vijethahospitalvizag.com/"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6768028772,
+    "lat": 17.7350755,
+    "lon": 83.277593,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Old Durga Nursing Home, Near Urvasi Theatre, Nh-5 Road, Kancharapalem",
+      "addr:postcode": "530008",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "8912558037",
+      "name": "Sun Multi Speciality Hospital",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6768332127,
+    "lat": 17.7061715,
+    "lon": 83.3092725,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 16-1-13, Kgh To Beach Down, Opposite Coastak Battery, Maharani Peth",
+      "addr:housenumber": "# 16-1-13",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Abc Hospital",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6768383856,
+    "lat": 17.7463633,
+    "lon": 83.2642758,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 45-40-39, Akkayyapalem",
+      "addr:postcode": "530013",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "2550147",
+      "name": "Suma Maternity Home",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6768386211,
+    "lat": 17.7443962,
+    "lon": 83.3083713,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Seethammadhara (N.E.)",
+      "addr:postcode": "530020",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Lion Dist 324 C, Cancer Treatment and Research Center",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6768387728,
+    "lat": 17.7382076,
+    "lon": 83.3146349,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Seethammadhara",
+      "addr:postcode": "531113",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "check_date": "2024-03-17",
+      "name": "Amg Hospital",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6768451188,
+    "lat": 17.7108601,
+    "lon": 83.3026153,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 18-1-6, K. G. H. Down Road, Maharanipeta",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:email": "info@indushospital.com",
+      "contact:mobile": "984 8724 365; 991 2222 456",
+      "healthcare": "hospital",
+      "name": "Indus Hospitals",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData",
+      "website": "https://www.indushospital.com/"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6768577352,
+    "lat": 17.7264096,
+    "lon": 83.3107545,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "D.No: 9-24-2/A, Rama Talkies Amar Nagar, Cbm Compound",
+      "addr:postcode": "530003",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "8912745030",
+      "name": "Visakha Ent Hospital",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6768715568,
+    "lat": 17.6853215,
+    "lon": 83.208107,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Gajuwaka",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "2517167",
+      "name": "Susruta Hospital",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6768741999,
+    "lat": 17.6824479,
+    "lon": 83.1970797,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "26-16-7,Chaitanya nagar,Gajuwaka,Visakhaptanam",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:mobile": "9348423777",
+      "contact:phone": "0891-2764411",
+      "email": "rkhospital.gajuwaka@gmail.com",
+      "fax": "0891-2517699",
+      "name": "R K Hospital",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData",
+      "website": "https://www.rkhospital.co.in/"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6768783710,
+    "lat": 17.7382447,
+    "lon": 83.3036815,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "49-48 16/5, NGO Colony, Akkayyapalem Highway, Vishakhapatnam",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "2734747",
+      "name": "Padmasri Hospital",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6770856512,
+    "lat": 17.739964,
+    "lon": 83.3041066,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "D.No: 49-54-10/2A, Balayya Saatry Layout",
+      "addr:postcode": "530013",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Raghavendra Hospital",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6770857209,
+    "lat": 17.6840514,
+    "lon": 83.1985898,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "D.No: 6-60-8/9, Sramikanagar, Gajuwaka",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sujatha Hospital",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6770861724,
+    "lat": 17.7364998,
+    "lon": 83.3044016,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 49-51-6, Santhipuram, Shankar Mattam road",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:email": "infovizag@centreforsight.net",
+      "contact:mobile": "9000469497",
+      "name": "Centre For Sight",
+      "operator:type": "Private",
+      "source": "OpenGovernmentData",
+      "website": "https://www.centreforsight.net/eye-hospitals-in-vizag"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6773497407,
+    "lat": 17.7288061,
+    "lon": 83.293823,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "D.No: 43-5-53, Railway New Colony, By The Side Of Laymen's Evange",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "8912720769",
+      "fax": "2711625",
+      "name": "Krishna Maternity And Nursing Home",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6773519885,
+    "lat": 17.69981,
+    "lon": 83.2960858,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "D.No: 10-7-85, Kailash Nagar. , Gajuwaka",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Amrutha Nursing Home Private Limited",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6773613228,
+    "lat": 17.6867743,
+    "lon": 83.203619,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "D.No: 7-15-12, Old Gajuwaka",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Padmaja Hospital - Gajuwaka",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6773652312,
+    "lat": 17.7097505,
+    "lon": 83.3054544,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Kgh Road, Maharanipet",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "0891 3067044 ,0891 3067022, 0891-3067000",
+      "email": "info@carehospitals.com",
+      "fax": "+91-891-2555799",
+      "healthcare": "hospital",
+      "name": "Care Hospital - Maharanipet",
+      "name:te": "\u0c15\u0c47\u0c30\u0c4d \u0c39\u0c3e\u0c38\u0c4d\u0c2a\u0c3f\u0c1f\u0c32\u0c4d - \u0c2e\u0c39\u0c3e\u0c30\u0c3e\u0c28\u0c40\u0c2a\u0c47\u0c1f",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6778457455,
+    "lat": 17.7103989,
+    "lon": 83.3037458,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 18-1-25, Beside vijaya Bank, Kgh Down Road , Maharanipeta",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "8912533955",
+      "healthcare": "hospital",
+      "name": "Samudra Hospitals",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6778538692,
+    "lat": 17.6870707,
+    "lon": 83.0013013,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Opp: Rtc Complex.",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Vikram Hospital",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6778593240,
+    "lat": 17.7102328,
+    "lon": 83.3043534,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "D.No: 18-1-34, Opposite K.G.H. O.P. Gate",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Abhaya Critical Care",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6778878343,
+    "lat": 17.7362763,
+    "lon": 83.3115497,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Seethammadhara",
+      "addr:postcode": "530013",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sunita Nursing Home",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6778891203,
+    "lat": 17.7320085,
+    "lon": 83.333627,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 8-197/2, Behind Laxmi Ganapathi Temple, Peda Waltair Junction",
+      "addr:postcode": "530017",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "8.92E+16",
+      "name": "Waltair Multicare Hospital",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6778921290,
+    "lat": 17.7118451,
+    "lon": 83.3038954,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 13-9-12, Dandu Bazar Road, Jagadamba Junction, Maharanipeta",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Siddharth Hospital",
+      "name:te": "\u0c38\u0c3f\u0c26\u0c4d\u0c27\u0c3e\u0c30\u0c4d\u0c25\u0c4d \u0c39\u0c3e\u0c38\u0c4d\u0c2a\u0c3f\u0c1f\u0c32\u0c4d",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6782119569,
+    "lat": 17.7108448,
+    "lon": 83.3125274,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 14-38-1 , Opp American Hospital , Z.P Jn",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Visakha Children Hospital",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6787301791,
+    "lat": 17.7083599,
+    "lon": 83.3086663,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "D.No: 14-37-45, Collector Office Junction",
+      "addr:postcode": "530001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "fixme": "Please verify the accurate position of the hospital as I have mapped the facility based on the address provided in Open Government data",
+      "name": "Sraddha Hospital",
+      "name:te": "\u0c36\u0c4d\u0c30\u0c26\u0c4d\u0c27 \u0c39\u0c3e\u0c38\u0c4d\u0c2a\u0c3f\u0c1f\u0c32\u0c4d",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6787401750,
+    "lat": 17.7440143,
+    "lon": 83.3352873,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 1-68-21, Mig-10/2, Sector II, MVP Colony",
+      "addr:postcode": "530017",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "2531553",
+      "name": "Tirumala Vijaya Hospital",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6789523012,
+    "lat": 17.7224323,
+    "lon": 83.309819,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 10-36-8, Lane Beside, Royal Fort, Hotel Ramnagar, Opp: Gvmc Out Gate",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "fax": "2712711",
+      "name": "Aarif Nursing Home",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6789535761,
+    "lat": 17.7099032,
+    "lon": 83.3107518,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Srirangapuram, Krishna Nagar, Maharani Peta,Visakhapatnam",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "2718179",
+      "name": "Vijaya Medical Centre",
+      "name:te": "\u0c35\u0c3f\u0c1c\u0c2f \u0c2e\u0c46\u0c21\u0c3f\u0c15\u0c32\u0c4d \u0c38\u0c46\u0c02\u0c1f\u0c30\u0c4d",
+      "source": "OpenGovernmentData",
+      "website": "https://vijayamedicalcentre.in/"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6789549353,
+    "lat": 17.7186287,
+    "lon": 83.3116168,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 15-13-7,Opp Lions Club, Ram Nagar.",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:email": "info@omnihospitals.in",
+      "fax": "2569758",
+      "name": "OMNI RK Super Specialty Hospital",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData",
+      "website": "https://omnihospitals.in/vizag/"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6789680553,
+    "lat": 17.7168287,
+    "lon": 83.3087254,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 10-50-81, Waltair Main Road , Rock Dale Lay Out",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "3989000",
+      "fax": "2764456",
+      "name": "Vasan Eye Care Hospital",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData",
+      "website": "https://vasaneye.com/"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6789720253,
+    "lat": 17.7171512,
+    "lon": 83.3083036,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 10-50-2, Waltair Main Road.",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "8912780780",
+      "healthcare": "hospital",
+      "name": "Lazarus Hospital",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6789830343,
+    "lat": 17.7685126,
+    "lon": 83.3147241,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "T.I.C. Point,Arilova Colony",
+      "addr:postcode": "530040",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sai Satya Hospital",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6791809450,
+    "lat": 17.7108505,
+    "lon": 83.3085356,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 14-24-1, Mens Hostel Road, Maharanipeta",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "contact:phone": "08912526500; 2526501;",
+      "fax": "2526502",
+      "name": "Bharathi Hospital",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6791968309,
+    "lat": 17.7124353,
+    "lon": 83.302677,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "H.No: 28-2-55, Tenneti Square, Jagadamba Centre",
+      "addr:postcode": "530020",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Lawrance and Mayo Hospital",
+      "name:te": "\u0c32\u0c3e\u0c30\u0c46\u0c28\u0c4d\u0c38\u0c4d \u0c05\u0c02\u0c21\u0c4d \u0c2e\u0c47\u0c2f\u0c4a",
+      "source": "OpenGovernmentData",
+      "website": "https://lawrenceandmayo.co.in/"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6794593273,
+    "lat": 17.8796711,
+    "lon": 83.3740931,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Visakhapatnam",
+      "addr:postcode": "530052",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Prema Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6798143867,
+    "lat": 17.7066084,
+    "lon": 83.3090506,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Near Circuit House, Ramanagar, Waltair Main Road",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "City Care Hospital",
+      "name:te": "\u0c38\u0c3f\u0c1f\u0c40 \u0c15\u0c47\u0c30\u0c4d \u0c39\u0c3e\u0c38\u0c4d\u0c2a\u0c3f\u0c1f\u0c32\u0c4d",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6801191501,
+    "lat": 17.7404309,
+    "lon": 83.250969,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Marripalem, Main Road",
+      "addr:postcode": "530018",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Kamala Nursing Home",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6804705372,
+    "lat": 17.7211498,
+    "lon": 83.3186179,
+    "tags": {
+      "amenity": "police",
+      "name": "Cyber Crime"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6804727620,
+    "lat": 17.7265297,
+    "lon": 83.2990453,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Opp: Sri Kanya Theatre, Rly New Colony",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Kalavathi Surgical Hospital and Laparoscopic Centre",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6804768866,
+    "lat": 17.728124,
+    "lon": 83.3123571,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "D.No: 9-1-227, Rama Talkies Jn,. C. B. M. Compound",
+      "addr:postcode": "530003",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Subham Prema Hospital",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6804932700,
+    "lat": 17.7203686,
+    "lon": 83.3127339,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Waltair Main Road, Ramnagar, Visakhapatnam",
+      "addr:postcode": "530020",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "check_date": "2024-07-05",
+      "contact:phone": "+91-0891-3041444",
+      "name": "Care Hospitals",
+      "opening_hours": "24/7",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6828740925,
+    "lat": 17.8099057,
+    "lon": 83.207571,
+    "tags": {
+      "addr:city": "visakhapatnam",
+      "addr:housenumber": "R655+X26, Pendurthi Araku Road, near Raithu Bazar, Chinnamushidiwada, Pendurthi, Visakhapatnam, Andhra Pradesh",
+      "addr:postcode": "531178",
+      "addr:street": "Pendurthi railway station road",
+      "amenity": "police",
+      "check_date": "2024-03-18",
+      "name": "Pendurthi Police Station"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6843473422,
+    "lat": 17.7109237,
+    "lon": 83.3023683,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "MyCure Hospital"
+    }
+  },
+  {
+    "type": "node",
+    "id": 6868865811,
+    "lat": 17.8231089,
+    "lon": 83.2064905,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7114008034,
+    "lat": 17.9231609,
+    "lon": 83.1486536,
+    "tags": {
+      "addr:district": "Vizianagaram",
+      "addr:place": "Opp. To Zp High School",
+      "addr:postcode": "525183",
+      "addr:state": "Andhra Pradesh",
+      "addr:subdistrict": "Kothavalasa Mandal",
+      "amenity": "hospital",
+      "name": "Government Hospital,Viyyampeta",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7114008044,
+    "lat": 17.8877592,
+    "lon": 83.4513908,
+    "tags": {
+      "addr:block": "Bheemunipatnam",
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Near Relli Veedhi",
+      "addr:place": "Near Mandal Resources Persons Office",
+      "addr:postcode": "531163",
+      "addr:state": "Andhra Pradesh",
+      "addr:subdistrict": "Bheemunipatnam Mandal",
+      "amenity": "hospital",
+      "name": "Government Hospital,Bheemili",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7114008055,
+    "lat": 17.7686588,
+    "lon": 83.3172347,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Govt Hospital",
+      "addr:place": "Opp: St Anns School",
+      "addr:postcode": "530040",
+      "addr:state": "Andhra Pradesh",
+      "addr:subdistrict": "Visakhapatnam (Urban) Mandal",
+      "amenity": "hospital",
+      "name": "GVMC hospital,FRU Arilova",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7114008093,
+    "lat": 17.6845257,
+    "lon": 83.0067163,
+    "tags": {
+      "addr:block": "Anakapalle",
+      "addr:district": "Visakhapatnam",
+      "addr:place": "Near Phool Bagh Road",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "addr:subdistrict": "Anakapalle Mandal",
+      "amenity": "hospital",
+      "contact:phone": "08932-223340",
+      "description": "District Hospital",
+      "name": "NTR Government Hospital,Anakapalle",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7114008149,
+    "lat": 17.8883305,
+    "lon": 83.0408116,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:place": "Near Mdo Office",
+      "addr:postcode": "531034",
+      "addr:state": "Andhra Pradesh",
+      "addr:subdistrict": "K.Kotapadu Mandal",
+      "amenity": "hospital",
+      "contact:phone": "08934-241041",
+      "name": "Government Hospital, K Kotapadu",
+      "source": "OpenGovernmentData"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7786891185,
+    "lat": 17.8951943,
+    "lon": 83.1863316,
+    "tags": {
+      "addr:district": "Vizianagaram",
+      "addr:full": "Kothavalasa",
+      "addr:postcode": "535183",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sri Venkata Sai Multi Specialty Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7786891201,
+    "lat": 17.8999331,
+    "lon": 83.1856362,
+    "tags": {
+      "addr:district": "Vizianagaram",
+      "addr:full": "Vizianagaram",
+      "addr:postcode": "535183",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "check_date": "2024-01-10",
+      "name": "Niharika Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7786891223,
+    "lat": 17.8976322,
+    "lon": 83.1862515,
+    "tags": {
+      "addr:district": "Vizianagaram",
+      "addr:full": "Kothavalasa",
+      "addr:postcode": "535183",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Dr. B Ramarao Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057180,
+    "lat": 17.8027947,
+    "lon": 83.347569,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Anand Nagar, Pothinamallayya Palem",
+      "addr:postcode": "530041",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Bethany Christian Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057181,
+    "lat": 17.7998444,
+    "lon": 83.3508178,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Pothinamallayya Palem",
+      "addr:postcode": "530048",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Dr. Adams Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057184,
+    "lat": 17.7341833,
+    "lon": 83.298429,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "80 Feet Road, Akkayyapalem",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Master Homeo Vaidyalayam",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057185,
+    "lat": 17.8830152,
+    "lon": 83.3251813,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Gudilova",
+      "addr:postcode": "530052",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Dr. Hedgewar School Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057188,
+    "lat": 17.8118168,
+    "lon": 83.3557704,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Srinivasa Nagar, Madhurawada, Visakhapatnam",
+      "addr:postcode": "530048",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Ramakrishna ENT Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057191,
+    "lat": 17.7289618,
+    "lon": 83.310741,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Ramatalkies, Dwaraka Nagar",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Day & Night Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057192,
+    "lat": 17.921695,
+    "lon": 83.426394,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Visakhapatnam",
+      "addr:postcode": "531162",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "NRI General Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057193,
+    "lat": 17.927652,
+    "lon": 83.423953,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Adarsanagar, Thagarapuvalasa",
+      "addr:postcode": "531163",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "ESI Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057196,
+    "lat": 17.743927,
+    "lon": 83.328678,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Sector 1, New Venkojipalem",
+      "addr:postcode": "530022",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sanjivi Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057199,
+    "lat": 17.735493,
+    "lon": 83.296865,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Ramachandra Nagar, Akkayyapalem",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Government Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057201,
+    "lat": 17.7274681,
+    "lon": 83.3043823,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Dwaraka Nagar",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sai Spoorthy Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057202,
+    "lat": 17.7468553,
+    "lon": 83.3307524,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Venkojipalem",
+      "addr:postcode": "530017",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Amma Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057203,
+    "lat": 17.7322507,
+    "lon": 83.3169337,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Resapuvanipalem, Dwaraka Nagar",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sandhya Eye Hospitals",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057204,
+    "lat": 17.9310994,
+    "lon": 83.427302,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Bangalametta, Thagarapuvalasa",
+      "addr:postcode": "531163",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Arogya Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057207,
+    "lat": 17.7398696,
+    "lon": 83.3381086,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:postcode": "530017",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Sri Krishna Hospital And Mrudula Kidney Centre",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057208,
+    "lat": 17.7347439,
+    "lon": 83.2989253,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "80 Feet Road, Akkayyapalem",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Ramkumar Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057209,
+    "lat": 17.7295515,
+    "lon": 83.3099357,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Srinagar, Dwaraka Nagar",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Reddy Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057210,
+    "lat": 17.7301424,
+    "lon": 83.2912686,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Akkayyapalem",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Kalavathy Maternity Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057211,
+    "lat": 17.7315298,
+    "lon": 83.2982102,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "S.V Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057212,
+    "lat": 17.8948381,
+    "lon": 83.4480273,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Opposite Police Station, Bheemili",
+      "addr:postcode": "531163",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Naidu Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057214,
+    "lat": 17.7360864,
+    "lon": 83.2988976,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Akkayyapalem",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Lakshmi Gayathri Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057217,
+    "lat": 17.733482,
+    "lon": 83.300686,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Lalitha Nagar, Akkayyapalem",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Saroja Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057218,
+    "lat": 17.8059869,
+    "lon": 83.3397326,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Pothinamallayya Palem",
+      "addr:postcode": "530041",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Surya Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057220,
+    "lat": 17.739424,
+    "lon": 83.2994272,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Abid Nagar, Akkayyapalem",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "A1 Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057222,
+    "lat": 17.8952319,
+    "lon": 83.4451285,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Bheemili",
+      "addr:postcode": "531163",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Mukyamantri Arogya Kendram",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057223,
+    "lat": 17.7275716,
+    "lon": 83.294103,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Dondaparthy, Railway New Colony",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "CARE Hospitals",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057224,
+    "lat": 17.9321277,
+    "lon": 83.423704,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Thagarapuvalasa",
+      "addr:postcode": "531162",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Surya Nursing Home",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057225,
+    "lat": 17.7636399,
+    "lon": 83.3591053,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Gudla Vani Palem, Sagar Nagar",
+      "addr:postcode": "530045",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Medi Cos Den Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057226,
+    "lat": 17.7427806,
+    "lon": 83.340338,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Sector 9, MVP Colony",
+      "addr:postcode": "530017",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Sri Surya Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057228,
+    "lat": 17.7346615,
+    "lon": 83.3003628,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Lalitha Nagar, Akkayyapalem",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sri Krishna Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057232,
+    "lat": 17.8131242,
+    "lon": 83.3555939,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Chandrampalem, Madhurawada",
+      "addr:postcode": "530048",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Ujhwal Hospitals",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057233,
+    "lat": 17.8900803,
+    "lon": 83.4536651,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Bheemili",
+      "addr:postcode": "531163",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Navratna Kesava Rao Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057234,
+    "lat": 17.7289528,
+    "lon": 83.2936785,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Dr. Kamalamma Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057235,
+    "lat": 17.7364007,
+    "lon": 83.3116732,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "TPT Colony, Seethammadara",
+      "addr:postcode": "530013",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "National Orthopaedic Centre",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057240,
+    "lat": 17.7318218,
+    "lon": 83.2982472,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Visakhapatnam, Akkayyapalem",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Vivekanandha Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057241,
+    "lat": 17.745865,
+    "lon": 83.3141989,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Hill View Doctors Colony, Seethammadara",
+      "addr:postcode": "530013",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Government ENT Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057242,
+    "lat": 17.7414689,
+    "lon": 83.3075918,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Seethammadara",
+      "addr:postcode": "530013",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Padmavathi Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057245,
+    "lat": 17.7846774,
+    "lon": 83.3746555,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Rushikonda",
+      "addr:postcode": "530045",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "GITAM Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057249,
+    "lat": 17.7301583,
+    "lon": 83.2947484,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Krishnaveni Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057256,
+    "lat": 17.7380243,
+    "lon": 83.3034712,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Akkayyapalem",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Morpheus Padmasri International IVF Centre",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057259,
+    "lat": 17.8024524,
+    "lon": 83.3535257,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Madhurawada",
+      "addr:postcode": "530041",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "GK's Rainbow Dental Superspeciality Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057260,
+    "lat": 17.7289115,
+    "lon": 83.293632,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Krishna Children Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057261,
+    "lat": 17.7274279,
+    "lon": 83.3077406,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Srinagar",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Master Homoeo Home",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057262,
+    "lat": 17.7322439,
+    "lon": 83.2918881,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Akkayyapalem",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sri Sai Ram Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057263,
+    "lat": 17.9309318,
+    "lon": 83.4260617,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Bangalametta, Thagarapuvalasa",
+      "addr:postcode": "531163",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Dr. Ramakrishna Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057268,
+    "lat": 17.7442418,
+    "lon": 83.297657,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Narasimhanagar, Kailasapuram",
+      "addr:postcode": "530024",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Soham ENT Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057270,
+    "lat": 17.8040379,
+    "lon": 83.3467145,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Pothinamallayya Palem",
+      "addr:postcode": "530041",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Keerthana Nursing Home",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057271,
+    "lat": 17.9307079,
+    "lon": 83.4191803,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Adarsanagar, Thagarapuvalasa",
+      "addr:postcode": "531162",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Padmavathi Nursing Home",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787057272,
+    "lat": 17.7244631,
+    "lon": 83.3331524,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:postcode": "530017",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sri Gayatri Nursing Home & Kasturi Maternity Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787449684,
+    "lat": 17.683136,
+    "lon": 83.001827,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Tirumala Jyoti Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787449686,
+    "lat": 17.6882064,
+    "lon": 83.0101255,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Woodpeta, Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Dr. Soma Raju Children Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787449688,
+    "lat": 17.687728,
+    "lon": 83.001839,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Sarada Colony, Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Kalyani Nursing Home",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787449689,
+    "lat": 17.6842691,
+    "lon": 83.011245,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Anakapalle, Gavarapalem, Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Annapurna Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787449691,
+    "lat": 17.688264,
+    "lon": 83.009283,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Woodpeta, Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "SS Dental Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787449692,
+    "lat": 17.6848737,
+    "lon": 83.0101274,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Gavarapalem, Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Maternity Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787449694,
+    "lat": 17.686424,
+    "lon": 83.00072,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Vivekananda Nagar, Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sai Teja Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787449695,
+    "lat": 17.6753904,
+    "lon": 83.0010632,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "RTC Complex Road, Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Benargy Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787449696,
+    "lat": 17.6892581,
+    "lon": 83.0021022,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Nehru Chowk, Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sri Sagar Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787449704,
+    "lat": 17.688484,
+    "lon": 83.002889,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Srinivasa Children's Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787449709,
+    "lat": 17.6852716,
+    "lon": 83.0024749,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "London Children's Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787449715,
+    "lat": 17.6854923,
+    "lon": 83.00227,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Nirmala Maternity Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787449716,
+    "lat": 17.6916683,
+    "lon": 83.0037356,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Woodpeta, Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Ayyappa Gupta Eye Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787449720,
+    "lat": 17.687618,
+    "lon": 83.001744,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Sarada Colony, Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Usha Prime Multispeciality Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787449732,
+    "lat": 17.687646,
+    "lon": 83.002401,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Gadam Dental Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787449736,
+    "lat": 17.680999,
+    "lon": 83.001142,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "RTC Complex Road, Sarada Colony, Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Medikon Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787449739,
+    "lat": 17.686005,
+    "lon": 83.009456,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Ravi Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787449741,
+    "lat": 17.68721,
+    "lon": 83.005706,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Laxmi Orthopaedic Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787449747,
+    "lat": 17.69098,
+    "lon": 83.0099047,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Lakshmi Narayana Nagar, Woodpeta, Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sapthagiri Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787449754,
+    "lat": 17.685712,
+    "lon": 83.0015806,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Sarada Colony, Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Dr. Ram Mohan Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787449757,
+    "lat": 17.685934,
+    "lon": 83.001269,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Mother and Child Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787449758,
+    "lat": 17.6843742,
+    "lon": 83.0022801,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Siddhartha Nursing Home",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787449765,
+    "lat": 17.6777911,
+    "lon": 83.0006719,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Sarada Colony, Anakapalle",
+      "addr:postcode": "531001",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sri Venkateswara Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647583,
+    "lat": 17.7101086,
+    "lon": 83.312939,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Krishna Nagar, Maharani Peta",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Kanakadurga Hospital",
+      "name:te": "\u0c15\u0c28\u0c15\u0c26\u0c41\u0c30\u0c4d\u0c17 \u0c39\u0c3e\u0c38\u0c4d\u0c2a\u0c3f\u0c1f\u0c32\u0c4d",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647584,
+    "lat": 17.7409007,
+    "lon": 83.2662977,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Sankurupeta, Pattabhi Reddy Thota, Kancharapalem",
+      "addr:postcode": "530007",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sunrise Hospitals",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647585,
+    "lat": 17.687897,
+    "lon": 83.2053903,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Gajuwaka",
+      "addr:postcode": "530011",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sunrise Childern Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647586,
+    "lat": 17.6843101,
+    "lon": 83.193854,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Chaitanya Nagar, Gajuwaka",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sri Krishna Orthopaedic Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647588,
+    "lat": 17.7129243,
+    "lon": 83.3197589,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Pandurangapuram, Krishna Nagar, Maharani Peta",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "A N Beach Hospital - Multi Speciality Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647591,
+    "lat": 17.7100946,
+    "lon": 83.3045397,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Maharani Peta",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Dr. Mangamma Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647592,
+    "lat": 17.6829789,
+    "lon": 83.1975029,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Chaitanya Nagar, Gajuwaka",
+      "addr:postcode": "530044",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sri Lakhmi ENT Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647593,
+    "lat": 17.702135,
+    "lon": 83.199526,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:postcode": "530012",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "BHEL Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647594,
+    "lat": 17.6846529,
+    "lon": 83.2016314,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Visakha Child Care Centre",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647599,
+    "lat": 17.6871805,
+    "lon": 83.2133794,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Gajuwaka",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Piles Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647600,
+    "lat": 17.710144,
+    "lon": 83.304361,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Jagadamba",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Visakha Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647602,
+    "lat": 17.8231815,
+    "lon": 83.2060963,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Aditya Nagar, Pendurthi",
+      "addr:postcode": "531173",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sreenivasa Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647603,
+    "lat": 17.6863477,
+    "lon": 83.2127666,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Simhagiri Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647604,
+    "lat": 17.6852466,
+    "lon": 83.2053196,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Gajuwaka",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "City Hospital Ortho & Specialities",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647605,
+    "lat": 17.712323,
+    "lon": 83.313972,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Gokhale Road, Krishna Nagar, Maharani Peta",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Medicover Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647609,
+    "lat": 17.688339,
+    "lon": 83.243601,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "GNT Road, Malkapuram",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Life Spring Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647612,
+    "lat": 17.6854195,
+    "lon": 83.2078579,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Kailash Nagar",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sri Lakshmi Children Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647614,
+    "lat": 17.6827868,
+    "lon": 83.1989654,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Chaitanya Nagar, Gajuwaka",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Ankitha Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647618,
+    "lat": 17.7480338,
+    "lon": 83.2192385,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Gopalapatnam, Simhachalam",
+      "addr:postcode": "530027",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Hymavathi Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647619,
+    "lat": 17.6844753,
+    "lon": 83.2100702,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Kailash Nagar, Gajuwaka",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Pujitha Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647620,
+    "lat": 17.7445712,
+    "lon": 83.2265444,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Gopalapatnam, Simhachalam",
+      "addr:postcode": "531127",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sarojini Children's Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647621,
+    "lat": 17.7452036,
+    "lon": 83.2261912,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Buchirajupalem",
+      "addr:postcode": "531127",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "SMS Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647623,
+    "lat": 17.6872165,
+    "lon": 83.2049981,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Indira Colony",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Navaratnam - Kesava Rao Charitable Health Centre",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647624,
+    "lat": 17.8148001,
+    "lon": 83.2042804,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Simhagiri Nagar, Pendurthi",
+      "addr:postcode": "531173",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Visakha Gynaec & Obst Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647626,
+    "lat": 17.7508459,
+    "lon": 83.2186331,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Gopalapatnam, Simhachalam",
+      "addr:postcode": "530027",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Suryanarayana Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647627,
+    "lat": 17.7656255,
+    "lon": 83.2256151,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Prahaladapuram, Simhachalam",
+      "addr:postcode": "530027",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Simhadri Women & Child Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647629,
+    "lat": 17.7104,
+    "lon": 83.312442,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "healthcare:speciality": "orthopaedics",
+      "name": "Vizag Ortho & Spine Centre",
+      "name:te": "\u0c35\u0c48\u0c1c\u0c3e\u0c17\u0c4d \u0c13\u0c30\u0c4d\u200c\u0c24\u0c4b & \u0c38\u0c4d\u0c2a\u0c48\u0c28\u0c4d \u0c38\u0c46\u0c02\u0c1f\u0c30\u0c4d",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647630,
+    "lat": 17.710327,
+    "lon": 83.302862,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Sri Amrutha Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647632,
+    "lat": 17.6869092,
+    "lon": 83.2079845,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Gandhinagar, Gajuwaka",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Mamata Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647633,
+    "lat": 17.709779,
+    "lon": 83.3103498,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Krishna Nagar, Maharani Peta",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sri Surya Dental Hospital",
+      "name:te": "\u0c36\u0c4d\u0c30\u0c40 \u0c38\u0c42\u0c30\u0c4d\u0c2f \u0c21\u0c46\u0c02\u0c1f\u0c32\u0c4d \u0c39\u0c3e\u0c38\u0c4d\u0c2a\u0c3f\u0c1f\u0c32\u0c4d",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647634,
+    "lat": 17.708149,
+    "lon": 83.309857,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Srirangapuram, Krishna Nagar, Maharani Peta",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Sri Surya Hospital",
+      "name:te": "\u0c36\u0c4d\u0c30\u0c40 \u0c38\u0c42\u0c30\u0c4d\u0c2f \u0c39\u0c3e\u0c38\u0c4d\u0c2a\u0c3f\u0c1f\u0c32\u0c4d",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647638,
+    "lat": 17.6877091,
+    "lon": 83.205361,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "BHVP Road, Gajuwaka",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Lata Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647639,
+    "lat": 17.6865547,
+    "lon": 83.2073838,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Gajuwaka",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Janani Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647640,
+    "lat": 17.6860522,
+    "lon": 83.2145015,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Indira Colony",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Geetha Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647641,
+    "lat": 17.7104023,
+    "lon": 83.3105799,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Krishna Nagar, Maharani Peta",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Shree Krishna Health Centre",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647642,
+    "lat": 17.745985,
+    "lon": 83.269641,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Burma Colony, Pattabhi Reddy Thota, Madhavadhara",
+      "addr:postcode": "530007",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Aditya Obstetrics & Gynecology Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647645,
+    "lat": 17.5685137,
+    "lon": 83.0939853,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:postcode": "531020",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "NTPC Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647647,
+    "lat": 17.6849028,
+    "lon": 83.2092812,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Kailasa Nagar, Gajuwaka",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sri Surya Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647648,
+    "lat": 17.6863384,
+    "lon": 83.2101897,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Gajuwaka",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Harshitha Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647649,
+    "lat": 17.790161,
+    "lon": 83.12163,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Sabbavaram",
+      "addr:postcode": "531035",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Mother and Child Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647650,
+    "lat": 17.8094151,
+    "lon": 83.2070778,
+    "tags": {
+      "addr:city": "Visakhapatnam, Andhra Pradesh",
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Chinnamushidiwada, Pendurthi",
+      "addr:housenumber": "R654+QRF, Chinnamushidiwada, Pendurthi, Visakhapatnam, Andhra Pradesh 531173",
+      "addr:postcode": "531173",
+      "addr:state": "Andhra Pradesh",
+      "addr:street": "Pendurthi",
+      "amenity": "hospital",
+      "emergency": "yes",
+      "healthcare": "hospital",
+      "healthcare:speciality": "dermatology;general",
+      "name": "Pendurthi Govt Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647652,
+    "lat": 17.746278,
+    "lon": 83.269671,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Muralinagar, Madhavadhara",
+      "addr:postcode": "530007",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sri Sai Aditya Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647654,
+    "lat": 17.710382,
+    "lon": 83.312125,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Krishna Nagar, Maharani Peta",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Gothis Doctor Chambers",
+      "name:te": "\u0c17\u0c4b\u0c24\u0c3f\u0c38\u0c4d \u0c21\u0c3e\u0c15\u0c4d\u0c1f\u0c30\u0c4d \u0c1a\u0c47\u0c02\u0c2c\u0c30\u0c4d\u0c38\u0c4d",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647655,
+    "lat": 17.6795765,
+    "lon": 83.2055093,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Vinayaka Nagar, Gonthinavanipalem, Pedagantyada",
+      "addr:postcode": "530044",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Harini Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647657,
+    "lat": 17.7671455,
+    "lon": 83.2120798,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Ravi Nagar, Naidu Thota",
+      "addr:postcode": "530047",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Heritage Kerala Ayurveda Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647660,
+    "lat": 17.6297105,
+    "lon": 83.077059,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Paravada, Jagannadhapuram Agraharam",
+      "addr:postcode": "531021",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sharan Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647661,
+    "lat": 17.710544,
+    "lon": 83.304302,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Jagadamba Junction",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Ramya Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647664,
+    "lat": 17.805851,
+    "lon": 83.213061,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Pendurthi",
+      "addr:postcode": "531173",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sri Sapthagiri Hospitals",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647666,
+    "lat": 17.7524734,
+    "lon": 83.2161371,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Bapuji Nagar, Gopalapatnam, Simhachalam",
+      "addr:postcode": "530027",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Government Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647667,
+    "lat": 17.7476896,
+    "lon": 83.2199593,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Gopalapatnam, Simhachalam",
+      "addr:postcode": "530027",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Raghavendra Eye Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647670,
+    "lat": 17.6212637,
+    "lon": 83.08184,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Paravada",
+      "addr:postcode": "531021",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Asha Hospital Diabetes & Multi Speciality",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647671,
+    "lat": 17.6852715,
+    "lon": 83.2046951,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Meher Nagar",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Muddu Krishna Children Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647673,
+    "lat": 17.7166466,
+    "lon": 83.3090277,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Nehru Nagar, Ram Nagar",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sarojini Devi Skin Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647675,
+    "lat": 17.7102508,
+    "lon": 83.3143316,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Krishna Nagar, Maharani Peta",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Ramsaranya Child Care Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647676,
+    "lat": 17.708177,
+    "lon": 83.308867,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Srirangapuram, Krishna Nagar, Maharani Peta",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Baba Hospital",
+      "name:te": "\u0c2c\u0c3e\u0c2c\u0c3e \u0c39\u0c3e\u0c38\u0c4d\u0c2a\u0c3f\u0c1f\u0c32\u0c4d",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647677,
+    "lat": 17.8177533,
+    "lon": 83.2064302,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Balaji Nagar, Pendurthi",
+      "addr:postcode": "531173",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Triveni Hospitals",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647678,
+    "lat": 17.6288271,
+    "lon": 83.0901428,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Pinamadaka",
+      "addr:postcode": "531021",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Amma Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7787647680,
+    "lat": 17.7100474,
+    "lon": 83.3046802,
+    "tags": {
+      "addr:district": "Visakhapatnam",
+      "addr:full": "Jagadamba Junction",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Aditya Multi Care Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7916820571,
+    "lat": 17.763448,
+    "lon": 83.3106082,
+    "tags": {
+      "addr:city": "Visakhapatnam",
+      "addr:housenumber": "Plot:15B, APIIC Health City, Chinna Gadhili, Arilova",
+      "addr:postcode": "530040",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "M.B. Hospitals"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7917282168,
+    "lat": 17.7171444,
+    "lon": 83.3091374,
+    "tags": {
+      "addr:city": "Visakhapatnam",
+      "addr:housenumber": "10-50-80",
+      "addr:postcode": "530002",
+      "addr:street": "Waltair Main Road",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "ApolloHospitals",
+      "operator": "Apollo Hospitals",
+      "operator:wikidata": "Q4780321",
+      "wikidata": "Q28153718",
+      "wikipedia": "en:Apollo Hospitals, Visakhapatnam"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7930495900,
+    "lat": 17.7638753,
+    "lon": 83.3057236,
+    "tags": {
+      "addr:city": "Visakhapatnam",
+      "addr:housenumber": "Plot No.10,11 &12",
+      "addr:postcode": "530040",
+      "address": "Plot No.10,11 &12, APIIC Health City, Chinagadili, Arilova, Visakhapatnam, Andhra Pradesh\u2013 530040",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "HCG Cancer Centre"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7931043211,
+    "lat": 17.7632652,
+    "lon": 83.3078391,
+    "tags": {
+      "addr:city": "Visakhapatnam",
+      "addr:housenumber": "Plot no.10, 11 & 12",
+      "addr:postcode": "530040",
+      "addr:street": "APIIC Health city, Arilova, Chinagadili.",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Star Pinnacle Heart Centre",
+      "name:te": "\u0c38\u0c4d\u0c1f\u0c3e\u0c30\u0c4d \u0c2a\u0c3f\u0c28\u0c4d\u0c28\u0c15\u0c3f\u0c32\u0c4d \u0c39\u0c3e\u0c30\u0c4d\u0c1f\u0c4d \u0c38\u0c46\u0c02\u0c1f\u0c30\u0c4d"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7934165413,
+    "lat": 17.6898831,
+    "lon": 83.1144238,
+    "tags": {
+      "addr:city": "Visakhapatnam",
+      "addr:postcode": "530053",
+      "addr:street": "Marripalem, Aganampudi Village, Gajuvaka Mandalam National Highway 16",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Homi Bhabha Cancer Hospital & Research Centre",
+      "name:etymology:wikidata": "Q325611",
+      "wikidata": "Q65059030",
+      "wikipedia": "en:Homi Bhabha Cancer Hospital and Research Centre, Visakhapatnam"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7951547049,
+    "lat": 17.7097535,
+    "lon": 83.3106734,
+    "tags": {
+      "addr:city": "Visakhapatnam",
+      "addr:housenumber": "14-37-33B",
+      "addr:postcode": "530002",
+      "addr:street": "Krishna Nagar road",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Ramsaranya Hospitals",
+      "name:te": "\u0c30\u0c3e\u0c02\u0c36\u0c30\u0c23\u0c4d\u0c2f \u0c39\u0c3e\u0c38\u0c4d\u0c2a\u0c3f\u0c1f\u0c32\u0c4d\u0c38\u0c4d"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7951595809,
+    "lat": 17.7202856,
+    "lon": 83.3130073,
+    "tags": {
+      "alt_name": "A.S Raja Complex",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Visakha Hospitals And Diagnostics"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7969038055,
+    "lat": 17.7173631,
+    "lon": 83.3094245,
+    "tags": {
+      "addr:city": "Visakhapatnam",
+      "addr:postcode": "530002",
+      "addr:street": "Rockdale Layout, Waltair Main Road",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "SevenHills Hospital"
+    }
+  },
+  {
+    "type": "node",
+    "id": 7999688946,
+    "lat": 17.6843531,
+    "lon": 83.2377236,
+    "tags": {
+      "addr:city": "Visakhapatnam",
+      "addr:housenumber": "Door No 62-2-106",
+      "addr:postcode": "530011",
+      "addr:street": "Malkapuram",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "St Anns Jubilee Memorial Hospital"
+    }
+  },
+  {
+    "type": "node",
+    "id": 8767763195,
+    "lat": 17.7396152,
+    "lon": 83.2555653,
+    "tags": {
+      "addr:district": "Vishakapatnam",
+      "addr:full": "Sai Nagar, Marripalem, Visakhapatnam",
+      "addr:postcode": "530018",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Suraksha Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 8767818502,
+    "lat": 17.7640286,
+    "lon": 83.3113995,
+    "tags": {
+      "addr:district": "Vishakapatnam",
+      "addr:full": "Health City, Chinna Gadhili, Hanumanthavaka, Visakhapatnam",
+      "addr:postcode": "530040",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Varma Hospitals",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 8767908843,
+    "lat": 17.7295406,
+    "lon": 83.309347,
+    "tags": {
+      "addr:district": "Vishakapatnam",
+      "addr:full": "Door. No. 47, 935, 3rd Line, Seetamma Peta, Dwaraka Nagar, Visakhapatnam",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sai Spoorthy Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 8767992101,
+    "lat": 17.7304744,
+    "lon": 83.3113942,
+    "tags": {
+      "addr:district": "Vishakapatnam",
+      "addr:full": "Seetamma Peta, Dwaraka Nagar, Visakhapatnam",
+      "addr:postcode": "530016",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Government Regional Eye Hospital",
+      "source": "Local Knowledge",
+      "wikidata": "Q65058377",
+      "wikipedia": "en:Dr. Rednam Surya Prasadrao Government Regional Eye Hospital"
+    }
+  },
+  {
+    "type": "node",
+    "id": 8768007090,
+    "lat": 17.710174,
+    "lon": 83.3045894,
+    "tags": {
+      "addr:district": "Vishakapatnam",
+      "addr:full": "17-1-17, Maharani Peta, Visakhapatnam",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "LG Hospitals",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 8768034019,
+    "lat": 17.763791,
+    "lon": 83.3124349,
+    "tags": {
+      "addr:district": "Vishakapatnam",
+      "addr:full": "Chinna Gadhili, Arilova, Visakhapatnam",
+      "addr:postcode": "530040",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Omega Hospitals",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 8768039075,
+    "lat": 17.7638179,
+    "lon": 83.3121251,
+    "tags": {
+      "addr:district": "Vishakapatnam",
+      "addr:full": "Chinna Gadhili, Arilova, Visakhapatnam",
+      "addr:postcode": "530040",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Medicover Hospitals",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 8768045905,
+    "lat": 17.7100054,
+    "lon": 83.3109067,
+    "tags": {
+      "addr:district": "Vishakapatnam",
+      "addr:full": "14-37-4/A, Krishna Nagar, Maharani Peta, Visakhapatnam",
+      "addr:postcode": "530002",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Ramsaranya Hospitals",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 8768062261,
+    "lat": 17.7336653,
+    "lon": 83.3324401,
+    "tags": {
+      "addr:district": "Vishakapatnam",
+      "addr:full": "Lawsons Bay Colony, Pedda Waltair, Visakhapatnam",
+      "addr:postcode": "530017",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "GJ Hospitals And Trauma Centre",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 8768067733,
+    "lat": 17.6812931,
+    "lon": 83.2159491,
+    "tags": {
+      "addr:district": "Vishakapatnam",
+      "addr:full": "BC Road, Seetharam Nagar, Gajuwaka, Visakhapatnam",
+      "addr:postcode": "530026",
+      "addr:state": "Andhra Pradesh",
+      "amenity": "hospital",
+      "name": "Sankar Foundation Eye Hospital",
+      "source": "Local Knowledge"
+    }
+  },
+  {
+    "type": "node",
+    "id": 9772561605,
+    "lat": 17.7493798,
+    "lon": 83.2191542,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Chest Hospital and Medical Store"
+    }
+  },
+  {
+    "type": "node",
+    "id": 10892780888,
+    "lat": 17.809861,
+    "lon": 83.2082462,
+    "tags": {
+      "addr:city": "visakhapatnam",
+      "addr:housenumber": "No:- 1, Araku - Visakhapatnam Rd, Sarada Nagar, Karmika Nagar,",
+      "addr:postcode": "531173",
+      "addr:street": "Pendurthi",
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Eye Hospitals"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11504889354,
+    "lat": 17.9582444,
+    "lon": 83.2171766,
+    "tags": {
+      "amenity": "hospital",
+      "check_date": "2024-01-10",
+      "healthcare": "hospital",
+      "name": "Visvam Healthcare Center"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11568650732,
+    "lat": 17.7095113,
+    "lon": 83.2987435,
+    "tags": {
+      "amenity": "fire_station",
+      "wikimedia_commons": "File:Fire_station_in_Vizag.jpg"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11609626426,
+    "lat": 17.7251141,
+    "lon": 83.3147147,
+    "tags": {
+      "amenity": "hospital",
+      "check_date": "2024-02-11",
+      "healthcare": "hospital",
+      "name": "Dr.Mohan's Diabetes Specialities Centre"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11647371247,
+    "lat": 17.6847886,
+    "lon": 83.1660819,
+    "tags": {
+      "amenity": "police",
+      "check_date": "2024-02-21",
+      "name": "Duvvada Police Station"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11688050188,
+    "lat": 17.7381018,
+    "lon": 83.3052011,
+    "tags": {
+      "amenity": "police",
+      "name": "4th Town Police Station"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11690446188,
+    "lat": 17.7414668,
+    "lon": 83.3118352,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "AMG Hospital"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11711398033,
+    "lat": 17.899753,
+    "lon": 83.1881834,
+    "tags": {
+      "amenity": "hospital",
+      "check_date": "2024-03-10",
+      "healthcare": "hospital",
+      "name": "Children Multi Speciality Hospital",
+      "operator": "Sri Parameswari",
+      "operator:type": "private"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11740567974,
+    "lat": 17.7478206,
+    "lon": 83.3318795,
+    "tags": {
+      "amenity": "hospital",
+      "check_date": "2024-03-17",
+      "healthcare": "hospital",
+      "name": "Medicover Hospitals"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11740884421,
+    "lat": 17.786154,
+    "lon": 83.3567371,
+    "tags": {
+      "amenity": "police",
+      "check_date": "2024-03-18"
+    }
+  },
+  {
+    "type": "node",
+    "id": 11851269089,
+    "lat": 17.7401303,
+    "lon": 83.2535864,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Suneetha Hospital Dr V Anand Rao"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12213464286,
+    "lat": 17.8046265,
+    "lon": 83.2093877,
+    "tags": {
+      "amenity": "hospital",
+      "emergency": "yes",
+      "healthcare": "hospital",
+      "mobile": "+919059240406",
+      "name": "Sai Clinic"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12213464390,
+    "lat": 17.8009047,
+    "lon": 83.2105594,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Saadhana Hospitals"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12213911037,
+    "lat": 17.8032146,
+    "lon": 83.2092659,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Surabhi Clinics"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12213911077,
+    "lat": 17.8024276,
+    "lon": 83.2094537,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Sarat Chandras Speciality Clinic"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12252527618,
+    "lat": 17.8972279,
+    "lon": 83.185985,
+    "tags": {
+      "amenity": "hospital",
+      "name": "Sunflower childrens clinic"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12291719195,
+    "lat": 17.9013382,
+    "lon": 83.1903751,
+    "tags": {
+      "amenity": "police",
+      "check_date": "2024-10-26",
+      "name": "Kothavalsa Police Station"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12470766214,
+    "lat": 17.7350078,
+    "lon": 83.2719764,
+    "tags": {
+      "amenity": "hospital",
+      "name": "Dr BV Adinarayana Childrens Specialist"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12531593373,
+    "lat": 17.729599,
+    "lon": 83.3294672,
+    "tags": {
+      "amenity": "hospital",
+      "name": "Ayushman arogya mandir"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12837010587,
+    "lat": 17.6875376,
+    "lon": 83.2582017,
+    "tags": {
+      "amenity": "police",
+      "check_date": "2025-05-14",
+      "name": "Malkapuram Police Station"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12892324871,
+    "lat": 17.9045341,
+    "lon": 83.4053081,
+    "tags": {
+      "amenity": "fire_station",
+      "check_date": "2025-06-06",
+      "name": "Chittivalasa Fire Station"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12892352602,
+    "lat": 17.8931748,
+    "lon": 83.3719104,
+    "tags": {
+      "amenity": "police",
+      "check_date": "2025-06-06",
+      "name": "Anandapuram Police Station"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12954702919,
+    "lat": 17.7996523,
+    "lon": 83.3526684,
+    "tags": {
+      "amenity": "police",
+      "name": "P.M. Palem Traffic Police Station"
+    }
+  },
+  {
+    "type": "node",
+    "id": 12992712257,
+    "lat": 17.7373995,
+    "lon": 83.3353795,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "KIMS Hospitals"
+    }
+  },
+  {
+    "type": "node",
+    "id": 13108171657,
+    "lat": 17.7625271,
+    "lon": 83.3075353,
+    "tags": {
+      "amenity": "hospital",
+      "check_date": "2025-08-30",
+      "healthcare": "hospital",
+      "name": "Indus Hospitals"
+    }
+  },
+  {
+    "type": "node",
+    "id": 13108171659,
+    "lat": 17.7621246,
+    "lon": 83.3119581,
+    "tags": {
+      "amenity": "hospital",
+      "check_date": "2025-08-30",
+      "healthcare": "hospital",
+      "name": "Narayana Medicity"
+    }
+  },
+  {
+    "type": "node",
+    "id": 13179825649,
+    "lat": 17.7403603,
+    "lon": 83.2464417,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Sanjivani Hospital"
+    }
+  },
+  {
+    "type": "node",
+    "id": 13204632652,
+    "lat": 17.7989437,
+    "lon": 83.3963328,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Gandhi"
+    }
+  },
+  {
+    "type": "node",
+    "id": 13204637343,
+    "lat": 17.7952383,
+    "lon": 83.3893022,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "forest"
+    }
+  },
+  {
+    "type": "node",
+    "id": 13204638818,
+    "lat": 17.7953651,
+    "lon": 83.3890616,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "forest"
+    }
+  },
+  {
+    "type": "node",
+    "id": 13204639830,
+    "lat": 17.7989074,
+    "lon": 83.3882361,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "forest"
+    }
+  },
+  {
+    "type": "node",
+    "id": 13281158467,
+    "lat": 17.6872398,
+    "lon": 83.0127619,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Geetha Eye & Orthopaedic Hospital"
+    }
+  },
+  {
+    "type": "node",
+    "id": 13369321117,
+    "lat": 17.900578,
+    "lon": 83.1897275,
+    "tags": {
+      "amenity": "hospital",
+      "check_date": "2025-11-24",
+      "healthcare": "hospital",
+      "name": "Primary Health Center Kothavalasa"
+    }
+  },
+  {
+    "type": "node",
+    "id": 13543686111,
+    "lat": 17.7912715,
+    "lon": 83.1258107,
+    "tags": {
+      "amenity": "police",
+      "check_date": "2026-02-10",
+      "name": "Sabbavaram Police Station"
+    }
+  },
+  {
+    "type": "node",
+    "id": 13543686113,
+    "lat": 17.7915674,
+    "lon": 83.1273676,
+    "tags": {
+      "amenity": "fire_station",
+      "check_date": "2026-02-10",
+      "name": "Sabbavaram Fire Station"
+    }
+  },
+  {
+    "type": "node",
+    "id": 13703071976,
+    "lat": 17.7161878,
+    "lon": 83.3072753,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "operator": "Dr. Agarwal's Eye Hospital",
+      "operator:type": "private",
+      "operator:wikidata": "Q17052044"
+    }
+  },
+  {
+    "type": "node",
+    "id": 13703652259,
+    "lat": 17.6846933,
+    "lon": 83.2022417,
+    "tags": {
+      "amenity": "hospital",
+      "healthcare": "hospital",
+      "name": "Rise Hospital"
+    }
+  },
+  {
+    "type": "node",
+    "id": 13800470090,
+    "lat": 17.7291423,
+    "lon": 83.3007641,
+    "tags": {
+      "amenity": "hospital",
+      "check_date": "2026-05-06",
+      "healthcare": "hospital",
+      "name": "Urban Primary Health Center Dondaparthy"
+    }
+  },
+  {
+    "type": "node",
+    "id": 13953432354,
+    "lat": 17.7426014,
+    "lon": 83.3281621,
+    "tags": {
+      "amenity": "police",
+      "check_date": "2026-06-10",
+      "name": "Directorate Of Enforcement"
+    }
+  }
+]

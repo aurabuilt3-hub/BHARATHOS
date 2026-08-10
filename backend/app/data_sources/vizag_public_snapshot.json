@@ -1,0 +1,4722 @@
+[
+  {
+    "name": "Visakha Homeo Clinic",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7224616,
+    "longitude": 83.3094001,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "1474046817",
+      "original_name": "Visakha Homeo Clinic",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Nikitha Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "D.No: 54-13-6, Beside S.B.I., Seethammadhara junction.",
+    "phone": "0891-2501501, 2719797, 2719696",
+    "latitude": 17.7426752,
+    "longitude": 83.3145614,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "1474440233",
+      "original_name": "Nikitha Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Padmaja Hospital - Seethammadhara",
+    "facility_type": "HOSPITAL",
+    "address": "Seethammadhara Jn",
+    "phone": null,
+    "latitude": 17.7436298,
+    "longitude": 83.3146125,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "2332948921",
+      "original_name": "Padmaja Hospital - Seethammadhara",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Jyothi Nursing Home",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.739081,
+    "longitude": 83.3229595,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "3265317980",
+      "original_name": "Jyothi Nursing Home",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Durga Nursing Home",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": "0891 255 8037",
+    "latitude": 17.7362275,
+    "longitude": 83.2713316,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "4267548789",
+      "original_name": "Durga Nursing Home",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Gopalapatnam Police Station",
+    "facility_type": "POLICE_STATION",
+    "address": "Araku-Visakhapatnam Road, Near State Bank ATM, Gopalapatam, Nad Junction, Gopalapatnam, Dungalavanipalem,",
+    "phone": "+91 891 252 0933",
+    "latitude": 17.7442772,
+    "longitude": 83.2257172,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "4446452868",
+      "original_name": "Gopalapatnam Police Station",
+      "original_category": "police"
+    }
+  },
+  {
+    "name": "Parawada Police Station",
+    "facility_type": "POLICE_STATION",
+    "address": "Visakhapatnam",
+    "phone": "+91 8933229533 ,+91 9440796082",
+    "latitude": 17.6296866,
+    "longitude": 83.0909269,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "4446457746",
+      "original_name": "Parawada Police Station",
+      "original_category": "police"
+    }
+  },
+  {
+    "name": "Rama Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 50-50-33/2, Ballayasastry Layout",
+    "phone": "08912727234; 2711444;",
+    "latitude": 17.7375272,
+    "longitude": 83.3071191,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "4541095944",
+      "original_name": "Rama Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "kalavathi hospital",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7824442,
+    "longitude": 83.2706719,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "4568276771",
+      "original_name": "kalavathi hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "LV Prasad Eye Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 11-113/1, Hanumanthawaka Junction",
+    "phone": "891- 6714000; 0891-86714055; 0891-6714066",
+    "latitude": 17.7568569,
+    "longitude": 83.3309144,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "4568465189",
+      "original_name": "LV Prasad Eye Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "KIMS (formerly Queens NRI Hospital)",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 50 - 53 - 14, Gurudwara Lane, Seethammadhara, Beside A. P.E.P. D. C. L Corporation Ltd",
+    "phone": "2535063",
+    "latitude": 17.7404353,
+    "longitude": 83.3080536,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "4635870145",
+      "original_name": "KIMS (formerly Queens NRI Hospital)",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sri Venkateshwara Nursing Hospital",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7147802,
+    "longitude": 83.307414,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "4799206480",
+      "original_name": "Sri Venkateshwara Nursing Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Amulya Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": "Nowroji Street",
+    "phone": null,
+    "latitude": 17.7154685,
+    "longitude": 83.3086985,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "4801326526",
+      "original_name": "Amulya Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Kala Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 27-1-104, 6th Lane, Dwarakanagar",
+    "phone": "08912764748;",
+    "latitude": 17.7288521,
+    "longitude": 83.3056846,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "4896583363",
+      "original_name": "Kala Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Pedda Gantyada Fore Station",
+    "facility_type": "FIRE_STATION",
+    "address": null,
+    "phone": null,
+    "latitude": 17.6680242,
+    "longitude": 83.2078233,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "5621265135",
+      "original_name": "Pedda Gantyada Fore Station",
+      "original_category": "fire_station"
+    }
+  },
+  {
+    "name": "Dr. VJs Cosmetic Surgery& Hair Transplantation Centre",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7236037,
+    "longitude": 83.2984784,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "5798458939",
+      "original_name": "Dr. VJs Cosmetic Surgery& Hair Transplantation Centre",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "St. Joseph's Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Zilla Parishad Juction, Gokhale Rd, Beside Spencer's, Port Officers Quarters",
+    "phone": null,
+    "latitude": 17.7113427,
+    "longitude": 83.3120581,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6628808944",
+      "original_name": "St. Joseph's Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "shantiniketan mental health centre",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.710893,
+    "longitude": 83.3118425,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6628820476",
+      "original_name": "shantiniketan mental health centre",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Mycure hospital",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7120173,
+    "longitude": 83.3146963,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6628861067",
+      "original_name": "Mycure hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Surya skin care",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7141226,
+    "longitude": 83.3143316,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6628946789",
+      "original_name": "Surya skin care",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Krishna Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "D.No: 14-37-29/1,Krishna Nagar, Maharanipeta, Z.P Junction, Visakhpatnam.",
+    "phone": "0891- 2538194 / 95",
+    "latitude": 17.7100754,
+    "longitude": 83.3109627,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6629033364",
+      "original_name": "Krishna Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Aaradhya fertility centre",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7149198,
+    "longitude": 83.3128724,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6629035082",
+      "original_name": "Aaradhya fertility centre",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sagar Durga Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "D.No: 15-13-6, Krishna Nagar Road",
+    "phone": null,
+    "latitude": 17.7086688,
+    "longitude": 83.3109667,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6629036947",
+      "original_name": "Sagar Durga Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Shri Venkataramana Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 15 -12-18/A, Krishna Nagar, Zillaparishad Junction",
+    "phone": "0891-2718315",
+    "latitude": 17.7090399,
+    "longitude": 83.3111357,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6629071967",
+      "original_name": "Shri Venkataramana Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "ABC hospital",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7070739,
+    "longitude": 83.3090178,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6629428979",
+      "original_name": "ABC hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Apex hospital",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7075645,
+    "longitude": 83.3089749,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6629457613",
+      "original_name": "Apex hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Usa hospital",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7078558,
+    "longitude": 83.3087882,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6629460182",
+      "original_name": "Usa hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Simhadri Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 15-12-1, Krishna Nagar, Maharani Peta",
+    "phone": "08912784545",
+    "latitude": 17.7082343,
+    "longitude": 83.3104939,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6635493113",
+      "original_name": "Simhadri Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Apollow pharmacy",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7082036,
+    "longitude": 83.3099146,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6635506599",
+      "original_name": "Apollow pharmacy",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Nature cure hospital",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7076415,
+    "longitude": 83.3111377,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6635515144",
+      "original_name": "Nature cure hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Life  medical centre",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7076108,
+    "longitude": 83.308198,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6635545548",
+      "original_name": "Life  medical centre",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Doctors care medical centre",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7079072,
+    "longitude": 83.3093781,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6635549621",
+      "original_name": "Doctors care medical centre",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sriddha hospital",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7081218,
+    "longitude": 83.3094103,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6635561459",
+      "original_name": "Sriddha hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Pinnacle",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7636985,
+    "longitude": 83.3082425,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6711948950",
+      "original_name": "Pinnacle",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Q1 Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7624241,
+    "longitude": 83.3078726,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6711993032",
+      "original_name": "Q1 Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "GIMS",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7620819,
+    "longitude": 83.3116458,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6712009588",
+      "original_name": "GIMS",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Apex Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 16-1-5, Coastal Battery Road, Maharznipeta",
+    "phone": null,
+    "latitude": 17.7067706,
+    "longitude": 83.3090204,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6755526826",
+      "original_name": "Apex Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Dj Clinic",
+    "facility_type": "HOSPITAL",
+    "address": "Sector VI Bus Stop, Mvp Colony",
+    "phone": null,
+    "latitude": 17.7440297,
+    "longitude": 83.3354643,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6758443699",
+      "original_name": "Dj Clinic",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Ramyasai Nursing Home",
+    "facility_type": "HOSPITAL",
+    "address": "Opp: R.T.C. Complex, Anakapalle",
+    "phone": "226099",
+    "latitude": 17.6861622,
+    "longitude": 83.0016124,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6758468632",
+      "original_name": "Ramyasai Nursing Home",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Vision Care Centre (Super Speciality Eye Hospital)",
+    "facility_type": "HOSPITAL",
+    "address": "D.No: 43-1424/4 and 43-14/4/2 (1st Floor), Sai Krishna Complex, Main Road, Railway New Colony, Visakhapatnam",
+    "phone": "8912790000",
+    "latitude": 17.7277139,
+    "longitude": 83.295486,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6758665270",
+      "original_name": "Vision Care Centre (Super Speciality Eye Hospital)",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Apoorva Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 50-17-62, Rajendra Nagar, Near Seethammapeta Junction",
+    "phone": "08912701258",
+    "latitude": 17.7300554,
+    "longitude": 83.3075653,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6758677177",
+      "original_name": "Apoorva Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Anapoorna Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 47 - 9 - 32, 3ird Lane, Dwaraka Nagar",
+    "phone": "8912755875",
+    "latitude": 17.7273371,
+    "longitude": 83.3047865,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6758686628",
+      "original_name": "Anapoorna Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Maxivision Super Speciality Eye Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": "Pavan Paradise, Near Diamond Park, Dwaraka Nagar",
+    "phone": "08912550550",
+    "latitude": 17.7269219,
+    "longitude": 83.304584,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6758705097",
+      "original_name": "Maxivision Super Speciality Eye Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Care Dental Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 1, Sree Balaji Chambers, Seethammapeta Main Road, Gurudwara Junction",
+    "phone": "8912552690",
+    "latitude": 17.7363435,
+    "longitude": 83.307247,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6758710664",
+      "original_name": "Care Dental Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "M.G.R. Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 8-4-32, Doctors Colony, Near Visakha Eye Hospital, Pedawaltair",
+    "phone": "0891-2755908",
+    "latitude": 17.7325361,
+    "longitude": 83.3309823,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6758717165",
+      "original_name": "M.G.R. Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Rhea Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 18-01-03, K.G.H. Down, Maharanipeta, Jagadamba Junction",
+    "phone": "8912793636",
+    "latitude": 17.7092414,
+    "longitude": 83.3041777,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6758735188",
+      "original_name": "Rhea Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Adarsha Orthopaedic Center",
+    "facility_type": "HOSPITAL",
+    "address": "Opp. St. Joseph's Hospital , Maharanipeta",
+    "phone": null,
+    "latitude": 17.7109406,
+    "longitude": 83.3117884,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6758743207",
+      "original_name": "Adarsha Orthopaedic Center",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Prabha Clinic and Nursing Home",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 29-2-36, Jail Road",
+    "phone": null,
+    "latitude": 17.7162921,
+    "longitude": 83.3041039,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6758772439",
+      "original_name": "Prabha Clinic and Nursing Home",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Mythri Nursing Home",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 16-1-4, K G H Beach Road, Maharanipet",
+    "phone": "8912706963",
+    "latitude": 17.7071258,
+    "longitude": 83.3089118,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6758784627",
+      "original_name": "Mythri Nursing Home",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Gowtami Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Kailashnagar , Kanithi Road, Gajuwaka",
+    "phone": null,
+    "latitude": 17.6825514,
+    "longitude": 83.2063977,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6758813629",
+      "original_name": "Gowtami Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Satyam Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 9-333/1, Ground Floor Of Union Bank, Beside Sankara Theatre, Gopalapatnam",
+    "phone": null,
+    "latitude": 17.7499948,
+    "longitude": 83.2187018,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6761009918",
+      "original_name": "Satyam Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Venkatarama Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 47-7-43, 4th line, Dwaraka Nagar, Nehru Bazar, Diamond Park Road, Dondaparthy",
+    "phone": "08912798631",
+    "latitude": 17.7278327,
+    "longitude": 83.3031356,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6761017583",
+      "original_name": "Venkatarama Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "SR Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Opp. Raitubazar, Gopalapatnam, Tailors Colony",
+    "phone": "08912520822",
+    "latitude": 17.752968,
+    "longitude": 83.2173438,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6761020424",
+      "original_name": "SR Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Good Health New Central Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "G1-10-16, Dwaraka Nagar Colony, Vizag",
+    "phone": null,
+    "latitude": 17.7379611,
+    "longitude": 83.3055443,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6761040532",
+      "original_name": "Good Health New Central Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Dr Rama Rao Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Kancharapalem",
+    "phone": "2558518",
+    "latitude": 17.7332163,
+    "longitude": 83.2790163,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6761060209",
+      "original_name": "Dr Rama Rao Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Vijetha Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "# 18-1-15,16, KGH Down, Near KGH Down Road, Maharani Peta, Jagadamba Junction, Visakhapatnam",
+    "phone": "92466 55454",
+    "latitude": 17.7106199,
+    "longitude": 83.3030283,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6761079196",
+      "original_name": "Vijetha Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sun Multi Speciality Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Old Durga Nursing Home, Near Urvasi Theatre, Nh-5 Road, Kancharapalem",
+    "phone": "8912558037",
+    "latitude": 17.7350755,
+    "longitude": 83.277593,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6768028772",
+      "original_name": "Sun Multi Speciality Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Abc Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 16-1-13, Kgh To Beach Down, Opposite Coastak Battery, Maharani Peth",
+    "phone": null,
+    "latitude": 17.7061715,
+    "longitude": 83.3092725,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6768332127",
+      "original_name": "Abc Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Suma Maternity Home",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 45-40-39, Akkayyapalem",
+    "phone": "2550147",
+    "latitude": 17.7463633,
+    "longitude": 83.2642758,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6768383856",
+      "original_name": "Suma Maternity Home",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Lion Dist 324 C, Cancer Treatment and Research Center",
+    "facility_type": "HOSPITAL",
+    "address": "Seethammadhara (N.E.)",
+    "phone": null,
+    "latitude": 17.7443962,
+    "longitude": 83.3083713,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6768386211",
+      "original_name": "Lion Dist 324 C, Cancer Treatment and Research Center",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Amg Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Seethammadhara",
+    "phone": null,
+    "latitude": 17.7382076,
+    "longitude": 83.3146349,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6768387728",
+      "original_name": "Amg Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Indus Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 18-1-6, K. G. H. Down Road, Maharanipeta",
+    "phone": "984 8724 365; 991 2222 456",
+    "latitude": 17.7108601,
+    "longitude": 83.3026153,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6768451188",
+      "original_name": "Indus Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Visakha Ent Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "D.No: 9-24-2/A, Rama Talkies Amar Nagar, Cbm Compound",
+    "phone": "8912745030",
+    "latitude": 17.7264096,
+    "longitude": 83.3107545,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6768577352",
+      "original_name": "Visakha Ent Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Susruta Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Gajuwaka",
+    "phone": "2517167",
+    "latitude": 17.6853215,
+    "longitude": 83.208107,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6768715568",
+      "original_name": "Susruta Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "R K Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "26-16-7,Chaitanya nagar,Gajuwaka,Visakhaptanam",
+    "phone": "0891-2764411",
+    "latitude": 17.6824479,
+    "longitude": 83.1970797,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6768741999",
+      "original_name": "R K Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Padmasri Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "49-48 16/5, NGO Colony, Akkayyapalem Highway, Vishakhapatnam",
+    "phone": "2734747",
+    "latitude": 17.7382447,
+    "longitude": 83.3036815,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6768783710",
+      "original_name": "Padmasri Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Raghavendra Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "D.No: 49-54-10/2A, Balayya Saatry Layout",
+    "phone": null,
+    "latitude": 17.739964,
+    "longitude": 83.3041066,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6770856512",
+      "original_name": "Raghavendra Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sujatha Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "D.No: 6-60-8/9, Sramikanagar, Gajuwaka",
+    "phone": null,
+    "latitude": 17.6840514,
+    "longitude": 83.1985898,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6770857209",
+      "original_name": "Sujatha Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Centre For Sight",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 49-51-6, Santhipuram, Shankar Mattam road",
+    "phone": "9000469497",
+    "latitude": 17.7364998,
+    "longitude": 83.3044016,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6770861724",
+      "original_name": "Centre For Sight",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Krishna Maternity And Nursing Home",
+    "facility_type": "HOSPITAL",
+    "address": "D.No: 43-5-53, Railway New Colony, By The Side Of Laymen's Evange",
+    "phone": "8912720769",
+    "latitude": 17.7288061,
+    "longitude": 83.293823,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6773497407",
+      "original_name": "Krishna Maternity And Nursing Home",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Amrutha Nursing Home Private Limited",
+    "facility_type": "HOSPITAL",
+    "address": "D.No: 10-7-85, Kailash Nagar. , Gajuwaka",
+    "phone": null,
+    "latitude": 17.69981,
+    "longitude": 83.2960858,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6773519885",
+      "original_name": "Amrutha Nursing Home Private Limited",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Padmaja Hospital - Gajuwaka",
+    "facility_type": "HOSPITAL",
+    "address": "D.No: 7-15-12, Old Gajuwaka",
+    "phone": null,
+    "latitude": 17.6867743,
+    "longitude": 83.203619,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6773613228",
+      "original_name": "Padmaja Hospital - Gajuwaka",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Care Hospital - Maharanipet",
+    "facility_type": "HOSPITAL",
+    "address": "Kgh Road, Maharanipet",
+    "phone": "0891 3067044 ,0891 3067022, 0891-3067000",
+    "latitude": 17.7097505,
+    "longitude": 83.3054544,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6773652312",
+      "original_name": "Care Hospital - Maharanipet",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Samudra Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 18-1-25, Beside vijaya Bank, Kgh Down Road , Maharanipeta",
+    "phone": "8912533955",
+    "latitude": 17.7103989,
+    "longitude": 83.3037458,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6778457455",
+      "original_name": "Samudra Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Vikram Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Opp: Rtc Complex.",
+    "phone": null,
+    "latitude": 17.6870707,
+    "longitude": 83.0013013,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6778538692",
+      "original_name": "Vikram Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Abhaya Critical Care",
+    "facility_type": "HOSPITAL",
+    "address": "D.No: 18-1-34, Opposite K.G.H. O.P. Gate",
+    "phone": null,
+    "latitude": 17.7102328,
+    "longitude": 83.3043534,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6778593240",
+      "original_name": "Abhaya Critical Care",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sunita Nursing Home",
+    "facility_type": "HOSPITAL",
+    "address": "Seethammadhara",
+    "phone": null,
+    "latitude": 17.7362763,
+    "longitude": 83.3115497,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6778878343",
+      "original_name": "Sunita Nursing Home",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Waltair Multicare Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 8-197/2, Behind Laxmi Ganapathi Temple, Peda Waltair Junction",
+    "phone": "8.92E+16",
+    "latitude": 17.7320085,
+    "longitude": 83.333627,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6778891203",
+      "original_name": "Waltair Multicare Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Siddharth Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 13-9-12, Dandu Bazar Road, Jagadamba Junction, Maharanipeta",
+    "phone": null,
+    "latitude": 17.7118451,
+    "longitude": 83.3038954,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6778921290",
+      "original_name": "Siddharth Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Visakha Children Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 14-38-1 , Opp American Hospital , Z.P Jn",
+    "phone": null,
+    "latitude": 17.7108448,
+    "longitude": 83.3125274,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6782119569",
+      "original_name": "Visakha Children Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sraddha Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "D.No: 14-37-45, Collector Office Junction",
+    "phone": null,
+    "latitude": 17.7083599,
+    "longitude": 83.3086663,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6787301791",
+      "original_name": "Sraddha Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Tirumala Vijaya Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 1-68-21, Mig-10/2, Sector II, MVP Colony",
+    "phone": "2531553",
+    "latitude": 17.7440143,
+    "longitude": 83.3352873,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6787401750",
+      "original_name": "Tirumala Vijaya Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Aarif Nursing Home",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 10-36-8, Lane Beside, Royal Fort, Hotel Ramnagar, Opp: Gvmc Out Gate",
+    "phone": null,
+    "latitude": 17.7224323,
+    "longitude": 83.309819,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6789523012",
+      "original_name": "Aarif Nursing Home",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Vijaya Medical Centre",
+    "facility_type": "HOSPITAL",
+    "address": "Srirangapuram, Krishna Nagar, Maharani Peta,Visakhapatnam",
+    "phone": "2718179",
+    "latitude": 17.7099032,
+    "longitude": 83.3107518,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6789535761",
+      "original_name": "Vijaya Medical Centre",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "OMNI RK Super Specialty Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 15-13-7,Opp Lions Club, Ram Nagar.",
+    "phone": null,
+    "latitude": 17.7186287,
+    "longitude": 83.3116168,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6789549353",
+      "original_name": "OMNI RK Super Specialty Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Vasan Eye Care Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 10-50-81, Waltair Main Road , Rock Dale Lay Out",
+    "phone": "3989000",
+    "latitude": 17.7168287,
+    "longitude": 83.3087254,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6789680553",
+      "original_name": "Vasan Eye Care Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Lazarus Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 10-50-2, Waltair Main Road.",
+    "phone": "8912780780",
+    "latitude": 17.7171512,
+    "longitude": 83.3083036,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6789720253",
+      "original_name": "Lazarus Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sai Satya Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "T.I.C. Point,Arilova Colony",
+    "phone": null,
+    "latitude": 17.7685126,
+    "longitude": 83.3147241,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6789830343",
+      "original_name": "Sai Satya Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Bharathi Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 14-24-1, Mens Hostel Road, Maharanipeta",
+    "phone": "08912526500; 2526501;",
+    "latitude": 17.7108505,
+    "longitude": 83.3085356,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6791809450",
+      "original_name": "Bharathi Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Lawrance and Mayo Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "H.No: 28-2-55, Tenneti Square, Jagadamba Centre",
+    "phone": null,
+    "latitude": 17.7124353,
+    "longitude": 83.302677,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6791968309",
+      "original_name": "Lawrance and Mayo Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Prema Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Visakhapatnam",
+    "phone": null,
+    "latitude": 17.8796711,
+    "longitude": 83.3740931,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6794593273",
+      "original_name": "Prema Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "City Care Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Near Circuit House, Ramanagar, Waltair Main Road",
+    "phone": null,
+    "latitude": 17.7066084,
+    "longitude": 83.3090506,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6798143867",
+      "original_name": "City Care Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Kamala Nursing Home",
+    "facility_type": "HOSPITAL",
+    "address": "Marripalem, Main Road",
+    "phone": null,
+    "latitude": 17.7404309,
+    "longitude": 83.250969,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6801191501",
+      "original_name": "Kamala Nursing Home",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Cyber Crime",
+    "facility_type": "POLICE_STATION",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7211498,
+    "longitude": 83.3186179,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6804705372",
+      "original_name": "Cyber Crime",
+      "original_category": "police"
+    }
+  },
+  {
+    "name": "Kalavathi Surgical Hospital and Laparoscopic Centre",
+    "facility_type": "HOSPITAL",
+    "address": "Opp: Sri Kanya Theatre, Rly New Colony",
+    "phone": null,
+    "latitude": 17.7265297,
+    "longitude": 83.2990453,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6804727620",
+      "original_name": "Kalavathi Surgical Hospital and Laparoscopic Centre",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Subham Prema Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "D.No: 9-1-227, Rama Talkies Jn,. C. B. M. Compound",
+    "phone": null,
+    "latitude": 17.728124,
+    "longitude": 83.3123571,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6804768866",
+      "original_name": "Subham Prema Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Care Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": "Waltair Main Road, Ramnagar, Visakhapatnam",
+    "phone": "+91-0891-3041444",
+    "latitude": 17.7203686,
+    "longitude": 83.3127339,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6804932700",
+      "original_name": "Care Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Pendurthi Police Station",
+    "facility_type": "POLICE_STATION",
+    "address": "Pendurthi railway station road",
+    "phone": null,
+    "latitude": 17.8099057,
+    "longitude": 83.207571,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6828740925",
+      "original_name": "Pendurthi Police Station",
+      "original_category": "police"
+    }
+  },
+  {
+    "name": "MyCure Hospital",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7109237,
+    "longitude": 83.3023683,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "6843473422",
+      "original_name": "MyCure Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Government Hospital,Viyyampeta",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.9231609,
+    "longitude": 83.1486536,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7114008034",
+      "original_name": "Government Hospital,Viyyampeta",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Government Hospital,Bheemili",
+    "facility_type": "HOSPITAL",
+    "address": "Near Relli Veedhi",
+    "phone": null,
+    "latitude": 17.8877592,
+    "longitude": 83.4513908,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7114008044",
+      "original_name": "Government Hospital,Bheemili",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "GVMC hospital,FRU Arilova",
+    "facility_type": "HOSPITAL",
+    "address": "Govt Hospital",
+    "phone": null,
+    "latitude": 17.7686588,
+    "longitude": 83.3172347,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7114008055",
+      "original_name": "GVMC hospital,FRU Arilova",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "NTR Government Hospital,Anakapalle",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": "08932-223340",
+    "latitude": 17.6845257,
+    "longitude": 83.0067163,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7114008093",
+      "original_name": "NTR Government Hospital,Anakapalle",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Government Hospital, K Kotapadu",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": "08934-241041",
+    "latitude": 17.8883305,
+    "longitude": 83.0408116,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7114008149",
+      "original_name": "Government Hospital, K Kotapadu",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sri Venkata Sai Multi Specialty Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Kothavalasa",
+    "phone": null,
+    "latitude": 17.8951943,
+    "longitude": 83.1863316,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7786891185",
+      "original_name": "Sri Venkata Sai Multi Specialty Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Niharika Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Vizianagaram",
+    "phone": null,
+    "latitude": 17.8999331,
+    "longitude": 83.1856362,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7786891201",
+      "original_name": "Niharika Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Dr. B Ramarao Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Kothavalasa",
+    "phone": null,
+    "latitude": 17.8976322,
+    "longitude": 83.1862515,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7786891223",
+      "original_name": "Dr. B Ramarao Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Bethany Christian Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Anand Nagar, Pothinamallayya Palem",
+    "phone": null,
+    "latitude": 17.8027947,
+    "longitude": 83.347569,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057180",
+      "original_name": "Bethany Christian Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Dr. Adams Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Pothinamallayya Palem",
+    "phone": null,
+    "latitude": 17.7998444,
+    "longitude": 83.3508178,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057181",
+      "original_name": "Dr. Adams Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Master Homeo Vaidyalayam",
+    "facility_type": "HOSPITAL",
+    "address": "80 Feet Road, Akkayyapalem",
+    "phone": null,
+    "latitude": 17.7341833,
+    "longitude": 83.298429,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057184",
+      "original_name": "Master Homeo Vaidyalayam",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Dr. Hedgewar School Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Gudilova",
+    "phone": null,
+    "latitude": 17.8830152,
+    "longitude": 83.3251813,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057185",
+      "original_name": "Dr. Hedgewar School Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Ramakrishna ENT Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Srinivasa Nagar, Madhurawada, Visakhapatnam",
+    "phone": null,
+    "latitude": 17.8118168,
+    "longitude": 83.3557704,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057188",
+      "original_name": "Ramakrishna ENT Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Day & Night Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Ramatalkies, Dwaraka Nagar",
+    "phone": null,
+    "latitude": 17.7289618,
+    "longitude": 83.310741,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057191",
+      "original_name": "Day & Night Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "NRI General Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Visakhapatnam",
+    "phone": null,
+    "latitude": 17.921695,
+    "longitude": 83.426394,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057192",
+      "original_name": "NRI General Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "ESI Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Adarsanagar, Thagarapuvalasa",
+    "phone": null,
+    "latitude": 17.927652,
+    "longitude": 83.423953,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057193",
+      "original_name": "ESI Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sanjivi Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Sector 1, New Venkojipalem",
+    "phone": null,
+    "latitude": 17.743927,
+    "longitude": 83.328678,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057196",
+      "original_name": "Sanjivi Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Government Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Ramachandra Nagar, Akkayyapalem",
+    "phone": null,
+    "latitude": 17.735493,
+    "longitude": 83.296865,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057199",
+      "original_name": "Government Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sai Spoorthy Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Dwaraka Nagar",
+    "phone": null,
+    "latitude": 17.7274681,
+    "longitude": 83.3043823,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057201",
+      "original_name": "Sai Spoorthy Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Amma Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Venkojipalem",
+    "phone": null,
+    "latitude": 17.7468553,
+    "longitude": 83.3307524,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057202",
+      "original_name": "Amma Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sandhya Eye Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": "Resapuvanipalem, Dwaraka Nagar",
+    "phone": null,
+    "latitude": 17.7322507,
+    "longitude": 83.3169337,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057203",
+      "original_name": "Sandhya Eye Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Arogya Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Bangalametta, Thagarapuvalasa",
+    "phone": null,
+    "latitude": 17.9310994,
+    "longitude": 83.427302,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057204",
+      "original_name": "Arogya Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sri Krishna Hospital And Mrudula Kidney Centre",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7398696,
+    "longitude": 83.3381086,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057207",
+      "original_name": "Sri Krishna Hospital And Mrudula Kidney Centre",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Ramkumar Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "80 Feet Road, Akkayyapalem",
+    "phone": null,
+    "latitude": 17.7347439,
+    "longitude": 83.2989253,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057208",
+      "original_name": "Ramkumar Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Reddy Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Srinagar, Dwaraka Nagar",
+    "phone": null,
+    "latitude": 17.7295515,
+    "longitude": 83.3099357,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057209",
+      "original_name": "Reddy Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Kalavathy Maternity Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Akkayyapalem",
+    "phone": null,
+    "latitude": 17.7301424,
+    "longitude": 83.2912686,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057210",
+      "original_name": "Kalavathy Maternity Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "S.V Hospital",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7315298,
+    "longitude": 83.2982102,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057211",
+      "original_name": "S.V Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Naidu Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Opposite Police Station, Bheemili",
+    "phone": null,
+    "latitude": 17.8948381,
+    "longitude": 83.4480273,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057212",
+      "original_name": "Naidu Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Lakshmi Gayathri Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Akkayyapalem",
+    "phone": null,
+    "latitude": 17.7360864,
+    "longitude": 83.2988976,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057214",
+      "original_name": "Lakshmi Gayathri Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Saroja Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Lalitha Nagar, Akkayyapalem",
+    "phone": null,
+    "latitude": 17.733482,
+    "longitude": 83.300686,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057217",
+      "original_name": "Saroja Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Surya Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Pothinamallayya Palem",
+    "phone": null,
+    "latitude": 17.8059869,
+    "longitude": 83.3397326,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057218",
+      "original_name": "Surya Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "A1 Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Abid Nagar, Akkayyapalem",
+    "phone": null,
+    "latitude": 17.739424,
+    "longitude": 83.2994272,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057220",
+      "original_name": "A1 Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Mukyamantri Arogya Kendram",
+    "facility_type": "HOSPITAL",
+    "address": "Bheemili",
+    "phone": null,
+    "latitude": 17.8952319,
+    "longitude": 83.4451285,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057222",
+      "original_name": "Mukyamantri Arogya Kendram",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "CARE Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": "Dondaparthy, Railway New Colony",
+    "phone": null,
+    "latitude": 17.7275716,
+    "longitude": 83.294103,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057223",
+      "original_name": "CARE Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Surya Nursing Home",
+    "facility_type": "HOSPITAL",
+    "address": "Thagarapuvalasa",
+    "phone": null,
+    "latitude": 17.9321277,
+    "longitude": 83.423704,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057224",
+      "original_name": "Surya Nursing Home",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Medi Cos Den Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Gudla Vani Palem, Sagar Nagar",
+    "phone": null,
+    "latitude": 17.7636399,
+    "longitude": 83.3591053,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057225",
+      "original_name": "Medi Cos Den Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sri Surya Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Sector 9, MVP Colony",
+    "phone": null,
+    "latitude": 17.7427806,
+    "longitude": 83.340338,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057226",
+      "original_name": "Sri Surya Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sri Krishna Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Lalitha Nagar, Akkayyapalem",
+    "phone": null,
+    "latitude": 17.7346615,
+    "longitude": 83.3003628,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057228",
+      "original_name": "Sri Krishna Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Ujhwal Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": "Chandrampalem, Madhurawada",
+    "phone": null,
+    "latitude": 17.8131242,
+    "longitude": 83.3555939,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057232",
+      "original_name": "Ujhwal Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Navratna Kesava Rao Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Bheemili",
+    "phone": null,
+    "latitude": 17.8900803,
+    "longitude": 83.4536651,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057233",
+      "original_name": "Navratna Kesava Rao Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Dr. Kamalamma Hospital",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7289528,
+    "longitude": 83.2936785,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057234",
+      "original_name": "Dr. Kamalamma Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "National Orthopaedic Centre",
+    "facility_type": "HOSPITAL",
+    "address": "TPT Colony, Seethammadara",
+    "phone": null,
+    "latitude": 17.7364007,
+    "longitude": 83.3116732,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057235",
+      "original_name": "National Orthopaedic Centre",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Vivekanandha Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Visakhapatnam, Akkayyapalem",
+    "phone": null,
+    "latitude": 17.7318218,
+    "longitude": 83.2982472,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057240",
+      "original_name": "Vivekanandha Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Government ENT Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Hill View Doctors Colony, Seethammadara",
+    "phone": null,
+    "latitude": 17.745865,
+    "longitude": 83.3141989,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057241",
+      "original_name": "Government ENT Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Padmavathi Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Seethammadara",
+    "phone": null,
+    "latitude": 17.7414689,
+    "longitude": 83.3075918,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057242",
+      "original_name": "Padmavathi Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "GITAM Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Rushikonda",
+    "phone": null,
+    "latitude": 17.7846774,
+    "longitude": 83.3746555,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057245",
+      "original_name": "GITAM Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Krishnaveni Hospital",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7301583,
+    "longitude": 83.2947484,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057249",
+      "original_name": "Krishnaveni Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Morpheus Padmasri International IVF Centre",
+    "facility_type": "HOSPITAL",
+    "address": "Akkayyapalem",
+    "phone": null,
+    "latitude": 17.7380243,
+    "longitude": 83.3034712,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057256",
+      "original_name": "Morpheus Padmasri International IVF Centre",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "GK's Rainbow Dental Superspeciality Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Madhurawada",
+    "phone": null,
+    "latitude": 17.8024524,
+    "longitude": 83.3535257,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057259",
+      "original_name": "GK's Rainbow Dental Superspeciality Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Krishna Children Hospital",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7289115,
+    "longitude": 83.293632,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057260",
+      "original_name": "Krishna Children Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Master Homoeo Home",
+    "facility_type": "HOSPITAL",
+    "address": "Srinagar",
+    "phone": null,
+    "latitude": 17.7274279,
+    "longitude": 83.3077406,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057261",
+      "original_name": "Master Homoeo Home",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sri Sai Ram Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Akkayyapalem",
+    "phone": null,
+    "latitude": 17.7322439,
+    "longitude": 83.2918881,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057262",
+      "original_name": "Sri Sai Ram Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Dr. Ramakrishna Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Bangalametta, Thagarapuvalasa",
+    "phone": null,
+    "latitude": 17.9309318,
+    "longitude": 83.4260617,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057263",
+      "original_name": "Dr. Ramakrishna Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Soham ENT Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Narasimhanagar, Kailasapuram",
+    "phone": null,
+    "latitude": 17.7442418,
+    "longitude": 83.297657,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057268",
+      "original_name": "Soham ENT Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Keerthana Nursing Home",
+    "facility_type": "HOSPITAL",
+    "address": "Pothinamallayya Palem",
+    "phone": null,
+    "latitude": 17.8040379,
+    "longitude": 83.3467145,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057270",
+      "original_name": "Keerthana Nursing Home",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Padmavathi Nursing Home",
+    "facility_type": "HOSPITAL",
+    "address": "Adarsanagar, Thagarapuvalasa",
+    "phone": null,
+    "latitude": 17.9307079,
+    "longitude": 83.4191803,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057271",
+      "original_name": "Padmavathi Nursing Home",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sri Gayatri Nursing Home & Kasturi Maternity Hospital",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7244631,
+    "longitude": 83.3331524,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787057272",
+      "original_name": "Sri Gayatri Nursing Home & Kasturi Maternity Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Tirumala Jyoti Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Anakapalle",
+    "phone": null,
+    "latitude": 17.683136,
+    "longitude": 83.001827,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787449684",
+      "original_name": "Tirumala Jyoti Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Dr. Soma Raju Children Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Woodpeta, Anakapalle",
+    "phone": null,
+    "latitude": 17.6882064,
+    "longitude": 83.0101255,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787449686",
+      "original_name": "Dr. Soma Raju Children Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Kalyani Nursing Home",
+    "facility_type": "HOSPITAL",
+    "address": "Sarada Colony, Anakapalle",
+    "phone": null,
+    "latitude": 17.687728,
+    "longitude": 83.001839,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787449688",
+      "original_name": "Kalyani Nursing Home",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Annapurna Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Anakapalle, Gavarapalem, Anakapalle",
+    "phone": null,
+    "latitude": 17.6842691,
+    "longitude": 83.011245,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787449689",
+      "original_name": "Annapurna Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "SS Dental Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Woodpeta, Anakapalle",
+    "phone": null,
+    "latitude": 17.688264,
+    "longitude": 83.009283,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787449691",
+      "original_name": "SS Dental Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Maternity Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Gavarapalem, Anakapalle",
+    "phone": null,
+    "latitude": 17.6848737,
+    "longitude": 83.0101274,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787449692",
+      "original_name": "Maternity Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sai Teja Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Vivekananda Nagar, Anakapalle",
+    "phone": null,
+    "latitude": 17.686424,
+    "longitude": 83.00072,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787449694",
+      "original_name": "Sai Teja Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Benargy Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "RTC Complex Road, Anakapalle",
+    "phone": null,
+    "latitude": 17.6753904,
+    "longitude": 83.0010632,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787449695",
+      "original_name": "Benargy Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sri Sagar Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Nehru Chowk, Anakapalle",
+    "phone": null,
+    "latitude": 17.6892581,
+    "longitude": 83.0021022,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787449696",
+      "original_name": "Sri Sagar Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Srinivasa Children's Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Anakapalle",
+    "phone": null,
+    "latitude": 17.688484,
+    "longitude": 83.002889,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787449704",
+      "original_name": "Srinivasa Children's Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "London Children's Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Anakapalle",
+    "phone": null,
+    "latitude": 17.6852716,
+    "longitude": 83.0024749,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787449709",
+      "original_name": "London Children's Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Nirmala Maternity Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Anakapalle",
+    "phone": null,
+    "latitude": 17.6854923,
+    "longitude": 83.00227,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787449715",
+      "original_name": "Nirmala Maternity Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Ayyappa Gupta Eye Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Woodpeta, Anakapalle",
+    "phone": null,
+    "latitude": 17.6916683,
+    "longitude": 83.0037356,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787449716",
+      "original_name": "Ayyappa Gupta Eye Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Usha Prime Multispeciality Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Sarada Colony, Anakapalle",
+    "phone": null,
+    "latitude": 17.687618,
+    "longitude": 83.001744,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787449720",
+      "original_name": "Usha Prime Multispeciality Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Gadam Dental Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Anakapalle",
+    "phone": null,
+    "latitude": 17.687646,
+    "longitude": 83.002401,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787449732",
+      "original_name": "Gadam Dental Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Medikon Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "RTC Complex Road, Sarada Colony, Anakapalle",
+    "phone": null,
+    "latitude": 17.680999,
+    "longitude": 83.001142,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787449736",
+      "original_name": "Medikon Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Ravi Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Anakapalle",
+    "phone": null,
+    "latitude": 17.686005,
+    "longitude": 83.009456,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787449739",
+      "original_name": "Ravi Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Laxmi Orthopaedic Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Anakapalle",
+    "phone": null,
+    "latitude": 17.68721,
+    "longitude": 83.005706,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787449741",
+      "original_name": "Laxmi Orthopaedic Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sapthagiri Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Lakshmi Narayana Nagar, Woodpeta, Anakapalle",
+    "phone": null,
+    "latitude": 17.69098,
+    "longitude": 83.0099047,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787449747",
+      "original_name": "Sapthagiri Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Dr. Ram Mohan Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Sarada Colony, Anakapalle",
+    "phone": null,
+    "latitude": 17.685712,
+    "longitude": 83.0015806,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787449754",
+      "original_name": "Dr. Ram Mohan Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Mother and Child Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Anakapalle",
+    "phone": null,
+    "latitude": 17.685934,
+    "longitude": 83.001269,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787449757",
+      "original_name": "Mother and Child Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Siddhartha Nursing Home",
+    "facility_type": "HOSPITAL",
+    "address": "Anakapalle",
+    "phone": null,
+    "latitude": 17.6843742,
+    "longitude": 83.0022801,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787449758",
+      "original_name": "Siddhartha Nursing Home",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sri Venkateswara Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Sarada Colony, Anakapalle",
+    "phone": null,
+    "latitude": 17.6777911,
+    "longitude": 83.0006719,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787449765",
+      "original_name": "Sri Venkateswara Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Kanakadurga Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Krishna Nagar, Maharani Peta",
+    "phone": null,
+    "latitude": 17.7101086,
+    "longitude": 83.312939,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647583",
+      "original_name": "Kanakadurga Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sunrise Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": "Sankurupeta, Pattabhi Reddy Thota, Kancharapalem",
+    "phone": null,
+    "latitude": 17.7409007,
+    "longitude": 83.2662977,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647584",
+      "original_name": "Sunrise Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sunrise Childern Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Gajuwaka",
+    "phone": null,
+    "latitude": 17.687897,
+    "longitude": 83.2053903,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647585",
+      "original_name": "Sunrise Childern Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sri Krishna Orthopaedic Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Chaitanya Nagar, Gajuwaka",
+    "phone": null,
+    "latitude": 17.6843101,
+    "longitude": 83.193854,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647586",
+      "original_name": "Sri Krishna Orthopaedic Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "A N Beach Hospital - Multi Speciality Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Pandurangapuram, Krishna Nagar, Maharani Peta",
+    "phone": null,
+    "latitude": 17.7129243,
+    "longitude": 83.3197589,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647588",
+      "original_name": "A N Beach Hospital - Multi Speciality Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Dr. Mangamma Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Maharani Peta",
+    "phone": null,
+    "latitude": 17.7100946,
+    "longitude": 83.3045397,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647591",
+      "original_name": "Dr. Mangamma Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sri Lakhmi ENT Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Chaitanya Nagar, Gajuwaka",
+    "phone": null,
+    "latitude": 17.6829789,
+    "longitude": 83.1975029,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647592",
+      "original_name": "Sri Lakhmi ENT Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "BHEL Hospital",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.702135,
+    "longitude": 83.199526,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647593",
+      "original_name": "BHEL Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Visakha Child Care Centre",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.6846529,
+    "longitude": 83.2016314,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647594",
+      "original_name": "Visakha Child Care Centre",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Piles Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Gajuwaka",
+    "phone": null,
+    "latitude": 17.6871805,
+    "longitude": 83.2133794,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647599",
+      "original_name": "Piles Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Visakha Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Jagadamba",
+    "phone": null,
+    "latitude": 17.710144,
+    "longitude": 83.304361,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647600",
+      "original_name": "Visakha Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sreenivasa Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Aditya Nagar, Pendurthi",
+    "phone": null,
+    "latitude": 17.8231815,
+    "longitude": 83.2060963,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647602",
+      "original_name": "Sreenivasa Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Simhagiri Hospital",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.6863477,
+    "longitude": 83.2127666,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647603",
+      "original_name": "Simhagiri Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "City Hospital Ortho & Specialities",
+    "facility_type": "HOSPITAL",
+    "address": "Gajuwaka",
+    "phone": null,
+    "latitude": 17.6852466,
+    "longitude": 83.2053196,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647604",
+      "original_name": "City Hospital Ortho & Specialities",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Medicover Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Gokhale Road, Krishna Nagar, Maharani Peta",
+    "phone": null,
+    "latitude": 17.712323,
+    "longitude": 83.313972,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647605",
+      "original_name": "Medicover Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Life Spring Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "GNT Road, Malkapuram",
+    "phone": null,
+    "latitude": 17.688339,
+    "longitude": 83.243601,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647609",
+      "original_name": "Life Spring Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sri Lakshmi Children Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Kailash Nagar",
+    "phone": null,
+    "latitude": 17.6854195,
+    "longitude": 83.2078579,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647612",
+      "original_name": "Sri Lakshmi Children Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Ankitha Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Chaitanya Nagar, Gajuwaka",
+    "phone": null,
+    "latitude": 17.6827868,
+    "longitude": 83.1989654,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647614",
+      "original_name": "Ankitha Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Hymavathi Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Gopalapatnam, Simhachalam",
+    "phone": null,
+    "latitude": 17.7480338,
+    "longitude": 83.2192385,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647618",
+      "original_name": "Hymavathi Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Pujitha Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Kailash Nagar, Gajuwaka",
+    "phone": null,
+    "latitude": 17.6844753,
+    "longitude": 83.2100702,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647619",
+      "original_name": "Pujitha Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sarojini Children's Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Gopalapatnam, Simhachalam",
+    "phone": null,
+    "latitude": 17.7445712,
+    "longitude": 83.2265444,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647620",
+      "original_name": "Sarojini Children's Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "SMS Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Buchirajupalem",
+    "phone": null,
+    "latitude": 17.7452036,
+    "longitude": 83.2261912,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647621",
+      "original_name": "SMS Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Navaratnam - Kesava Rao Charitable Health Centre",
+    "facility_type": "HOSPITAL",
+    "address": "Indira Colony",
+    "phone": null,
+    "latitude": 17.6872165,
+    "longitude": 83.2049981,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647623",
+      "original_name": "Navaratnam - Kesava Rao Charitable Health Centre",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Visakha Gynaec & Obst Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Simhagiri Nagar, Pendurthi",
+    "phone": null,
+    "latitude": 17.8148001,
+    "longitude": 83.2042804,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647624",
+      "original_name": "Visakha Gynaec & Obst Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Suryanarayana Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Gopalapatnam, Simhachalam",
+    "phone": null,
+    "latitude": 17.7508459,
+    "longitude": 83.2186331,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647626",
+      "original_name": "Suryanarayana Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Simhadri Women & Child Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Prahaladapuram, Simhachalam",
+    "phone": null,
+    "latitude": 17.7656255,
+    "longitude": 83.2256151,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647627",
+      "original_name": "Simhadri Women & Child Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Vizag Ortho & Spine Centre",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7104,
+    "longitude": 83.312442,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647629",
+      "original_name": "Vizag Ortho & Spine Centre",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sri Amrutha Hospital",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.710327,
+    "longitude": 83.302862,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647630",
+      "original_name": "Sri Amrutha Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Mamata Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Gandhinagar, Gajuwaka",
+    "phone": null,
+    "latitude": 17.6869092,
+    "longitude": 83.2079845,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647632",
+      "original_name": "Mamata Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sri Surya Dental Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Krishna Nagar, Maharani Peta",
+    "phone": null,
+    "latitude": 17.709779,
+    "longitude": 83.3103498,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647633",
+      "original_name": "Sri Surya Dental Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sri Surya Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Srirangapuram, Krishna Nagar, Maharani Peta",
+    "phone": null,
+    "latitude": 17.708149,
+    "longitude": 83.309857,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647634",
+      "original_name": "Sri Surya Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Lata Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "BHVP Road, Gajuwaka",
+    "phone": null,
+    "latitude": 17.6877091,
+    "longitude": 83.205361,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647638",
+      "original_name": "Lata Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Janani Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Gajuwaka",
+    "phone": null,
+    "latitude": 17.6865547,
+    "longitude": 83.2073838,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647639",
+      "original_name": "Janani Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Geetha Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Indira Colony",
+    "phone": null,
+    "latitude": 17.6860522,
+    "longitude": 83.2145015,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647640",
+      "original_name": "Geetha Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Shree Krishna Health Centre",
+    "facility_type": "HOSPITAL",
+    "address": "Krishna Nagar, Maharani Peta",
+    "phone": null,
+    "latitude": 17.7104023,
+    "longitude": 83.3105799,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647641",
+      "original_name": "Shree Krishna Health Centre",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Aditya Obstetrics & Gynecology Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Burma Colony, Pattabhi Reddy Thota, Madhavadhara",
+    "phone": null,
+    "latitude": 17.745985,
+    "longitude": 83.269641,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647642",
+      "original_name": "Aditya Obstetrics & Gynecology Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "NTPC Hospital",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.5685137,
+    "longitude": 83.0939853,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647645",
+      "original_name": "NTPC Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sri Surya Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Kailasa Nagar, Gajuwaka",
+    "phone": null,
+    "latitude": 17.6849028,
+    "longitude": 83.2092812,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647647",
+      "original_name": "Sri Surya Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Harshitha Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Gajuwaka",
+    "phone": null,
+    "latitude": 17.6863384,
+    "longitude": 83.2101897,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647648",
+      "original_name": "Harshitha Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Mother and Child Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Sabbavaram",
+    "phone": null,
+    "latitude": 17.790161,
+    "longitude": 83.12163,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647649",
+      "original_name": "Mother and Child Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Pendurthi Govt Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Chinnamushidiwada, Pendurthi",
+    "phone": null,
+    "latitude": 17.8094151,
+    "longitude": 83.2070778,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647650",
+      "original_name": "Pendurthi Govt Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sri Sai Aditya Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Muralinagar, Madhavadhara",
+    "phone": null,
+    "latitude": 17.746278,
+    "longitude": 83.269671,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647652",
+      "original_name": "Sri Sai Aditya Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Gothis Doctor Chambers",
+    "facility_type": "HOSPITAL",
+    "address": "Krishna Nagar, Maharani Peta",
+    "phone": null,
+    "latitude": 17.710382,
+    "longitude": 83.312125,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647654",
+      "original_name": "Gothis Doctor Chambers",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Harini Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Vinayaka Nagar, Gonthinavanipalem, Pedagantyada",
+    "phone": null,
+    "latitude": 17.6795765,
+    "longitude": 83.2055093,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647655",
+      "original_name": "Harini Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Heritage Kerala Ayurveda Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Ravi Nagar, Naidu Thota",
+    "phone": null,
+    "latitude": 17.7671455,
+    "longitude": 83.2120798,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647657",
+      "original_name": "Heritage Kerala Ayurveda Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sharan Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Paravada, Jagannadhapuram Agraharam",
+    "phone": null,
+    "latitude": 17.6297105,
+    "longitude": 83.077059,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647660",
+      "original_name": "Sharan Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Ramya Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Jagadamba Junction",
+    "phone": null,
+    "latitude": 17.710544,
+    "longitude": 83.304302,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647661",
+      "original_name": "Ramya Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sri Sapthagiri Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": "Pendurthi",
+    "phone": null,
+    "latitude": 17.805851,
+    "longitude": 83.213061,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647664",
+      "original_name": "Sri Sapthagiri Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Government Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Bapuji Nagar, Gopalapatnam, Simhachalam",
+    "phone": null,
+    "latitude": 17.7524734,
+    "longitude": 83.2161371,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647666",
+      "original_name": "Government Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Raghavendra Eye Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Gopalapatnam, Simhachalam",
+    "phone": null,
+    "latitude": 17.7476896,
+    "longitude": 83.2199593,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647667",
+      "original_name": "Raghavendra Eye Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Asha Hospital Diabetes & Multi Speciality",
+    "facility_type": "HOSPITAL",
+    "address": "Paravada",
+    "phone": null,
+    "latitude": 17.6212637,
+    "longitude": 83.08184,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647670",
+      "original_name": "Asha Hospital Diabetes & Multi Speciality",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Muddu Krishna Children Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Meher Nagar",
+    "phone": null,
+    "latitude": 17.6852715,
+    "longitude": 83.2046951,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647671",
+      "original_name": "Muddu Krishna Children Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sarojini Devi Skin Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Nehru Nagar, Ram Nagar",
+    "phone": null,
+    "latitude": 17.7166466,
+    "longitude": 83.3090277,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647673",
+      "original_name": "Sarojini Devi Skin Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Ramsaranya Child Care Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Krishna Nagar, Maharani Peta",
+    "phone": null,
+    "latitude": 17.7102508,
+    "longitude": 83.3143316,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647675",
+      "original_name": "Ramsaranya Child Care Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Baba Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Srirangapuram, Krishna Nagar, Maharani Peta",
+    "phone": null,
+    "latitude": 17.708177,
+    "longitude": 83.308867,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647676",
+      "original_name": "Baba Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Triveni Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": "Balaji Nagar, Pendurthi",
+    "phone": null,
+    "latitude": 17.8177533,
+    "longitude": 83.2064302,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647677",
+      "original_name": "Triveni Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Amma Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Pinamadaka",
+    "phone": null,
+    "latitude": 17.6288271,
+    "longitude": 83.0901428,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647678",
+      "original_name": "Amma Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Aditya Multi Care Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Jagadamba Junction",
+    "phone": null,
+    "latitude": 17.7100474,
+    "longitude": 83.3046802,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7787647680",
+      "original_name": "Aditya Multi Care Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "M.B. Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": "Plot:15B, APIIC Health City, Chinna Gadhili, Arilova, Visakhapatnam",
+    "phone": null,
+    "latitude": 17.763448,
+    "longitude": 83.3106082,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7916820571",
+      "original_name": "M.B. Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "ApolloHospitals",
+    "facility_type": "HOSPITAL",
+    "address": "Waltair Main Road",
+    "phone": null,
+    "latitude": 17.7171444,
+    "longitude": 83.3091374,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7917282168",
+      "original_name": "ApolloHospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "HCG Cancer Centre",
+    "facility_type": "HOSPITAL",
+    "address": "Plot No.10,11 &12, Visakhapatnam",
+    "phone": null,
+    "latitude": 17.7638753,
+    "longitude": 83.3057236,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7930495900",
+      "original_name": "HCG Cancer Centre",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Star Pinnacle Heart Centre",
+    "facility_type": "HOSPITAL",
+    "address": "APIIC Health city, Arilova, Chinagadili.",
+    "phone": null,
+    "latitude": 17.7632652,
+    "longitude": 83.3078391,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7931043211",
+      "original_name": "Star Pinnacle Heart Centre",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Homi Bhabha Cancer Hospital & Research Centre",
+    "facility_type": "HOSPITAL",
+    "address": "Marripalem, Aganampudi Village, Gajuvaka Mandalam National Highway 16",
+    "phone": null,
+    "latitude": 17.6898831,
+    "longitude": 83.1144238,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7934165413",
+      "original_name": "Homi Bhabha Cancer Hospital & Research Centre",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Ramsaranya Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": "Krishna Nagar road",
+    "phone": null,
+    "latitude": 17.7097535,
+    "longitude": 83.3106734,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7951547049",
+      "original_name": "Ramsaranya Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Visakha Hospitals And Diagnostics",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7202856,
+    "longitude": 83.3130073,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7951595809",
+      "original_name": "Visakha Hospitals And Diagnostics",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "SevenHills Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Rockdale Layout, Waltair Main Road",
+    "phone": null,
+    "latitude": 17.7173631,
+    "longitude": 83.3094245,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7969038055",
+      "original_name": "SevenHills Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "St Anns Jubilee Memorial Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Malkapuram",
+    "phone": null,
+    "latitude": 17.6843531,
+    "longitude": 83.2377236,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "7999688946",
+      "original_name": "St Anns Jubilee Memorial Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Suraksha Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Sai Nagar, Marripalem, Visakhapatnam",
+    "phone": null,
+    "latitude": 17.7396152,
+    "longitude": 83.2555653,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "8767763195",
+      "original_name": "Suraksha Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Varma Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": "Health City, Chinna Gadhili, Hanumanthavaka, Visakhapatnam",
+    "phone": null,
+    "latitude": 17.7640286,
+    "longitude": 83.3113995,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "8767818502",
+      "original_name": "Varma Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sai Spoorthy Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Door. No. 47, 935, 3rd Line, Seetamma Peta, Dwaraka Nagar, Visakhapatnam",
+    "phone": null,
+    "latitude": 17.7295406,
+    "longitude": 83.309347,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "8767908843",
+      "original_name": "Sai Spoorthy Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Government Regional Eye Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "Seetamma Peta, Dwaraka Nagar, Visakhapatnam",
+    "phone": null,
+    "latitude": 17.7304744,
+    "longitude": 83.3113942,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "8767992101",
+      "original_name": "Government Regional Eye Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "LG Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": "17-1-17, Maharani Peta, Visakhapatnam",
+    "phone": null,
+    "latitude": 17.710174,
+    "longitude": 83.3045894,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "8768007090",
+      "original_name": "LG Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Omega Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": "Chinna Gadhili, Arilova, Visakhapatnam",
+    "phone": null,
+    "latitude": 17.763791,
+    "longitude": 83.3124349,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "8768034019",
+      "original_name": "Omega Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Medicover Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": "Chinna Gadhili, Arilova, Visakhapatnam",
+    "phone": null,
+    "latitude": 17.7638179,
+    "longitude": 83.3121251,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "8768039075",
+      "original_name": "Medicover Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Ramsaranya Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": "14-37-4/A, Krishna Nagar, Maharani Peta, Visakhapatnam",
+    "phone": null,
+    "latitude": 17.7100054,
+    "longitude": 83.3109067,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "8768045905",
+      "original_name": "Ramsaranya Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "GJ Hospitals And Trauma Centre",
+    "facility_type": "HOSPITAL",
+    "address": "Lawsons Bay Colony, Pedda Waltair, Visakhapatnam",
+    "phone": null,
+    "latitude": 17.7336653,
+    "longitude": 83.3324401,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "8768062261",
+      "original_name": "GJ Hospitals And Trauma Centre",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sankar Foundation Eye Hospital",
+    "facility_type": "HOSPITAL",
+    "address": "BC Road, Seetharam Nagar, Gajuwaka, Visakhapatnam",
+    "phone": null,
+    "latitude": 17.6812931,
+    "longitude": 83.2159491,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "8768067733",
+      "original_name": "Sankar Foundation Eye Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Chest Hospital and Medical Store",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7493798,
+    "longitude": 83.2191542,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "9772561605",
+      "original_name": "Chest Hospital and Medical Store",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Eye Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": "Pendurthi",
+    "phone": null,
+    "latitude": 17.809861,
+    "longitude": 83.2082462,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "10892780888",
+      "original_name": "Eye Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Visvam Healthcare Center",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.9582444,
+    "longitude": 83.2171766,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "11504889354",
+      "original_name": "Visvam Healthcare Center",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Dr.Mohan's Diabetes Specialities Centre",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7251141,
+    "longitude": 83.3147147,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "11609626426",
+      "original_name": "Dr.Mohan's Diabetes Specialities Centre",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Duvvada Police Station",
+    "facility_type": "POLICE_STATION",
+    "address": null,
+    "phone": null,
+    "latitude": 17.6847886,
+    "longitude": 83.1660819,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "11647371247",
+      "original_name": "Duvvada Police Station",
+      "original_category": "police"
+    }
+  },
+  {
+    "name": "4th Town Police Station",
+    "facility_type": "POLICE_STATION",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7381018,
+    "longitude": 83.3052011,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "11688050188",
+      "original_name": "4th Town Police Station",
+      "original_category": "police"
+    }
+  },
+  {
+    "name": "AMG Hospital",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7414668,
+    "longitude": 83.3118352,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "11690446188",
+      "original_name": "AMG Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Children Multi Speciality Hospital",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.899753,
+    "longitude": 83.1881834,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "11711398033",
+      "original_name": "Children Multi Speciality Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Medicover Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7478206,
+    "longitude": 83.3318795,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "11740567974",
+      "original_name": "Medicover Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Suneetha Hospital Dr V Anand Rao",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7401303,
+    "longitude": 83.2535864,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "11851269089",
+      "original_name": "Suneetha Hospital Dr V Anand Rao",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sai Clinic",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.8046265,
+    "longitude": 83.2093877,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "12213464286",
+      "original_name": "Sai Clinic",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Saadhana Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.8009047,
+    "longitude": 83.2105594,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "12213464390",
+      "original_name": "Saadhana Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Surabhi Clinics",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.8032146,
+    "longitude": 83.2092659,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "12213911037",
+      "original_name": "Surabhi Clinics",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sarat Chandras Speciality Clinic",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.8024276,
+    "longitude": 83.2094537,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "12213911077",
+      "original_name": "Sarat Chandras Speciality Clinic",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sunflower childrens clinic",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.8972279,
+    "longitude": 83.185985,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "12252527618",
+      "original_name": "Sunflower childrens clinic",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Kothavalsa Police Station",
+    "facility_type": "POLICE_STATION",
+    "address": null,
+    "phone": null,
+    "latitude": 17.9013382,
+    "longitude": 83.1903751,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "12291719195",
+      "original_name": "Kothavalsa Police Station",
+      "original_category": "police"
+    }
+  },
+  {
+    "name": "Dr BV Adinarayana Childrens Specialist",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7350078,
+    "longitude": 83.2719764,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "12470766214",
+      "original_name": "Dr BV Adinarayana Childrens Specialist",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Ayushman arogya mandir",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.729599,
+    "longitude": 83.3294672,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "12531593373",
+      "original_name": "Ayushman arogya mandir",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Malkapuram Police Station",
+    "facility_type": "POLICE_STATION",
+    "address": null,
+    "phone": null,
+    "latitude": 17.6875376,
+    "longitude": 83.2582017,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "12837010587",
+      "original_name": "Malkapuram Police Station",
+      "original_category": "police"
+    }
+  },
+  {
+    "name": "Chittivalasa Fire Station",
+    "facility_type": "FIRE_STATION",
+    "address": null,
+    "phone": null,
+    "latitude": 17.9045341,
+    "longitude": 83.4053081,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "12892324871",
+      "original_name": "Chittivalasa Fire Station",
+      "original_category": "fire_station"
+    }
+  },
+  {
+    "name": "Anandapuram Police Station",
+    "facility_type": "POLICE_STATION",
+    "address": null,
+    "phone": null,
+    "latitude": 17.8931748,
+    "longitude": 83.3719104,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "12892352602",
+      "original_name": "Anandapuram Police Station",
+      "original_category": "police"
+    }
+  },
+  {
+    "name": "P.M. Palem Traffic Police Station",
+    "facility_type": "POLICE_STATION",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7996523,
+    "longitude": 83.3526684,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "12954702919",
+      "original_name": "P.M. Palem Traffic Police Station",
+      "original_category": "police"
+    }
+  },
+  {
+    "name": "KIMS Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7373995,
+    "longitude": 83.3353795,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "12992712257",
+      "original_name": "KIMS Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Indus Hospitals",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7625271,
+    "longitude": 83.3075353,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "13108171657",
+      "original_name": "Indus Hospitals",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Narayana Medicity",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7621246,
+    "longitude": 83.3119581,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "13108171659",
+      "original_name": "Narayana Medicity",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sanjivani Hospital",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7403603,
+    "longitude": 83.2464417,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "13179825649",
+      "original_name": "Sanjivani Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Gandhi",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7989437,
+    "longitude": 83.3963328,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "13204632652",
+      "original_name": "Gandhi",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "forest",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7952383,
+    "longitude": 83.3893022,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "13204637343",
+      "original_name": "forest",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "forest",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7953651,
+    "longitude": 83.3890616,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "13204638818",
+      "original_name": "forest",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "forest",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7989074,
+    "longitude": 83.3882361,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "13204639830",
+      "original_name": "forest",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Geetha Eye & Orthopaedic Hospital",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.6872398,
+    "longitude": 83.0127619,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "13281158467",
+      "original_name": "Geetha Eye & Orthopaedic Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Primary Health Center Kothavalasa",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.900578,
+    "longitude": 83.1897275,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "13369321117",
+      "original_name": "Primary Health Center Kothavalasa",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Sabbavaram Police Station",
+    "facility_type": "POLICE_STATION",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7912715,
+    "longitude": 83.1258107,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "13543686111",
+      "original_name": "Sabbavaram Police Station",
+      "original_category": "police"
+    }
+  },
+  {
+    "name": "Sabbavaram Fire Station",
+    "facility_type": "FIRE_STATION",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7915674,
+    "longitude": 83.1273676,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "13543686113",
+      "original_name": "Sabbavaram Fire Station",
+      "original_category": "fire_station"
+    }
+  },
+  {
+    "name": "Rise Hospital",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.6846933,
+    "longitude": 83.2022417,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "13703652259",
+      "original_name": "Rise Hospital",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Urban Primary Health Center Dondaparthy",
+    "facility_type": "HOSPITAL",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7291423,
+    "longitude": 83.3007641,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "13800470090",
+      "original_name": "Urban Primary Health Center Dondaparthy",
+      "original_category": "hospital"
+    }
+  },
+  {
+    "name": "Directorate Of Enforcement",
+    "facility_type": "POLICE_STATION",
+    "address": null,
+    "phone": null,
+    "latitude": 17.7426014,
+    "longitude": 83.3281621,
+    "source_type": "OPEN_DATA",
+    "source_name": "OpenStreetMap",
+    "source_url": "https://www.openstreetmap.org",
+    "extra_data": {
+      "source_record_id": "13953432354",
+      "original_name": "Directorate Of Enforcement",
+      "original_category": "police"
+    }
+  },
+  {
+    "name": "King George Hospital (KGH)",
+    "facility_type": "HOSPITAL",
+    "address": "Collector Office Road, Maharanipeta, Visakhapatnam",
+    "phone": "0891-2564891",
+    "latitude": 17.7112,
+    "longitude": 83.3031,
+    "source_type": "OFFICIAL_PUBLIC",
+    "source_name": "Visakhapatnam District Administration",
+    "source_url": "https://visakhapatnam.ap.gov.in/hospitals/",
+    "extra_data": {
+      "source_record_id": "kgh_official_01",
+      "original_name": "King George Hospital",
+      "original_category": "Hospital"
+    }
+  },
+  {
+    "name": "Visakha Institute of Medical Sciences (VIMS)",
+    "facility_type": "HOSPITAL",
+    "address": "Hanumanthavaka, Visakhapatnam",
+    "phone": "0891-2854000",
+    "latitude": 17.7615,
+    "longitude": 83.3312,
+    "source_type": "OFFICIAL_PUBLIC",
+    "source_name": "Visakhapatnam District Administration",
+    "source_url": "https://visakhapatnam.ap.gov.in/hospitals/",
+    "extra_data": {
+      "source_record_id": "vims_official_02",
+      "original_name": "Visakha Institute of Medical Sciences",
+      "original_category": "Hospital"
+    }
+  }
+]
