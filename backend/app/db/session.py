@@ -22,7 +22,8 @@ if not db_url.startswith("sqlite"):
 
 engine = create_engine(
     db_url,
-    **engine_args
+    **engine_args,
+    connect_args={"connect_timeout": 3}
 )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)

@@ -49,6 +49,54 @@ class IncidentRepository:
         return db.query(Incident).filter(Incident.id == incident_id).first()
 
     @staticmethod
+    def list_filtered(
+        db: Session,
+        user: "User",
+        filters: dict,
+        page: int = 1,
+        limit: int = 20,
+    ) -> tuple[List[Incident], int]:
+        """Return incidents matching filters, respecting user geographic scope, and total count.
+        `filters` may include category, severity, status, zone_id, ward_id, state_id, district_id, city_id, department_id, date_from, date_to.
+        Returns (items, total).
+        """
+        query = db.query(Incident)
+        # Apply filters
+        if filters.get("category"):
+            query = query.filter(Incident.category == filters["category"])
+        if filters.get("severity"):
+            query = query.filter(Incident.severity == filters["severity"])
+        if filters.get("status"):
+            query = query.filter(Incident.status == filters["status"])
+        if filters.get("zone_id"):
+            query = query.filter(Incident.zone_id == filters["zone_id"])
+        if filters.get("ward_id"):
+            query = query.filter(Incident.ward_id == filters["ward_id"])
+        if filters.get("department_id"):
+            query = query.filter(Incident.department_id == filters["department_id"])
+        if filters.get("date_from"):
+            query = query.filter(Incident.created_at >= filters["date_from"])
+        if filters.get("date_to"):
+            query = query.filter(Incident.created_at <= filters["date_to"])
+
+        # Geographic scope enforcement for non‑admin users
+        role_name = user.role.role_name if user.role else "citizen"
+        if role_name not in ("admin", "national_admin"):
+            # resolve incident hierarchy ids via joins
+            # Join to Zone -> City -> District -> State when needed
+            if filters.get("state_id"):
+                query = query.join(Incident.zone).join(Zone.city).join(City.district).filter(State.id == filters["state_id"])
+            if filters.get("district_id"):
+                query = query.join(Incident.zone).join(Zone.city).join(City.district).filter(District.id == filters["district_id"])
+            if filters.get("city_id"):
+                query = query.join(Incident.zone).join(Zone.city).filter(City.id == filters["city_id"])
+
+        total = query.count()
+        offset = (page - 1) * limit
+        items = query.order_by(desc(Incident.created_at)).offset(offset).limit(limit).all()
+        return items, total
+
+    @staticmethod
     def list_all(
         db: Session,
         category: Optional[str] = None,
@@ -56,8 +104,12 @@ class IncidentRepository:
         status: Optional[str] = None,
         zone_id: Optional[uuid.UUID] = None,
         limit: int = 50,
-        offset: int = 0
+        offset: int = 0,
     ) -> List[Incident]:
+        """Legacy wrapper used by the service layer. Applies simple filters without
+        user‑scope enforcement. This method exists to maintain backward compatibility
+        with existing code that expects `IncidentRepository.list_all`.
+        """
         query = db.query(Incident)
         if category:
             query = query.filter(Incident.category == category)
@@ -67,8 +119,9 @@ class IncidentRepository:
             query = query.filter(Incident.status == status)
         if zone_id:
             query = query.filter(Incident.zone_id == zone_id)
-
-        return query.order_by(desc(Incident.created_at)).offset(offset).limit(limit).all()
+        # Apply pagination using limit/offset semantics
+        query = query.order_by(desc(Incident.created_at)).offset(offset).limit(limit)
+        return query.all()
 
     @staticmethod
     def update_status(db: Session, incident: Incident, new_status: str) -> Incident:
