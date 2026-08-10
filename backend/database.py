@@ -1,0 +1,31 @@
+from sqlalchemy import create_engine
+from sqlalchemy.orm import declarative_base, sessionmaker, Session
+from config import settings
+
+# In SQLAlchemy 2.0, future=True is default, but we can set up standard sessionmaker
+# Ensure connection uses psycopg (v3) driver instead of psycopg2
+db_url = settings.DATABASE_URL
+if db_url.startswith("postgresql://"):
+    db_url = db_url.replace("postgresql://", "postgresql+psycopg://", 1)
+elif db_url.startswith("postgres://"):
+    db_url = db_url.replace("postgres://", "postgresql+psycopg://", 1)
+
+engine_args = {"pool_pre_ping": True}
+if not db_url.startswith("sqlite"):
+    engine_args["pool_size"] = 10
+    engine_args["max_overflow"] = 20
+
+engine = create_engine(
+    db_url,
+    **engine_args
+)
+
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+Base = declarative_base()
+
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()

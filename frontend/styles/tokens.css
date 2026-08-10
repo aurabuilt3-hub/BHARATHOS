@@ -1,0 +1,30 @@
+:root {
+  /* Ultra-Premium National Command Center Color System */
+  --bg-canvas: #030712;
+  --bg-panel: #0b0f19;
+  --bg-card: rgba(11, 15, 25, 0.75);
+  --bg-header: rgba(15, 23, 42, 0.65);
+  
+  /* Borders & 3D Lighting */
+  --border-glass: rgba(30, 41, 59, 0.8);
+  --border-glass-glow: rgba(56, 189, 248, 0.3);
+  --border-ai-glow: rgba(168, 85, 247, 0.3);
+
+  /* Primary Brand & Status Highlights */
+  --color-electric-blue: #38bdf8;
+  --color-telemetry-cyan: #06b6d4;
+  --color-ai-purple: #a855f7;
+  --color-emergency-red: #ef4444;
+  --color-warning-amber: #f59e0b;
+  --color-operational-emerald: #10b981;
+
+  /* Typography Colors */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  /* Elevation Shadows */
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --shadow-electric: 0 0 20px rgba(56, 189, 248, 0.15);
+  --shadow-ai: 0 0 20px rgba(168, 85, 247, 0.2);
+}

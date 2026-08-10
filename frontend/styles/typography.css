@@ -1,0 +1,52 @@
+/* BharatOS Typography Styles */
+h1 {
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 1.875rem; /* 30px */
+  line-height: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+h3 {
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+}
+
+h4 {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+}
+
+.text-body {
+  font-size: 1rem; /* 16px */
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: #94a3b8;
+}
+
+.text-caption {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.25rem;
+  font-weight: 400;
+  color: #64748b;
+}
+
+.font-mono-data {
+  font-family: var(--font-geist-mono), monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
