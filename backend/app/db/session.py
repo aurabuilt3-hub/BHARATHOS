@@ -16,14 +16,16 @@ except ImportError:
     pass
 
 engine_args = {"pool_pre_ping": True}
+connect_args = {}
 if not db_url.startswith("sqlite"):
     engine_args["pool_size"] = 10
     engine_args["max_overflow"] = 20
+    connect_args["connect_timeout"] = 3
 
 engine = create_engine(
     db_url,
     **engine_args,
-    connect_args={"connect_timeout": 3}
+    connect_args=connect_args
 )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
