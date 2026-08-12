@@ -1,3 +1,4 @@
+import logging
 from fastapi import APIRouter, Depends, status
 from fastapi.responses import JSONResponse
 from sqlalchemy.orm import Session
@@ -5,6 +6,7 @@ from sqlalchemy import text
 from app.db.session import get_db
 from app.core.config import settings
 
+logger = logging.getLogger("app.health")
 router = APIRouter(prefix="/health", tags=["Health & Status"])
 
 @router.get("", status_code=status.HTTP_200_OK)
@@ -24,7 +26,8 @@ def readiness_check(db: Session = Depends(get_db)):
             "status": "ready",
             "database": "connected"
         }
-    except Exception:
+    except Exception as e:
+        logger.error("Database readiness check failed: %s", e, exc_info=True)
         return JSONResponse(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
             content={

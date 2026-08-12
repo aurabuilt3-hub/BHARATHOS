@@ -1,23 +1,47 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import DashboardLayout from '../../../components/layout/DashboardLayout'
 import PageHeader from '../../../components/ui/PageHeader'
 import StatCard from '../../../components/ui/StatCard'
 import MetricBadge from '../../../components/ui/MetricBadge'
 import AISummaryWidget from '../../../components/widgets/AISummaryWidget'
 import ResourceWidget from '../../../components/widgets/ResourceWidget'
-
 import { AlertIcon, ActivityIcon, PoliceIcon, TrendIcon } from '../../../components/icons'
-import { visakhapatnamIncidentsData } from '../../../lib/mock/incidents'
+import { apiService, BackendIncident } from '../../../services/api'
 
 type ExecutiveRole = 'collector' | 'commissioner' | 'chief_sec' | 'chief_min' | 'ndma' | 'disaster'
 
 export default function ExecutiveDashboardPage() {
   const [executiveRole, setExecutiveRole] = useState<ExecutiveRole>('collector')
+  const [incidents, setIncidents] = useState<BackendIncident[]>([])
+  const [loading, setLoading] = useState(true)
+  const [errorMsg, setErrorMsg] = useState<string | null>(null)
 
-  const criticalCount = visakhapatnamIncidentsData.filter(i => i.severity === 'critical').length
-  const activeCount = visakhapatnamIncidentsData.filter(i => i.status === 'active').length
+  useEffect(() => {
+    let isMounted = true
+    setLoading(true)
+    apiService.getIncidents({ limit: 100 })
+      .then((res) => {
+        if (isMounted) {
+          setIncidents(res)
+          setErrorMsg(null)
+        }
+      })
+      .catch((err) => {
+        if (isMounted) {
+          setErrorMsg(err.message || 'Failed to sync leadership incident queue.')
+        }
+      })
+      .finally(() => {
+        if (isMounted) setLoading(false)
+      })
+
+    return () => { isMounted = false }
+  }, [])
+
+  const criticalCount = incidents.filter(i => i.severity === 'critical').length
+  const activeCount = incidents.filter(i => i.status === 'active' || i.status === 'assigned' || i.status === 'in_progress').length
 
   const getRoleConfig = (role: ExecutiveRole) => {
     switch (role) {
@@ -54,7 +78,7 @@ export default function ExecutiveDashboardPage() {
       case 'collector':
       default:
         return {
-          title: 'Visakhapatnam District Collector situational Summary',
+          title: 'Visakhapatnam District Collector Situational Summary',
           kpiLabel: 'Collector Hotline Index',
           kpiValue: '99.8% Online'
         }
@@ -116,7 +140,7 @@ export default function ExecutiveDashboardPage() {
             value={activeCount}
             change={2.1}
             changeType="increase"
-            description="pending department dispatch"
+            description="pending department dispatch (DB Live)"
             icon={<AlertIcon className="h-5 w-5 text-red-400" />}
             glow={true}
           />
@@ -155,41 +179,62 @@ export default function ExecutiveDashboardPage() {
             <span className="text-xs text-slate-500 font-mono-data">Filtered for Senior Leadership</span>
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs">
-              <thead className="border-b border-slate-800 text-slate-400 uppercase tracking-wider text-[10px]">
-                <tr>
-                  <th className="py-3 px-4">Ticket</th>
-                  <th className="py-3 px-4">Category</th>
-                  <th className="py-3 px-4">Title & Location</th>
-                  <th className="py-3 px-4">Severity</th>
-                  <th className="py-3 px-4">Status</th>
-                  <th className="py-3 px-4">Department</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-900">
-                {visakhapatnamIncidentsData.map((inc) => (
-                  <tr key={inc.id} className="hover:bg-slate-900/40 transition-colors">
-                    <td className="py-3 px-4 font-bold text-blue-400 font-mono-data">{inc.id}</td>
-                    <td className="py-3 px-4 text-slate-300 font-bold">{inc.category}</td>
-                    <td className="py-3 px-4">
-                      <span className="font-bold text-white block">{inc.title}</span>
-                      <span className="text-[10px] text-slate-500">{inc.location}</span>
-                    </td>
-                    <td className="py-3 px-4">
-                      <MetricBadge value={inc.severity} type={inc.severity} />
-                    </td>
-                    <td className="py-3 px-4">
-                      <span className="text-[10px] font-bold px-2 py-0.5 rounded border uppercase tracking-wider font-mono-data bg-blue-950/40 border-blue-900/30 text-blue-400">
-                        {inc.status}
-                      </span>
-                    </td>
-                    <td className="py-3 px-4 text-slate-400">{inc.assignedDepartment || 'Pending Assignment'}</td>
+          {loading ? (
+            <div className="py-12 flex flex-col items-center justify-center space-y-2">
+              <div className="h-6 w-6 animate-spin rounded-full border-2 border-blue-500 border-t-transparent"></div>
+              <span className="text-xs text-slate-500 font-mono-data">Loading leadership action queue...</span>
+            </div>
+          ) : errorMsg ? (
+            <div className="text-center py-8 text-xs text-red-400 font-mono">{errorMsg}</div>
+          ) : incidents.length === 0 ? (
+            <div className="text-center py-8 text-xs text-slate-500">No active priority tickets logged in database.</div>
+          ) : (
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-xs">
+                <thead className="border-b border-slate-800 text-slate-400 uppercase tracking-wider text-[10px]">
+                  <tr>
+                    <th className="py-3 px-4">Ticket</th>
+                    <th className="py-3 px-4">Category</th>
+                    <th className="py-3 px-4">Title & Location</th>
+                    <th className="py-3 px-4">Severity</th>
+                    <th className="py-3 px-4">Status</th>
+                    <th className="py-3 px-4">Department</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                </thead>
+                <tbody className="divide-y divide-slate-900">
+                  {incidents.map((inc) => (
+                    <tr key={inc.id} className="hover:bg-slate-900/40 transition-colors">
+                      <td className="py-3 px-4 font-bold text-blue-400 font-mono-data truncate max-w-[120px]">{inc.id}</td>
+                      <td className="py-3 px-4 text-slate-300 font-bold capitalize">{inc.category}</td>
+                      <td className="py-3 px-4">
+                        <span className="font-bold text-white block">{inc.title}</span>
+                        <span className="text-[10px] text-slate-500">
+                          {inc.address || `${inc.latitude.toFixed(4)}° N, ${inc.longitude.toFixed(4)}° E`}
+                        </span>
+                      </td>
+                      <td className="py-3 px-4">
+                        <MetricBadge value={inc.severity} type={inc.severity} />
+                      </td>
+                      <td className="py-3 px-4">
+                        <span className={`text-[10px] font-bold px-2 py-0.5 rounded border uppercase tracking-wider font-mono-data ${
+                          inc.status === 'resolved' 
+                            ? 'bg-emerald-950/40 border-emerald-900/30 text-emerald-450' 
+                            : 'bg-blue-950/40 border-blue-900/30 text-blue-400'
+                        }`}>
+                          {inc.status}
+                        </span>
+                      </td>
+                      <td className="py-3 px-4 text-slate-400">
+                        {inc.assignments && inc.assignments.length > 0 
+                          ? inc.assignments[0]?.department?.name || 'Assigned Agent' 
+                          : 'Pending Assignment'}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
         </div>
       </div>
     </DashboardLayout>

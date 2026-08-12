@@ -32,7 +32,8 @@ import {
   ClipboardList,
   ChevronLeft,
   ChevronRight,
-  Sparkles
+  Sparkles,
+  Database
 } from 'lucide-react'
 
 import BrandLogo from '../ui/BrandLogo'
@@ -109,6 +110,7 @@ export default function Sidebar() {
       items: [
         { id: 'users-roles', label: 'Users & Roles', path: '/dashboard/executive#users', icon: Users, color: 'text-slate-400' },
         { id: 'settings', label: 'Settings', path: '/dashboard/executive#settings', icon: Sliders, color: 'text-slate-400' },
+        { id: 'data-ingestion', label: 'Sync Console', path: '/dashboard/administration', icon: Database, color: 'text-sky-400' },
         { id: 'audit-logs', label: 'Audit Logs', path: '/dashboard/analytics#audit', icon: ClipboardList, color: 'text-slate-400' }
       ]
     }

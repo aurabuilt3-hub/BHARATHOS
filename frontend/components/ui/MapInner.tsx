@@ -9,6 +9,7 @@ import {
   Popup, 
   Polygon, 
   Circle,
+  Polyline,
   LayersControl, 
   LayerGroup,
   ScaleControl,
@@ -52,12 +53,21 @@ export interface MapHeatPoint {
   color: string
 }
 
+export interface MapPolyline {
+  id: string | number
+  positions: [number, number][]
+  color?: string
+  weight?: number
+  dashArray?: string
+}
+
 interface MapInnerProps {
   center: [number, number]
   zoom: number
   markers?: MapMarker[]
   polygons?: MapPolygon[]
   heatpoints?: MapHeatPoint[]
+  polylines?: MapPolyline[]
   onMarkerClick?: (marker: MapMarker) => void
 }
 
@@ -85,6 +95,7 @@ export default function MapInner({
   markers = [],
   polygons = [],
   heatpoints = [],
+  polylines = [],
   onMarkerClick
 }: MapInnerProps) {
   const [measuring, setMeasuring] = useState(false)
@@ -110,7 +121,7 @@ export default function MapInner({
       <div className="absolute top-4 left-4 z-[999]">
         <button
           onClick={() => setMeasuring(!measuring)}
-          className="px-3 py-1.5 rounded-lg border border-slate-800 bg-[#020617]/90 text-slate-450 hover:text-white text-xs font-bold transition-all shadow-xl backdrop-blur-md"
+          className="px-3 py-1.5 rounded-lg border border-slate-800 bg-[#020617]/90 text-slate-400 hover:text-white text-xs font-bold transition-all shadow-xl backdrop-blur-md"
         >
           {measuring ? '📐 Measuring Mode Active' : '📐 Measure Distance'}
         </button>
@@ -155,6 +166,24 @@ export default function MapInner({
               ))}
             </LayerGroup>
           </LayersControl.Overlay>
+
+          {polylines.length > 0 && (
+            <LayersControl.Overlay checked name="Digital Twin Connections">
+              <LayerGroup>
+                {polylines.map((line) => (
+                  <Polyline
+                    key={line.id}
+                    positions={line.positions}
+                    pathOptions={{
+                      color: line.color || '#3b82f6',
+                      weight: line.weight || 2.5,
+                      dashArray: line.dashArray
+                    }}
+                  />
+                ))}
+              </LayerGroup>
+            </LayersControl.Overlay>
+          )}
 
           {polygons.length > 0 && (
             <LayersControl.Overlay checked name="Ward Polygons">

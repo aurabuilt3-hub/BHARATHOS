@@ -9,12 +9,16 @@ export default function AISummaryWidget() {
     summary: string
     confidence: number
     reasoning: string
-    model: string
+    priority: string
+    recommended_departments: string[]
+    next_steps: string[]
   }>({
     summary: 'Divert traffic off NH16 beach bypass corridor and deploy pump unit M-12 to Mudasarlova Spillway.',
     confidence: 94.2,
     reasoning: 'Drain gauge reading exceeds critical safety limit. RAG SOP Guidelines recommend pump pre-positioning.',
-    model: 'Gemini 2.5 Pro (LangGraph Graph Orchestrated)'
+    priority: 'high',
+    recommended_departments: ['Municipal Operations', 'Traffic Control'],
+    next_steps: ['Deploy water pumps', 'Establish police barricades']
   })
 
   useEffect(() => {
@@ -25,21 +29,26 @@ export default function AISummaryWidget() {
             summary: res.summary,
             confidence: res.confidence,
             reasoning: res.reasoning,
-            model: res.model
+            priority: res.priority || 'medium',
+            recommended_departments: res.recommended_departments || [],
+            next_steps: res.next_steps || []
           })
         }
+      })
+      .catch((err) => {
+        console.warn("AI Triage query offline, using local cached recommendations:", err)
       })
   }, [])
 
   return (
-    <div className="glass-panel border-l-4 border-l-blue-500 rounded-2xl p-5 flex flex-col space-y-4">
+    <div className="glass-panel border-l-4 border-l-purple-500 rounded-2xl p-5 flex flex-col space-y-4">
       <div className="flex items-center justify-between border-b border-slate-900 pb-3">
         <div className="flex items-center space-x-2">
-          <ActivityIcon className="h-5 w-5 text-blue-400 animate-pulse" />
+          <ActivityIcon className="h-5 w-5 text-purple-400 animate-pulse" />
           <h4 className="text-sm font-bold text-white tracking-wide">Multi-Agent AI Recommendation Plan</h4>
         </div>
-        <span className="text-[10px] font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-800 px-2 py-0.5 rounded font-mono-data">
-          Human Approval Mandatory
+        <span className="text-[10px] font-bold text-purple-400 bg-purple-950/60 border border-purple-800 px-2 py-0.5 rounded font-mono">
+          Advisory Mode
         </span>
       </div>
 
@@ -50,18 +59,35 @@ export default function AISummaryWidget() {
         </div>
 
         <div>
-          <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider block">Reasoning & Evidence</span>
+          <span className="text-[10px] text-slate-550 font-bold uppercase tracking-wider block font-mono">AI Reasoning</span>
           <p className="text-[11px] text-slate-400 mt-0.5 leading-relaxed">{data.reasoning}</p>
         </div>
 
-        <div className="grid grid-cols-2 gap-3 pt-2">
-          <div className="rounded-xl border border-slate-800 bg-[#050816] p-2.5">
-            <span className="text-[10px] text-slate-500 font-semibold uppercase block">Agent Confidence</span>
-            <span className="text-xs font-bold text-emerald-400 mt-0.5 block font-mono-data">{data.confidence}%</span>
+        {data.next_steps.length > 0 && (
+          <div>
+            <span className="text-[10px] text-slate-550 font-bold uppercase tracking-wider block font-mono">Next Steps</span>
+            <ul className="list-disc pl-4 text-[11px] text-slate-400 mt-1 space-y-0.5">
+              {data.next_steps.map((step, idx) => (
+                <li key={idx}>{step}</li>
+              ))}
+            </ul>
           </div>
-          <div className="rounded-xl border border-slate-800 bg-[#050816] p-2.5">
-            <span className="text-[10px] text-slate-500 font-semibold uppercase block">Orchestration Graph</span>
-            <span className="text-[11px] font-bold text-blue-400 mt-0.5 block font-mono-data truncate">{data.model}</span>
+        )}
+
+        <div className="grid grid-cols-3 gap-2.5 pt-2">
+          <div className="rounded-xl border border-slate-850 bg-[#050816] p-2.5 text-center">
+            <span className="text-[9px] text-slate-500 font-bold uppercase block font-mono">Confidence</span>
+            <span className="text-xs font-bold text-purple-400 mt-0.5 block font-mono">{data.confidence}%</span>
+          </div>
+          <div className="rounded-xl border border-slate-850 bg-[#050816] p-2.5 text-center">
+            <span className="text-[9px] text-slate-500 font-bold uppercase block font-mono">Priority</span>
+            <span className="text-xs font-bold text-red-400 mt-0.5 block font-mono uppercase">{data.priority}</span>
+          </div>
+          <div className="rounded-xl border border-slate-850 bg-[#050816] p-2.5 text-center">
+            <span className="text-[9px] text-slate-500 font-bold uppercase block font-mono">Routing</span>
+            <span className="text-[10px] font-bold text-blue-450 mt-0.5 block font-mono truncate" title={data.recommended_departments.join(', ')}>
+              {data.recommended_departments[0] || 'NEOC'}
+            </span>
           </div>
         </div>
       </div>

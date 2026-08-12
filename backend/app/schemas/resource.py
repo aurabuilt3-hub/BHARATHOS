@@ -57,6 +57,7 @@ class PaginatedResourceResponse(BaseModel):
 
 class ResourceAllocationRequest(BaseModel):
     incident_id: uuid.UUID
+    resource_id: uuid.UUID
 
     model_config = ConfigDict(from_attributes=True)
 

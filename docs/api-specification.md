@@ -538,9 +538,150 @@ All geographic hierarchy endpoints require authentication (`Authorization: Beare
 
 ---
 
+### 2.7. Dashboard Aggregates
+
+#### `GET /dashboard/overview`
+- **Description**: Aggregates incidents, alerts, resources, facilities, digital twin nodes, telemetry, weather, AQI, freshness, and provenance. Restricts results strictly to the requesting user's geographic authorization scope.
+- **Headers**: `Authorization: Bearer <Supabase_JWT_Token>`
+- **Response Status**: `200 OK`
+- **Response Structure**:
+  ```json
+  {
+    "active_incidents_count": 5,
+    "total_incidents_count": 25,
+    "active_alerts_count": 2,
+    "resources": {
+      "total": 10,
+      "available": 8,
+      "allocated": 2
+    },
+    "facilities_count": 218,
+    "digital_twin_nodes_count": 4,
+    "telemetry": {
+      "total_records": 124,
+      "status": "active"
+    },
+    "weather": {
+      "temperature": 31.2,
+      "humidity": 78.0,
+      "precipitation": 0.0,
+      "wind_speed": 12.0,
+      "weather_code": 1,
+      "observed_at": "2026-08-10T12:00:00Z",
+      "freshness": "FRESH",
+      "source_type": "OPEN_DATA",
+      "source_name": "Open-Meteo",
+      "source_url": "https://api.open-meteo.com/v1/forecast?..."
+    },
+    "air_quality": {
+      "aqi": 42.0,
+      "pm2_5": 12.0,
+      "pm10": 24.0,
+      "nitrogen_dioxide": 5.0,
+      "ozone": 15.0,
+      "observed_at": "2026-08-10T12:00:00Z",
+      "freshness": "FRESH",
+      "source_type": "OPEN_DATA",
+      "source_name": "Open-Meteo",
+      "source_url": "https://air-quality-api.open-meteo.com/v1/air-quality?..."
+    }
+  }
+  ```
+
+---
+
+### 2.8. Administration & Data Ingestion
+
+#### `GET /admin/data-ingestion/status`
+- **Description**: Returns statistics of the latest synchronization run from the PostgreSQL AuditLog database table. Restricted to roles: `admin`, `national_admin`.
+- **Headers**: `Authorization: Bearer <Supabase_JWT_Token>`
+- **Response Status**: `200 OK` or `403 Forbidden`
+- **Response Structure**:
+  ```json
+  {
+    "last_run": "2026-08-10T12:05:00Z",
+    "status": "success",
+    "duration_ms": 1234,
+    "sources": {
+      "openstreetmap_overpass": {
+        "status": "success",
+        "records_processed": 105,
+        "records_created": 3,
+        "records_updated": 2,
+        "errors": []
+      },
+      "open_meteo_weather": {
+        "status": "success",
+        "records_processed": 1,
+        "records_created": 4,
+        "records_updated": 0,
+        "errors": []
+      },
+      "open_meteo_aqi": {
+        "status": "success",
+        "records_processed": 1,
+        "records_created": 3,
+        "records_updated": 0,
+        "errors": []
+      }
+    }
+  }
+  ```
+
+#### `POST /admin/data-ingestion/sync`
+- **Description**: Triggers a synchronous, admin-controlled data integration run of registered weather, AQI, and Overpass facility sources. Restricted to roles: `admin`, `national_admin`.
+- **Headers**: `Authorization: Bearer <Supabase_JWT_Token>`
+- **Response Status**: `200 OK` (returns sync stats payload) or `403 Forbidden`
+
+---
+
 ## 3. WebSockets Real-Time Topics
 
-- **`ws://localhost:8000/ws/dashboard`**: Emits real-time aggregates and overall network health calculations.
-- **`ws://localhost:8000/ws/sensors`**: Streams active sensor measurements.
-- **`ws://localhost:8000/ws/incidents`**: Pushes immediate JSON updates when incidents are reported or assigned.
-- **`ws://localhost:8000/ws/notifications`**: Broadcasts alerts to relevant client connections.
+All WebSocket endpoints require JWT authentication. The Supabase JWT token must be passed as a query parameter (e.g., `?token=<JWT_TOKEN>`). If the token is missing, invalid, or expired, the backend rejects the connection with close code `1008` (Policy Violation).
+
+Geographic scoping is strictly enforced on the backend connection manager: users receive only events that lie within their authorized administrative scope boundaries (State -> District -> City).
+
+### 3.1. Available Endpoints
+
+- **`/ws/dashboard`**: Centralized event channel. Streams all incidents, alerts, resources, sensors, and telemetry updates to keep the main dashboards current without duplicating socket connections.
+- **`/ws/sensors`**: Streams active sensor measurements.
+- **`/ws/incidents`**: Pushes immediate JSON updates when incidents are reported or assigned.
+- **`/ws/notifications`**: Broadcasts alerts to relevant client connections.
+
+### 3.2. Event payload schemas
+
+Every WebSocket message broadcast uses the following structured event contract:
+
+```json
+{
+  "event": "INCIDENT_STATUS_CHANGED",
+  "timestamp": "2026-08-11T00:19:59.123456",
+  "entity_type": "incident",
+  "entity_id": "e47ac10b-58cc-4372-a567-0e02b2c3d499",
+  "data": {
+    "id": "e47ac10b-58cc-4372-a567-0e02b2c3d499",
+    "status": "assigned",
+    "severity": "high"
+  },
+  "source_type": "SYSTEM",
+  "geography": {
+    "state_id": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+    "district_id": "e47ac10b-58cc-4372-a567-0e02b2c3d480",
+    "city_id": "d47ac10b-58cc-4372-a567-0e02b2c3d481"
+  }
+}
+```
+
+#### Supported Event Constants:
+- `INCIDENT_CREATED`: Fired when a citizen reports an incident.
+- `INCIDENT_STATUS_CHANGED`: Fired when status updates (e.g. active -> resolved).
+- `INCIDENT_ASSIGNED`: Fired when assigned to a specific department.
+- `ALERT_CREATED`: Fired when a government advisory or threshold breach alert is generated.
+- `ALERT_STATUS_CHANGED`: Fired when status updates (e.g. active -> resolved/acknowledged).
+- `RESOURCE_CREATED`: Fired when a vehicle/fleet asset is registered.
+- `RESOURCE_UPDATED`: Fired when metadata changes.
+- `RESOURCE_ALLOCATED`: Fired when an ambulance/patrol is allocated to an incident.
+- `RESOURCE_RELEASED`: Fired when resource finishes task and becomes available.
+- `TELEMETRY_UPDATED`: Fired when IoT sensor fluctuates or weather data is synced.
+- `DIGITAL_TWIN_NODE_UPDATED`: Fired when status changes on a mapping node.
+

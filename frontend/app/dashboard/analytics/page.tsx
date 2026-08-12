@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import DashboardLayout from '../../../components/layout/DashboardLayout'
 import PageHeader from '../../../components/ui/PageHeader'
 import StatCard from '../../../components/ui/StatCard'
@@ -9,24 +9,61 @@ import AreaChart from '../../../components/ui/AreaChart'
 import BarChart from '../../../components/ui/BarChart'
 import PieChart from '../../../components/ui/PieChart'
 import LineChart from '../../../components/ui/LineChart'
-
 import ScenarioSimulatorWidget from '../../../components/widgets/ScenarioSimulatorWidget'
 import { KPIEngine } from '../../../lib/analytics/kpiEngine'
 import { ForecastEngine } from '../../../lib/analytics/forecastEngine'
 import { TrendEngine } from '../../../lib/analytics/trendEngine'
-import { RiskEngine } from '../../../lib/analytics/riskEngine'
 import { DepartmentEngine } from '../../../lib/analytics/departmentEngine'
 import { ReportExporter } from '../../../lib/reportExporter'
-
 import { incidentCategoryPieData, responseTimeHistoryData } from '../../../lib/mock/analytics'
 import { TrendIcon, ActivityIcon, AlertIcon } from '../../../components/icons'
+import { apiService, DashboardOverview } from '../../../services/api'
 
 export default function StrategicAnalyticsPage() {
   const kpis = KPIEngine.calculateSummary()
   const forecasts = ForecastEngine.getPredictiveForecasts()
   const weeklyTrends = TrendEngine.getWeeklyTrendData()
   const deptPerformance = DepartmentEngine.getDepartmentPerformanceData()
-  const topRisks = RiskEngine.getTopRiskAreas()
+
+  const [overview, setOverview] = useState<DashboardOverview | null>(null)
+  const [incidents, setIncidents] = useState<any[]>([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    let isMounted = true
+    setLoading(true)
+    Promise.all([
+      apiService.getIncidents({ limit: 200 }),
+      apiService.getDashboardOverview()
+    ]).then(([incidentsRes, overviewRes]) => {
+      if (!isMounted) return
+      setIncidents(incidentsRes)
+      setOverview(overviewRes)
+      setLoading(false)
+    }).catch(err => {
+      console.warn("Analytics data fetch fallback active", err)
+      if (isMounted) setLoading(false)
+    })
+    return () => { isMounted = false }
+  }, [])
+
+  // Dynamically calculate pie categories from active database incidents
+  const categoryCounts = incidents.reduce((acc: Record<string, number>, inc) => {
+    const cat = String(inc.category || 'Other').trim()
+    const capitalized = cat.charAt(0).toUpperCase() + cat.slice(1).toLowerCase()
+    acc[capitalized] = (acc[capitalized] || 0) + 1
+    return acc
+  }, {})
+
+  const chartColors = ['#3b82f6', '#10b981', '#f97316', '#ef4444', '#a855f7', '#06b6d4']
+  const dynamicPieData = Object.keys(categoryCounts).map((cat, idx) => ({
+    name: cat,
+    value: categoryCounts[cat],
+    color: chartColors[idx % chartColors.length],
+    fill: chartColors[idx % chartColors.length]
+  }))
+
+  const finalPieData = dynamicPieData.length > 0 ? dynamicPieData : incidentCategoryPieData
 
   const handleExportCSV = () => {
     ReportExporter.exportToCSV('BharatOS_Analytics_Report', weeklyTrends)
@@ -35,6 +72,13 @@ export default function StrategicAnalyticsPage() {
   const handleExportPDF = () => {
     ReportExporter.exportToPDF('BharatOS Strategic Analytics Executive Report')
   }
+
+  // Dynamic values derived from overview
+  const sensorHealth = overview?.telemetry?.status === 'active' ? 100 : kpis.sensorHealthPercent
+  const sensorCount = overview?.telemetry?.total_records !== undefined ? `${overview.telemetry.total_records} Logs` : '98 active'
+  const resolutionRate = overview?.active_incidents_count !== undefined && overview?.total_incidents_count 
+    ? Math.round(((overview.total_incidents_count - overview.active_incidents_count) / overview.total_incidents_count) * 100) 
+    : kpis.resolutionRatePercent
 
   return (
     <DashboardLayout userRole="admin">
@@ -73,10 +117,10 @@ export default function StrategicAnalyticsPage() {
           />
           <StatCard
             title="Incident Resolution Rate"
-            value={`${kpis.resolutionRatePercent}%`}
+            value={`${resolutionRate}%`}
             change={2.4}
             changeType="increase"
-            description="overall completion rate"
+            description="overall completion rate (DB Live)"
             icon={<ActivityIcon className="h-5 w-5 text-blue-400" />}
             glow={true}
           />
@@ -90,10 +134,10 @@ export default function StrategicAnalyticsPage() {
           />
           <StatCard
             title="IoT Telemetry Health"
-            value={`${kpis.sensorHealthPercent}%`}
+            value={`${sensorHealth}%`}
             change={0.1}
             changeType="increase"
-            description="98 active sensors online"
+            description={`${sensorCount} registered (DB Live)`}
             icon={<AlertIcon className="h-5 w-5 text-cyan-400" />}
           />
         </div>
@@ -138,17 +182,8 @@ export default function StrategicAnalyticsPage() {
 
         {/* 4. Analytics Charts Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <ChartCard title="Weekly Incident Trends Across Categories" description="Past 7 days incident volume">
-            <AreaChart
-              data={weeklyTrends}
-              xAxisKey="day"
-              series={[
-                { key: 'Flood', color: '#3b82f6' },
-                { key: 'Medical', color: '#10b981' },
-                { key: 'Accident', color: '#f97316' },
-                { key: 'Fire', color: '#ef4444' }
-              ]}
-            />
+          <ChartCard title="Incident Category Breakdown" description="Proportional volume across all logged categories">
+            <PieChart data={finalPieData} />
           </ChartCard>
 
           <ChartCard title="Department Resolution Efficiency" description="Dispatched vs Resolved ticket metrics">

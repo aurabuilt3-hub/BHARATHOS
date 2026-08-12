@@ -127,6 +127,16 @@ def seed_db(db: Session):
             "latitude": 17.7112,
             "longitude": 83.3042,
             "last_telemetry": {"water_level": 4.15, "unit": "m"}
+        },
+        {
+            "id": "e47ac10b-58cc-4372-a567-0e02b2c3d495",
+            "name": "Vizag Weather & Air Quality Monitoring Station",
+            "type": "weather",
+            "level": None,
+            "status": "normal",
+            "latitude": 17.6868,
+            "longitude": 83.2185,
+            "last_telemetry": {"temperature": 28.0, "aqi": 50, "unit": "metric"}
         }
     ]
     for n in nodes_data:

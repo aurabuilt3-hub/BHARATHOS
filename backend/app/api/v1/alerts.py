@@ -15,9 +15,9 @@ from app.schemas.alert import (
     AlertSummaryResponse,
 )
 from app.services.alert_service import AlertService
+from app.realtime.event_service import event_service
 
 router = APIRouter(prefix="/alerts", tags=["Alerts"])
-
 
 @router.get("/summary", response_model=AlertSummaryResponse)
 def get_alerts_summary(
@@ -27,7 +27,6 @@ def get_alerts_summary(
     # Expire outdated alerts first (maintenance action on telemetry alerts)
     AlertService.expire_alerts(db)
     return AlertService.get_summary(db, current_user)
-
 
 @router.get("/", response_model=PaginatedAlertResponse)
 def list_alerts(
@@ -69,7 +68,6 @@ def list_alerts(
     )
     return PaginatedAlertResponse(items=items, total=total, page=page, limit=limit)
 
-
 @router.get("/{alert_id}", response_model=AlertResponse)
 def get_alert(
     alert_id: str,
@@ -80,35 +78,35 @@ def get_alert(
     AlertService.expire_alerts(db)
     return AlertService.get_alert(db, current_user, alert_id)
 
-
 @router.post("/", response_model=AlertResponse, status_code=status.HTTP_201_CREATED)
-def create_alert(
+async def create_alert(
     payload: AlertCreate,
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
     alert = AlertService.create_alert(db, current_user, payload.model_dump())
     db.commit()
+    await event_service.publish_alert_created(db, alert)
     return alert
 
-
 @router.patch("/{alert_id}/acknowledge", response_model=AlertResponse)
-def acknowledge_alert(
+async def acknowledge_alert(
     alert_id: str,
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
     alert = AlertService.acknowledge_alert(db, current_user, alert_id)
     db.commit()
+    await event_service.publish_alert_status_changed(db, alert, "acknowledged")
     return alert
 
-
 @router.patch("/{alert_id}/resolve", response_model=AlertResponse)
-def resolve_alert(
+async def resolve_alert(
     alert_id: str,
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
     alert = AlertService.resolve_alert(db, current_user, alert_id)
     db.commit()
+    await event_service.publish_alert_status_changed(db, alert, "resolved")
     return alert
