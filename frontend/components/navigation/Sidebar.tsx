@@ -230,9 +230,9 @@ export default function Sidebar() {
                     )}
 
                     {/* Custom Telemetry Badges */}
-                    {item.badge && !sidebarCollapsed && (
+                    {(item as any).badge && !sidebarCollapsed && (
                       <span className="ml-auto text-[9px] font-bold px-1.5 py-0.5 rounded bg-purple-950/60 border border-purple-800 text-purple-400 animate-pulse font-mono shrink-0">
-                        {item.badge}
+                        {(item as any).badge}
                       </span>
                     )}
                   </Link>

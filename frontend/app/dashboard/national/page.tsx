@@ -304,7 +304,6 @@ export default function NationalCommandPage() {
         console.error("Failed to fetch dashboard overview", err)
         if (isMounted) setLoading(false)
       })
->>>>>>> 4094a40810aa27c231f8d40c32b320bc908a9b2a
     }
 
     fetchAll()
@@ -1350,8 +1349,6 @@ export default function NationalCommandPage() {
                   <span>Loading response data...</span>
                 </div>
               )}
-            </div>
-          </div>
             </div>
           </div>
 

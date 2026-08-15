@@ -112,7 +112,7 @@ export default function CitizenAlerts() {
             >
               <div className="flex items-center justify-between">
                 <span className="text-[10px] font-mono font-bold text-slate-450 uppercase tracking-wider">
-                  {t.sourceLabel} {alert.source || 'CWC Station'}
+                  {t.sourceLabel} {(alert as any).source || 'CWC Station'}
                 </span>
                 <span className={`text-[9px] font-bold px-2 py-0.5 rounded border uppercase tracking-wider font-mono ${
                   alert.severity === 'critical' ? 'text-red-400 bg-red-950/40 border-red-900/30' :

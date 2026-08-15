@@ -69,6 +69,20 @@ export default function CityDashboardPage() {
   const [level, setLevel] = useState<AdminLevel>('city')
   const city = visakhapatnamCityData
 
+  const [currentTime, setCurrentTime] = useState('')
+  const [currentDate, setCurrentDate] = useState('')
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date()
+      setCurrentTime(now.toLocaleTimeString('en-IN', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' }))
+      setCurrentDate(now.toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' }).toUpperCase())
+    }
+    updateTime()
+    const timer = setInterval(updateTime, 1000)
+    return () => clearInterval(timer)
+  }, [])
+
   // E2E Dispatch Drawer & Reporting Modal state
   const [selectedIncident, setSelectedIncident] = useState<BackendIncident | null>(null)
   const [incidentResources, setIncidentResources] = useState<BackendResource[]>([])
@@ -691,7 +705,7 @@ export default function CityDashboardPage() {
   }
 
   const getHeaderDetails = () => {
-    switch (level) {
+    switch (level as string) {
       case 'national':
         return {
           title: 'National Operations Command Center',
