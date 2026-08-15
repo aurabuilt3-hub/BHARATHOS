@@ -48,7 +48,7 @@ export default function AISummaryWidget() {
           <h4 className="text-sm font-bold text-white tracking-wide">Multi-Agent AI Recommendation Plan</h4>
         </div>
         <span className="text-[10px] font-bold text-purple-400 bg-purple-950/60 border border-purple-800 px-2 py-0.5 rounded font-mono">
-          Advisory Mode
+          Advisory Mode • DEMO SCENARIO
         </span>
       </div>
 

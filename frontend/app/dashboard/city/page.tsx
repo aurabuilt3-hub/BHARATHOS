@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 import DashboardLayout from '../../../components/layout/DashboardLayout'
 import PageHeader from '../../../components/ui/PageHeader'
 import WeatherWidget from '../../../components/widgets/WeatherWidget'
-import TrafficWidget from '../../../components/widgets/TrafficWidget'
+import FloodRiskWidget from '../../../components/widgets/FloodRiskWidget'
 import ResourceWidget from '../../../components/widgets/ResourceWidget'
 import SensorWidget from '../../../components/widgets/SensorWidget'
 import AISummaryWidget from '../../../components/widgets/AISummaryWidget'
@@ -20,10 +20,13 @@ import { incidentCategoryPieData, responseTimeHistoryData } from '../../../lib/m
 import { 
   apiService, 
   BackendIncident, 
-  BackendResource 
+  BackendResource,
+  BackendFacility,
+  DashboardOverview
 } from '../../../services/api'
 import { AnimatePresence, motion } from 'framer-motion'
 import { AlertTriangle } from 'lucide-react'
+import MapContainer, { MapMarker } from '../../../components/ui/MapContainer'
 
 type AdminLevel = 'national' | 'state' | 'district' | 'city' | 'ward'
 
@@ -34,7 +37,7 @@ export default function CityDashboardPage() {
   // E2E Dispatch Drawer & Reporting Modal state
   const [selectedIncident, setSelectedIncident] = useState<BackendIncident | null>(null)
   const [incidentResources, setIncidentResources] = useState<BackendResource[]>([])
-  const [allDepartments, setAllDepartments] = useState<any[]>([])
+  const [allDepartments, setAllDepartments] = useState<Array<{ id: string; name: string }>>([])
   const [resources, setResources] = useState<BackendResource[]>([])
   const [showReportModal, setShowReportModal] = useState(false)
   const [reportForm, setReportForm] = useState({
@@ -53,21 +56,80 @@ export default function CityDashboardPage() {
   const [updatingStatus, setUpdatingStatus] = useState<string | null>(null)
   const [actionAlert, setActionAlert] = useState<string | null>(null)
 
-  // Fetch initial metadata
+  // Live map and dashboard stats states
+  const [incidents, setIncidents] = useState<BackendIncident[]>([])
+  const [facilities, setFacilities] = useState<BackendFacility[]>([])
+  const [stats, setStats] = useState<DashboardOverview | null>(null)
+
+  // Fetch initial metadata and live command telemetry
   useEffect(() => {
     Promise.all([
       apiService.getDepartments(),
-      apiService.getResources({ limit: 100 })
-    ]).then(([deptsRes, resourcesRes]) => {
+      apiService.getResources({ limit: 100 }),
+      apiService.getIncidents({ limit: 100 }),
+      apiService.getFacilities({ limit: 100 }),
+      apiService.getDashboardOverview()
+    ]).then(([deptsRes, resourcesRes, incidentsRes, facilitiesRes, statsRes]) => {
       setAllDepartments(deptsRes || [])
       setResources(resourcesRes.items || [])
+      setIncidents(incidentsRes || [])
+      setFacilities(facilitiesRes.items || [])
+      setStats(statsRes)
     }).catch(err => {
-      console.warn("Offline fallback loading metadata", err)
+      console.warn("Offline fallback loading metadata and stats", err)
     })
   }, [])
 
+  // Convert DB items to map markers
+  const incidentMarkers = incidents.map(inc => ({
+    id: `inc-${inc.id}`,
+    position: [inc.latitude, inc.longitude] as [number, number],
+    title: `⚠️ [${inc.category.toUpperCase()}] ${inc.title}`,
+    description: `${inc.description} • Status: ${inc.status}`,
+    category: inc.severity === 'critical' ? 'critical' as const : inc.severity === 'high' ? 'high' as const : inc.severity === 'medium' ? 'medium' as const : 'low' as const
+  }))
+
+  const facilityMarkers = facilities.map(fac => {
+    let emoji = '🏥'
+    if (fac.facility_type === 'POLICE_STATION') emoji = '👮'
+    if (fac.facility_type === 'FIRE_STATION') emoji = '🚒'
+    return {
+      id: `fac-${fac.id}`,
+      position: [fac.latitude, fac.longitude] as [number, number],
+      title: `${emoji} ${fac.name}`,
+      description: `Type: ${fac.facility_type} • Address: ${fac.address || 'N/A'}`,
+      category: 'info' as const
+    }
+  })
+
+  const resourceMarkers = resources.map(res => {
+    let emoji = '🚗'
+    if (res.type === 'ambulance') emoji = '🚑'
+    if (res.type === 'fire_truck') emoji = '🚒'
+    if (res.type === 'patrol_car') emoji = '🚓'
+    return {
+      id: `res-${res.id}`,
+      position: [res.latitude, res.longitude] as [number, number],
+      title: `${emoji} ${res.name}`,
+      description: `Type: ${res.type} • Status: ${res.status}`,
+      category: 'info' as const
+    }
+  })
+
+  const allMarkers = [...incidentMarkers, ...facilityMarkers, ...resourceMarkers].filter(m => m.position[0] !== undefined && m.position[1] !== undefined)
+
+  const handleMarkerClick = (marker: MapMarker) => {
+    const rawId = String(marker.id).replace(/^(inc|fac|res)-/, '')
+    if (String(marker.id).startsWith('inc-')) {
+      const inc = incidents.find(i => i.id === rawId)
+      if (inc) {
+        handleSelectIncident(inc)
+      }
+    }
+  }
+
   // E2E Dispatch & workflow handler actions
-  const handleSelectIncident = async (item: any) => {
+  const handleSelectIncident = async (item: { id: string }) => {
     try {
       const inc = await apiService.getIncidentById(item.id)
       setSelectedIncident(inc)
@@ -107,9 +169,10 @@ export default function CityDashboardPage() {
       setActionAlert("CITIZEN INCIDENT REPORTED")
       // Quick refresh page by resetting selected incident
       setSelectedIncident(null)
-    } catch (err: any) {
-      console.error(err)
-      setActionAlert(`Report Failed: ${err.message || 'Error'}`)
+    } catch (err: unknown) {
+      const error = err as Error
+      console.error(error)
+      setActionAlert(`Report Failed: ${error.message || 'Error'}`)
     } finally {
       setSubmittingIncident(false)
     }
@@ -128,9 +191,10 @@ export default function CityDashboardPage() {
       } : null)
       
       setActionAlert("DEPARTMENT DISPATCHED")
-    } catch (err: any) {
-      console.error(err)
-      setActionAlert(`Assign Failed: ${err.message || 'Error'}`)
+    } catch (err: unknown) {
+      const error = err as Error
+      console.error(error)
+      setActionAlert(`Assign Failed: ${error.message || 'Error'}`)
     } finally {
       setAssigningDeptId(null)
     }
@@ -144,13 +208,14 @@ export default function CityDashboardPage() {
       
       setSelectedIncident(prev => prev ? {
         ...prev,
-        status: status as any
+        status: status as BackendIncident['status']
       } : null)
       
       setActionAlert(`INCIDENT STATUS: ${status.toUpperCase()}`)
-    } catch (err: any) {
-      console.error(err)
-      setActionAlert(`Update Failed: ${err.message || 'Error'}`)
+    } catch (err: unknown) {
+      const error = err as Error
+      console.error(error)
+      setActionAlert(`Update Failed: ${error.message || 'Error'}`)
     } finally {
       setUpdatingStatus(null)
     }
@@ -169,9 +234,10 @@ export default function CityDashboardPage() {
       setResources(refreshedResources.items || [])
       
       setActionAlert("FLEET ASSET ALLOCATED")
-    } catch (err: any) {
-      console.error(err)
-      setActionAlert(`Allocation Failed: ${err.message || 'Error'}`)
+    } catch (err: unknown) {
+      const error = err as Error
+      console.error(error)
+      setActionAlert(`Allocation Failed: ${error.message || 'Error'}`)
     } finally {
       setAllocatingResourceId(null)
     }
@@ -190,9 +256,10 @@ export default function CityDashboardPage() {
       setResources(refreshedResources.items || [])
       
       setActionAlert("RESOURCE RELEASED")
-    } catch (err: any) {
-      console.error(err)
-      setActionAlert(`Release Failed: ${err.message || 'Error'}`)
+    } catch (err: unknown) {
+      const error = err as Error
+      console.error(error)
+      setActionAlert(`Release Failed: ${error.message || 'Error'}`)
     } finally {
       setAllocatingResourceId(null)
     }
@@ -282,17 +349,75 @@ export default function CityDashboardPage() {
           }
         />
 
+        {/* KPI Stats Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="glass-panel border-l-4 border-l-red-500 rounded-xl p-4 flex flex-col justify-between">
+            <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider font-mono">Active Incidents</span>
+            <span className="text-xl font-extrabold text-white mt-2 font-mono">{stats?.active_incidents_count ?? 12}</span>
+            <span className="text-[9px] text-red-400 mt-1 font-mono">● LIVE FEEDS ACTIVE</span>
+          </div>
+          <div className="glass-panel border-l-4 border-l-orange-500 rounded-xl p-4 flex flex-col justify-between">
+            <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider font-mono">High Risk Zones</span>
+            <span className="text-xl font-extrabold text-white mt-2 font-mono">3</span>
+            <span className="text-[9px] text-orange-400 mt-1 font-mono">MVP Colony, Beach Road, Gajuwaka</span>
+          </div>
+          <div className="glass-panel border-l-4 border-l-yellow-500 rounded-xl p-4 flex flex-col justify-between">
+            <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider font-mono">Active Warnings</span>
+            <span className="text-xl font-extrabold text-white mt-2 font-mono">{stats?.active_alerts_count ?? 4}</span>
+            <span className="text-[9px] text-yellow-400 mt-1 font-mono">RED ALERT IS ACTIVE</span>
+          </div>
+          <div className="glass-panel border-l-4 border-l-emerald-500 rounded-xl p-4 flex flex-col justify-between">
+            <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider font-mono">Resources Deployed</span>
+            <span className="text-xl font-extrabold text-white mt-2 font-mono">{stats?.resources?.allocated ?? 8}</span>
+            <span className="text-[9px] text-emerald-400 mt-1 font-mono">PUMPS, DRAINAGE VANS</span>
+          </div>
+          <div className="glass-panel border-l-4 border-l-blue-500 rounded-xl p-4 flex flex-col justify-between">
+            <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider font-mono">Avg Response Time</span>
+            <span className="text-xl font-extrabold text-white mt-2 font-mono">14.2m</span>
+            <span className="text-[9px] text-blue-400 mt-1 font-mono">TARGET &lt; 15.0m</span>
+          </div>
+          <div className="glass-panel border-l-4 border-l-purple-500 rounded-xl p-4 flex flex-col justify-between">
+            <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider font-mono">Areas at Risk</span>
+            <span className="text-xl font-extrabold text-white mt-2 font-mono">6</span>
+            <span className="text-[9px] text-purple-400 mt-1 font-mono">LOW-LYING COASTAL BASINS</span>
+          </div>
+        </div>
+
+        {/* Large Interactive GIS Map */}
+        <div className="h-[450px] w-full rounded-2xl border border-slate-900 overflow-hidden relative shadow-2xl">
+          <MapContainer 
+            center={[17.7289, 83.3214]} 
+            zoom={13}
+            markers={allMarkers}
+            onMarkerClick={handleMarkerClick}
+          />
+          <div className="absolute top-4 right-4 z-[999] bg-[#020617]/95 border border-slate-800 rounded-xl p-3.5 text-xs text-slate-350 shadow-2xl backdrop-blur-md max-w-xs space-y-2 pointer-events-none select-none">
+            <div className="flex items-center space-x-1.5 border-b border-slate-800 pb-1.5 mb-1.5">
+              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+              <span className="font-extrabold text-white font-mono uppercase tracking-wider text-[10px]">GIS Control Center</span>
+            </div>
+            <div className="flex items-center space-x-2 text-[10px] font-mono-data text-slate-400">
+              <span className="w-2.5 h-2.5 rounded bg-red-500 border border-white" />
+              <span>Flooding Incidents</span>
+            </div>
+            <div className="flex items-center space-x-2 text-[10px] font-mono-data text-slate-400">
+              <span className="w-2.5 h-2.5 rounded bg-blue-500 border border-white" />
+              <span>Municipal Infrastructure</span>
+            </div>
+          </div>
+        </div>
+
         {/* 1. Top Row: Weather & AI Summary */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <WeatherWidget />
           <AISummaryWidget />
         </div>
 
-        {/* 2. Middle Row: Resource, Sensor & Traffic Widgets */}
+        {/* 2. Middle Row: Resource, Sensor & Flood Risk Widgets */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <ResourceWidget />
           <SensorWidget />
-          <TrafficWidget />
+          <FloodRiskWidget />
         </div>
 
         {/* 3. Incidents Queue & Analytics */}
@@ -490,12 +615,22 @@ export default function CityDashboardPage() {
                   <p className="text-slate-500 font-mono mt-0.5">[{selectedIncident.latitude.toFixed(4)}, {selectedIncident.longitude.toFixed(4)}]</p>
                 </div>
 
-                {/* AI Triage Information */}
-                <div className="p-3.5 rounded-xl border border-purple-900/40 bg-purple-950/15">
-                  <span className="text-[10px] font-bold text-purple-400 uppercase tracking-widest font-mono block">AI Triage Intel</span>
-                  <p className="text-slate-300 mt-1.5 leading-relaxed">
-                    Triage Priority: <span className="font-bold text-purple-300 uppercase">{selectedIncident.severity}</span>. Recommended routing to municipal pumps and traffic detours.
+                {/* AI Flood Response Advisor */}
+                <div className="p-3.5 rounded-xl border border-purple-900/40 bg-purple-950/15 space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-bold text-purple-400 uppercase tracking-widest font-mono">AI Flood Response Advisor</span>
+                    <span className="text-[8px] font-mono font-bold bg-purple-950 px-2 py-0.5 rounded border border-purple-900/40 text-purple-300">ADVISORY MODE</span>
+                  </div>
+                  <p className="text-slate-350 leading-relaxed font-semibold">
+                    Triage Priority: <span className="font-bold text-purple-300 uppercase">{selectedIncident.severity}</span>. Recommended routing of dewatering pumps and municipal support to {selectedIncident.address || 'incident coordinates'}.
                   </p>
+                  <div className="flex items-center justify-between pt-1 text-[8.5px] font-mono font-bold text-slate-500 uppercase tracking-wider">
+                    <span className="text-purple-400">AI Advisory</span>
+                    <span>➔</span>
+                    <span className="text-amber-400 text-slate-300 animate-pulse">Operator Review</span>
+                    <span>➔</span>
+                    <span className="text-emerald-400">Dispatch Decision</span>
+                  </div>
                 </div>
 
                 {/* Operations Assignment */}

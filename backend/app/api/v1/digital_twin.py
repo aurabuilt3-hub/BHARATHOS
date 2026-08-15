@@ -1,11 +1,16 @@
-from fastapi import APIRouter, Depends, HTTPException, Query, status
+from fastapi import APIRouter, Depends, HTTPException, Query, status, Header
 from typing import List, Optional
 import uuid
+import os
 from datetime import datetime
+from pydantic import BaseModel, Field
+from sqlalchemy.orm.attributes import flag_modified
 
 from app.dependencies.auth import get_current_user, verify_geographic_scope
 from app.db.session import get_db
-from app.models.models import User
+from app.models.models import User, DigitalTwinNode, TelemetryRecord
+from app.services.alert_rule_service import AlertRuleService
+from app.realtime.event_service import event_service
 from app.schemas.schemas import (
     DigitalTwinNodeResponse,
     NodeConnectionResponse,
@@ -138,3 +143,88 @@ def get_summary(
     ):
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Out of scope")
     return get_summary_service(db, state_id, district_id, city_id)
+
+
+class IoTTelemetryIn(BaseModel):
+    metric_type: str = Field(..., description="e.g. water_level")
+    value: float = Field(..., description="Calibrated sensor water level")
+    unit: Optional[str] = "m"
+    timestamp: Optional[datetime] = None
+
+@router.post("/nodes/{node_id}/telemetry", status_code=status.HTTP_201_CREATED)
+async def post_node_telemetry(
+    node_id: uuid.UUID,
+    payload: IoTTelemetryIn,
+    x_iot_key: Optional[str] = Header(None, alias="X-IOT-KEY"),
+    db: get_db = Depends(get_db),
+):
+    # Enforce API Key authentication
+    expected_key = os.getenv("IOT_INGESTION_KEY")
+    if not expected_key or x_iot_key != expected_key:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Unauthorized or missing X-IOT-KEY header."
+        )
+
+    # Fetch target digital twin node
+    node = db.query(DigitalTwinNode).filter(DigitalTwinNode.id == node_id).first()
+    if not node:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Digital Twin Node not found."
+        )
+
+    # Determine state/severity based on thresholds
+    # Threshold rules: critical >= 4.2, warning >= 4.0, else normal
+    val = payload.value
+    status_str = "critical" if val >= 4.2 else "warning" if val >= 4.0 else "normal"
+
+    # Cache telemetry inside node
+    node.status = status_str
+    current_telemetry = dict(node.last_telemetry or {})
+    current_telemetry.update({
+        payload.metric_type: val,
+        "unit": payload.unit,
+        "source_type": "REAL_IOT",
+        "observed_at": datetime.utcnow().isoformat()
+    })
+    node.last_telemetry = current_telemetry
+    flag_modified(node, "last_telemetry")
+
+    # Create Telemetry Record
+    rec = TelemetryRecord(
+        id=uuid.uuid4(),
+        node_id=node.id,
+        metric_type=payload.metric_type,
+        value=val,
+        unit=payload.unit,
+        status=status_str,
+        timestamp=payload.timestamp or datetime.utcnow()
+    )
+    # Transient attribute to pass source_type provenance to AlertRuleService
+    rec.source_type = "REAL_IOT"
+    db.add(rec)
+    db.flush()
+
+    # Evaluate rules & generate alerts/incidents
+    alert = AlertRuleService.evaluate_telemetry(db, rec)
+
+    # Commit changes
+    db.commit()
+    db.refresh(rec)
+    db.refresh(node)
+    if alert:
+        db.refresh(alert)
+
+    # Broadcast updates dynamically
+    await event_service.publish_telemetry_updated(db, rec, node)
+    await event_service.publish_node_updated(db, node)
+    if alert:
+        await event_service.publish_alert_created(db, alert)
+
+    return {
+        "status": "ok",
+        "telemetry_id": str(rec.id),
+        "node_status": node.status,
+        "alert_generated": alert is not None
+    }

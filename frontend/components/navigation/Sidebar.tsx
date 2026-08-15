@@ -72,46 +72,51 @@ export default function Sidebar() {
         { id: 'state-command', label: 'State Command', path: '/dashboard/state', icon: Building2, color: 'text-indigo-400' },
         { id: 'district-command', label: 'District Command', path: '/dashboard/city?level=district', icon: MapPin, color: 'text-teal-400' },
         { id: 'city-command', label: 'City Command', path: '/dashboard/city', icon: Building, color: 'text-emerald-400' },
-        { id: 'digital-twin', label: 'Digital Twin', path: '/dashboard/digital-twin', icon: Layers, color: 'text-blue-400' }
+        { id: 'ward-command', label: 'Ward Operations', path: '/dashboard/city?level=ward', icon: Sliders, color: 'text-emerald-500' }
       ]
     },
     {
-      title: 'OPERATIONS',
+      title: 'FLOOD INTELLIGENCE',
       items: [
-        { id: 'incidents', label: 'Incidents', path: '/dashboard/national', icon: AlertTriangle, color: 'text-red-400' },
-        { id: 'police', label: 'Police', path: '/dashboard/police', icon: Shield, color: 'text-blue-500' },
-        { id: 'fire', label: 'Fire & Hazmat', path: '/dashboard/fire', icon: Flame, color: 'text-amber-500' },
-        { id: 'healthcare', label: 'Healthcare', path: '/dashboard/healthcare', icon: HeartPulse, color: 'text-rose-400' },
-        { id: 'ambulance', label: 'Ambulance', path: '/dashboard/ambulance', icon: Truck, color: 'text-emerald-400' },
-        { id: 'traffic', label: 'Traffic', path: '/dashboard/city#traffic', icon: Car, color: 'text-orange-400' },
-        { id: 'emergency-dispatch', label: 'Emergency Dispatch', path: '/dashboard/executive#dispatch', icon: PhoneCall, color: 'text-pink-400' }
+        { id: 'flood-overview', label: 'Flood Overview', path: '/dashboard/national#overview', icon: Layers, color: 'text-blue-400' },
+        { id: 'risk-map', label: 'Risk Map', path: '/dashboard/digital-twin#risk', icon: Waves, color: 'text-cyan-400' },
+        { id: 'flood-incidents', label: 'Flood Incidents', path: '/dashboard/city#incidents', icon: AlertTriangle, color: 'text-red-400' },
+        { id: 'early-warnings', label: 'Early Warnings', path: '/dashboard/national#warnings', icon: Wind, color: 'text-amber-400' },
+        { id: 'risk-analysis', label: 'Risk Analysis', path: '/dashboard/city#risk-analysis', icon: TrendingUp, color: 'text-teal-400' }
       ]
     },
     {
-      title: 'HAZARDS',
+      title: 'RESPONSE',
       items: [
-        { id: 'weather', label: 'Weather', path: '/dashboard/digital-twin#weather', icon: CloudRain, color: 'text-yellow-400' },
-        { id: 'flood', label: 'Flood Warnings', path: '/dashboard/digital-twin#flood', icon: Waves, color: 'text-blue-400' },
-        { id: 'cyclone', label: 'Cyclone Intel', path: '/dashboard/digital-twin#cyclone', icon: Wind, color: 'text-cyan-400' },
-        { id: 'earthquake', label: 'Earthquake Monitor', path: '/dashboard/digital-twin#earthquake', icon: Activity, color: 'text-orange-500' }
+        { id: 'dispatch', label: 'Dispatch', path: '/dashboard/city?action=dispatch', icon: PhoneCall, color: 'text-pink-400' },
+        { id: 'resources', label: 'Resources', path: '/dashboard/city#resources', icon: Truck, color: 'text-emerald-400' },
+        { id: 'response-teams', label: 'Response Teams', path: '/dashboard/city#resources', icon: Shield, color: 'text-indigo-400' }
       ]
     },
     {
-      title: 'INTELLIGENCE',
+      title: 'DIGITAL TWIN',
       items: [
-        { id: 'ai-ops', label: 'AI Operations', path: '/dashboard/ai-ops', icon: Cpu, color: 'text-purple-400', badge: 'AI' },
-        { id: 'analytics', label: 'Analytics', path: '/dashboard/analytics', icon: TrendingUp, color: 'text-cyan-300' },
-        { id: 'reports', label: 'Reports', path: '/dashboard/analytics#reports', icon: BarChart3, color: 'text-teal-300' },
-        { id: 'knowledge-base', label: 'Knowledge Base', path: '/dashboard/ai-ops#kb', icon: BookOpen, color: 'text-indigo-300' }
+        { id: 'flood-twin', label: 'Flood Digital Twin', path: '/dashboard/digital-twin', icon: Cpu, color: 'text-blue-450' },
+        { id: 'sensors', label: 'Sensors', path: '/dashboard/digital-twin#sensors', icon: Activity, color: 'text-purple-400' }
       ]
     },
     {
-      title: 'ADMINISTRATION',
+      title: 'AI',
       items: [
-        { id: 'users-roles', label: 'Users & Roles', path: '/dashboard/executive#users', icon: Users, color: 'text-slate-400' },
-        { id: 'settings', label: 'Settings', path: '/dashboard/executive#settings', icon: Sliders, color: 'text-slate-400' },
-        { id: 'data-ingestion', label: 'Sync Console', path: '/dashboard/administration', icon: Database, color: 'text-sky-400' },
-        { id: 'audit-logs', label: 'Audit Logs', path: '/dashboard/analytics#audit', icon: ClipboardList, color: 'text-slate-400' }
+        { id: 'flood-ai', label: 'Flood AI Advisor', path: '/dashboard/ai-ops', icon: Sparkles, color: 'text-purple-300', badge: 'AI' }
+      ]
+    },
+    {
+      title: 'CITIZEN',
+      items: [
+        { id: 'report-flooding', label: 'Report Flooding', path: '/dashboard/city?report=citizen', icon: AlertTriangle, color: 'text-red-500' },
+        { id: 'safety-alerts', label: 'Safety & Alerts', path: '/dashboard/national#safety', icon: BookOpen, color: 'text-sky-300' }
+      ]
+    },
+    {
+      title: 'SYSTEM',
+      items: [
+        { id: 'sync-console', label: 'Sync Console', path: '/dashboard/administration', icon: Database, color: 'text-sky-400' }
       ]
     }
   ]
@@ -147,13 +152,21 @@ export default function Sidebar() {
             <div className="space-y-1">
               {section.items.map((item) => {
                 const isDistrictItem = item.path.includes('level=district')
+                const isWardItem = item.path.includes('level=ward')
                 const isCityItem = item.path === '/dashboard/city'
                 
+                const queryStr = typeof window !== 'undefined' ? window.location.search : ''
                 const isActive = isDistrictItem 
                   ? (pathname === '/dashboard/city' && level === 'district')
-                  : isCityItem 
-                    ? (pathname === '/dashboard/city' && level !== 'district')
-                    : (pathname === item.path)
+                  : isWardItem
+                    ? (pathname === '/dashboard/city' && level === 'ward')
+                    : isCityItem 
+                      ? (pathname === '/dashboard/city' && level !== 'district' && level !== 'ward' && !queryStr.includes('report=citizen') && !queryStr.includes('action=dispatch'))
+                      : item.path.includes('report=citizen')
+                        ? (pathname === '/dashboard/city' && queryStr.includes('report=citizen'))
+                        : item.path.includes('action=dispatch')
+                          ? (pathname === '/dashboard/city' && queryStr.includes('action=dispatch'))
+                          : (pathname === item.path.split('#')[0])
                 
                 const isHovered = hoveredItem === item.id
                 const Icon = item.icon

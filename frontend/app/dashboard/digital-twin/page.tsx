@@ -109,8 +109,8 @@ export default function DigitalTwinPage() {
   const nodeMarkers: MapMarker[] = nodes.map(node => ({
     id: `node-${node.id}`,
     position: [node.latitude, node.longitude] as [number, number],
-    title: `📡 ${node.name}`,
-    description: `Type: ${node.type} • Status: ${node.status}`,
+    title: node.type === 'weather' ? `⛈️ [Weather Station] ${node.name}` : `🌊 [IoT Runoff Gauge] ${node.name}`,
+    description: `Hydrological Sensor Node • Status: ${node.status} • Value: ${node.last_telemetry || 'N/A'}`,
     category: node.status === 'critical' ? 'critical' as const : node.status === 'warning' ? 'high' as const : 'info' as const
   }))
 

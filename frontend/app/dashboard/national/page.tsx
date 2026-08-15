@@ -137,6 +137,54 @@ interface AIAgent {
   task: string
 }
 
+const translations = {
+  en: {
+    pilot: "Live Data Pilot: Visakhapatnam (Other Regions: Integration Ready / Data Coverage Pending)",
+    title: "Urban Flood Early Warning & Response System",
+    warningsTitle: "Active Hydrological Warnings & Alerts",
+    statusNormal: "Normal",
+    statusWatch: "Watch",
+    statusWarning: "Warning",
+    statusCritical: "Critical",
+    mvpColony: "MVP Colony Outfall Sector 4",
+    beachRoad: "Beach Road Beach Bypass Corridor",
+    gajuwaka: "Gajuwaka Industrial runoff reservoir",
+    warningDetail1: "High tide combined with rainfall exceeds culvert capacity.",
+    warningDetail2: "Runoff velocity exceeds discharge threshold. Divert light traffic.",
+    warningDetail3: "Water level is normal. SCADA sensor gate operating normally."
+  },
+  te: {
+    pilot: "ప్రత్యక్ష డేటా పైలట్: విశాఖపట్నం (ఇతర ప్రాంతాలు: అనుసంధానానికి సిద్ధం / డేటా పెండింగ్)",
+    title: "పట్టణ వరద ముందస్తు హెచ్చరిక & ప్రతిస్పందన వేదిక",
+    warningsTitle: "క్రియాశీల జలసంబంధిత హెచ్చరికలు",
+    statusNormal: "సాధారణం",
+    statusWatch: "నిఘా ఉంచండి",
+    statusWarning: "హెచ్చరిక",
+    statusCritical: "తీవ్రమైన ప్రమాదం",
+    mvpColony: "ఎమ్విపి కాలనీ అవుట్‌ఫాల్ సెక్టార్ 4",
+    beachRoad: "బీచ్ రోడ్ బైపాస్ కారిడార్",
+    gajuwaka: "గాజువాక పారిశ్రామిక రన్-ఆఫ్ జలాశయం",
+    warningDetail1: "అధిక అలల ఉధృతి మరియు భారీ వర్షపాతం వల్ల డ్రైనేజీ నిండిపోయింది.",
+    warningDetail2: "రన్-ఆఫ్ వేగం డిశ్చార్జ్ పరిమితిని మించిపోయింది. ట్రాఫిక్ మళ్లించండి.",
+    warningDetail3: "నీటి మట్టం సాధారణంగా ఉంది. స్కాడా సెన్సార్ సాధారణంగా పనిచేస్తోంది."
+  },
+  hi: {
+    pilot: "लाइव डेटा पायलट: विशाखापत्तनम (अन्य क्षेत्र: एकीकरण के लिए तैयार / डेटा लंबित)",
+    title: "शहरी बाढ़ पूर्व चेतावनी एवं प्रतिक्रिया प्रणाली",
+    warningsTitle: "सक्रिय जल विज्ञान चेतावनियाँ और अलर्ट",
+    statusNormal: "सामान्य",
+    statusWatch: "निगरानी रखें",
+    statusWarning: "चेतावनी",
+    statusCritical: "गंभीर खतरा",
+    mvpColony: "एमवीपी कॉलोनी आउटफॉल सेक्टर 4",
+    beachRoad: "बीच रोड बाईपास कॉरिडोर",
+    gajuwaka: "गाजुवाका अपवाह जलाशय",
+    warningDetail1: "उच्च ज्वार और भारी बारिश के कारण जल निकासी क्षमता समाप्त हो गई है।",
+    warningDetail2: "अपवाह वेग निर्वहन सीमा से अधिक है। यातायात को डायवर्ट करें।",
+    warningDetail3: "जल स्तर सामान्य है। स्काडा सेंसर गेट सामान्य रूप से काम कर रहा है।"
+  }
+}
+
 export default function NationalCommandPage() {
   // DB Live States
   const [overview, setOverview] = useState<DashboardOverview | null>(null)
@@ -146,6 +194,7 @@ export default function NationalCommandPage() {
   const [nodes, setNodes] = useState<BackendDigitalTwinNode[]>([])
   const [alerts, setAlerts] = useState<BackendAlert[]>([])
   const [loading, setLoading] = useState(true)
+  const [lang, setLang] = useState<'en' | 'te' | 'hi'>('en')
 
   // Dispatch Drawer / Reporting state additions
   const [selectedIncident, setSelectedIncident] = useState<BackendIncident | null>(null)
@@ -700,6 +749,88 @@ export default function NationalCommandPage() {
             </motion.div>
           )}
         </AnimatePresence>
+
+        {/* Multilingual Early Warning & Pilot Banner */}
+        <div className="glass-panel border border-slate-800 rounded-2xl p-5 space-y-4">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-900 pb-4">
+            <div className="space-y-1">
+              <div className="flex items-center space-x-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+                <span className="text-[10px] font-extrabold text-emerald-400 font-mono uppercase tracking-widest bg-emerald-950/60 border border-emerald-900/40 px-2.5 py-0.5 rounded">
+                  {translations[lang].pilot}
+                </span>
+              </div>
+              <h2 className="text-lg font-black text-white tracking-wide">{translations[lang].title}</h2>
+            </div>
+            
+            {/* Language Selector */}
+            <div className="flex items-center space-x-1.5 border border-slate-850 rounded-xl bg-[#050816] p-1 self-start md:self-auto font-mono text-[10px]">
+              {(['en', 'te', 'hi'] as const).map((l) => (
+                <button
+                  key={l}
+                  onClick={() => setLang(l)}
+                  className={`px-3 py-1 rounded-lg font-bold capitalize transition-all ${
+                    lang === l
+                      ? 'bg-blue-600 text-white shadow-md'
+                      : 'text-slate-500 hover:text-slate-350'
+                  }`}
+                >
+                  {l === 'en' ? 'EN' : l === 'te' ? 'తెలుగు' : 'हिन्दी'}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Alert Status Grid */}
+          <div className="space-y-3">
+            <h3 className="text-[11px] font-bold text-slate-400 uppercase tracking-wider font-mono">{translations[lang].warningsTitle}</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              
+              {/* Alert 1: MVP Colony */}
+              <div className="p-4 rounded-xl border border-red-950 bg-red-950/10 space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold text-white">{translations[lang].mvpColony}</span>
+                  <span className="text-[9px] font-bold px-2 py-0.5 rounded bg-red-900/60 border border-red-800 text-red-300 font-mono uppercase">
+                    {translations[lang].statusCritical}
+                  </span>
+                </div>
+                <p className="text-[11px] text-slate-450 leading-relaxed">{translations[lang].warningDetail1}</p>
+                <div className="text-[10px] font-mono-data text-red-400 bg-red-950/40 px-2 py-1 rounded border border-red-900/20">
+                  Level: 4.18m / Limit: 3.50m
+                </div>
+              </div>
+
+              {/* Alert 2: Beach Road */}
+              <div className="p-4 rounded-xl border border-orange-950 bg-orange-950/10 space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold text-white">{translations[lang].beachRoad}</span>
+                  <span className="text-[9px] font-bold px-2 py-0.5 rounded bg-orange-900/60 border border-orange-800 text-orange-300 font-mono uppercase">
+                    {translations[lang].statusWarning}
+                  </span>
+                </div>
+                <p className="text-[11px] text-slate-450 leading-relaxed">{translations[lang].warningDetail2}</p>
+                <div className="text-[10px] font-mono-data text-orange-400 bg-orange-950/40 px-2 py-1 rounded border border-orange-900/20">
+                  Level: 3.12m / Limit: 3.00m
+                </div>
+              </div>
+
+              {/* Alert 3: Gajuwaka */}
+              <div className="p-4 rounded-xl border border-slate-850 bg-slate-950/60 space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold text-white">{translations[lang].gajuwaka}</span>
+                  <span className="text-[9px] font-bold px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-450 font-mono uppercase">
+                    {translations[lang].statusNormal}
+                  </span>
+                </div>
+                <p className="text-[11px] text-slate-500 leading-relaxed">{translations[lang].warningDetail3}</p>
+                <div className="text-[10px] font-mono-data text-slate-400 bg-slate-900/40 px-2 py-1 rounded border border-slate-800">
+                  Level: 1.45m / Limit: 4.00m
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
 
         {/* 1. TOP PREMIUM DENSE KPI CARDS */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 xl:grid-cols-10 gap-3">
