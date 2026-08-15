@@ -80,7 +80,7 @@ graph TD
 
 ## 3. Real-Time Telemetry Design
 
-Real-time streaming is achieved using a centralized `ConnectionManager` class that maintains connection groups per topic:
+Real-time streaming is achieved using a centralized `ConnectionManager` class that maintains connection groups per topic, wrapped in `ActiveConnection` objects containing authenticated geographic scopes:
 
 1. **`dashboard`**: Receives structural network health statuses, active incident totals, and server load telemetry.
 2. **`incidents`**: Streams raw incident creations, status updates, and dispatch confirmations to active command-center screens.
@@ -88,16 +88,40 @@ Real-time streaming is achieved using a centralized `ConnectionManager` class th
 4. **`notifications`**: Dispatches high-priority system alerts and push notices.
 
 ```python
+class ActiveConnection:
+    def __init__(self, websocket: WebSocket, user_id: uuid.UUID, role_name: str, state_id: Optional[uuid.UUID], district_id: Optional[uuid.UUID], city_id: Optional[uuid.UUID]):
+        self.websocket = websocket
+        self.user_id = user_id
+        self.role_name = role_name
+        self.state_id = state_id
+        self.district_id = district_id
+        self.city_id = city_id
+
 class ConnectionManager:
     def __init__(self):
-        self.active_connections: Dict[str, List[WebSocket]] = {
+        self.active_connections: Dict[str, List[ActiveConnection]] = {
             "dashboard": [],
             "incidents": [],
             "sensors": [],
             "notifications": []
         }
-    # Accept client -> track by topic list -> broadcast payloads as JSON
+    
+    async def connect(self, topic: str, active_conn: ActiveConnection):
+        # Accepts connection and registers user attributes in memory
+    
+    async def broadcast(self, topic: str, message: dict, db: Optional[Session] = None):
+        # Evaluates geographic scope of message against user role/location attributes,
+        # ensuring operators only receive events matching their authorization boundary.
 ```
+
+### 3.1. DB Transaction → Event Ordering
+To guarantee database consistency, WebSocket events represent committed state. The pipeline enforces:
+1. Start DB Transaction
+2. Execute business operations (e.g. allocate resource)
+3. Commit transaction successfully
+4. Broadcast WebSocket event to matching scoped subscribers
+If the transaction fails or rolls back, no event is broadcast, preventing dirty read anomalies on the frontend.
+
 
 ---
 
@@ -147,5 +171,32 @@ BharatOS implements a production-oriented, scope-aware multi-agent architecture 
 
 ### 5.3. Multilingual Support
 The orchestrator performs text-based language identification. For Devanagari (Hindi) and Telugu inputs, intent classification maps to localized repositories and generates responses natively in the query language.
+
+
+---
+
+## 6. Real-time Ingestion & Public Data Integration
+
+BharatOS integrates keyless public APIs and open data directories to retrieve and normalize Visakhapatnam emergency parameters dynamically:
+
+### 6.1. Integrations Package (`app/integrations/`)
+- **Weather Adapter (`weather/client.py`)**: Fetches temperature, relative humidity, precipitation, and wind speeds from the keyless Open-Meteo Forecast endpoint.
+- **Air Quality Adapter (`air_quality/client.py`)**: Queries current AQI index, PM2.5, PM10, nitrogen dioxide, and ozone concentrations from the keyless Open-Meteo Air Quality endpoint.
+- **Facilities Client (`facilities/client.py`)**: Submits bounding-box geocoded queries to the OpenStreetMap Overpass API, returning optimized coordinates for emergency hubs (police, fire, hospitals).
+- **APSDMA Alerts**: Hardcoded to `UNAVAILABLE` in the source registry as no machine-readable public API feed is verified, avoiding fake scrapers.
+
+### 6.2. Synchronization Service (`app/services/data_sync_service.py`)
+- Coordinates adapter queries sequentially under safe `HTTP` timeouts (e.g. 5–15 seconds).
+- Maps weather/AQI records to a single seeded "Vizag Weather & Air Quality Monitoring Station" Digital Twin Node (`e47ac10b-58cc-4372-a567-0e02b2c3d495`) and logs corresponding `TelemetryRecord` items.
+- Implements geo-boundary coordinates validation, runs alphanumeric string-similarity deduplication heuristics, and applies a conflict resolution rule (DO NOT overwrite official/verified data with crowdsourced open-data values).
+- Persists sync success metrics under `AuditLog` table using `action="DATA_INGESTION_SYNC"` and stores local snapshots under `ingestion_report.json` for compatibility.
+- Exposes administrative routes `/admin/data-ingestion/status` and `/admin/data-ingestion/sync`.
+
+### 6.3. Scoped Dashboard Overview (`dashboard.py`)
+- `GET /dashboard/overview` aggregates incidents, alerts, resources, facilities, nodes, and telemetry.
+- Resolves weather and AQI values from the latest monitoring station telemetry records.
+- Calculates dynamic freshness status (`FRESH` < 1h, `STALE` < 4h, `EXPIRED` > 4h) and exposes detailed source url / type provenance metadata.
+- Automatically bounds queries strictly to the user's geographic profile (`city_id`, `district_id`, `state_id`).
+
 
 

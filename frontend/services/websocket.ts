@@ -1,3 +1,5 @@
+import { supabase } from '../lib/supabase'
+
 const WS_BASE_URL = process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:8000/ws'
 
 export type MessageHandler = (data: any) => void
@@ -14,9 +16,20 @@ export class RealtimeWebSocketClient {
     this.topic = topic
   }
 
-  public connect() {
+  public async connect() {
     this.isExplicitDisconnect = false
-    const url = `${WS_BASE_URL}/${this.topic}`
+    
+    let tokenParam = ''
+    try {
+      const { data: { session } } = await supabase.auth.getSession()
+      if (session?.access_token) {
+        tokenParam = `?token=${encodeURIComponent(session.access_token)}`
+      }
+    } catch (err) {
+      console.warn("[WebSocket] Error retrieving auth session:", err)
+    }
+
+    const url = `${WS_BASE_URL}/${this.topic}${tokenParam}`
 
     try {
       this.socket = new WebSocket(url)

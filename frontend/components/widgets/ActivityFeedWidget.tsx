@@ -25,9 +25,110 @@ export default function ActivityFeedWidget() {
     const wsClient = new RealtimeWebSocketClient('dashboard')
     wsClient.connect()
 
-    const unsubscribe = wsClient.subscribe((data) => {
-      if (data && data.activity) {
-        setActivities(prev => [data.activity, ...prev.slice(0, 9)])
+    const unsubscribe = wsClient.subscribe((evt: any) => {
+      if (!evt || !evt.event || !evt.data) return
+
+      const timestamp = new Date(evt.timestamp || Date.now()).toLocaleTimeString([], { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' })
+      let activityItem: ActivityItem | null = null
+
+      switch (evt.event) {
+        case 'INCIDENT_CREATED':
+          activityItem = {
+            id: evt.data.id || Date.now().toString(),
+            timestamp,
+            title: 'Incident Created',
+            description: `[${(evt.data.severity || 'low').toUpperCase()}] ${evt.data.category || 'Incident'}: ${evt.data.title}`,
+            category: 'incident'
+          }
+          break
+        case 'INCIDENT_STATUS_CHANGED':
+          const isResolved = evt.data.status === 'resolved' || evt.data.status === 'closed'
+          activityItem = {
+            id: evt.data.id || Date.now().toString(),
+            timestamp,
+            title: `Incident ${evt.data.status.toUpperCase()}`,
+            description: `Ticket #${evt.data.ticket_number || ''} is now ${evt.data.status}.`,
+            category: isResolved ? 'resolution' : 'incident'
+          }
+          break
+        case 'INCIDENT_ASSIGNED':
+          activityItem = {
+            id: evt.data.id || Date.now().toString(),
+            timestamp,
+            title: 'Officer Assigned',
+            description: `Ticket #${evt.data.ticket_number || ''} assigned. Notes: ${evt.data.notes || 'Dispatch active'}.`,
+            category: 'assignment'
+          }
+          break
+        case 'ALERT_CREATED':
+          activityItem = {
+            id: evt.data.id || Date.now().toString(),
+            timestamp,
+            title: 'Alert Created',
+            description: `[${(evt.data.severity || 'low').toUpperCase()}] ${evt.data.title}: ${evt.data.description || ''}`,
+            category: 'incident'
+          }
+          break
+        case 'ALERT_STATUS_CHANGED':
+          activityItem = {
+            id: evt.data.id || Date.now().toString(),
+            timestamp,
+            title: `Alert ${evt.data.status.toUpperCase()}`,
+            description: `Alert '${evt.data.title}' is now ${evt.data.status}.`,
+            category: evt.data.status === 'resolved' ? 'resolution' : 'incident'
+          }
+          break
+        case 'RESOURCE_ALLOCATED':
+          activityItem = {
+            id: evt.data.id || Date.now().toString(),
+            timestamp,
+            title: 'Resource Allocated',
+            description: `${evt.data.type || 'Resource'} '${evt.data.name}' allocated to incident #${evt.data.incident_ticket || ''}.`,
+            category: 'assignment'
+          }
+          break
+        case 'RESOURCE_RELEASED':
+          activityItem = {
+            id: evt.data.id || Date.now().toString(),
+            timestamp,
+            title: 'Resource Released',
+            description: `${evt.data.type || 'Resource'} '${evt.data.name}' released from incident #${evt.data.incident_ticket || ''}.`,
+            category: 'resolution'
+          }
+          break
+        case 'RESOURCE_UPDATED':
+          activityItem = {
+            id: evt.data.id || Date.now().toString(),
+            timestamp,
+            title: 'Resource Updated',
+            description: `Resource '${evt.data.name}' is now ${evt.data.status}.`,
+            category: 'resolution'
+          }
+          break
+        case 'TELEMETRY_UPDATED':
+          activityItem = {
+            id: evt.data.id || Date.now().toString(),
+            timestamp,
+            title: 'Telemetry Alert',
+            description: `Sensor '${evt.data.node_name}' registered ${evt.data.value} ${evt.data.unit || ''} (${evt.data.status}).`,
+            category: 'ai'
+          }
+          break
+        case 'DIGITAL_TWIN_NODE_UPDATED':
+          activityItem = {
+            id: evt.data.id || Date.now().toString(),
+            timestamp,
+            title: 'Sensor Status Update',
+            description: `Digital twin node '${evt.data.name}' status is now ${evt.data.status}.`,
+            category: 'ai'
+          }
+          break
+        default:
+          break
+      }
+
+      if (activityItem) {
+        setActivities(prev => [activityItem!, ...prev.slice(0, 9)])
       }
     })
 

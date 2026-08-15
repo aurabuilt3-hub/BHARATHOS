@@ -55,18 +55,29 @@ export default function NotificationCenter() {
       const wsClient = new RealtimeWebSocketClient('notifications')
       wsClient.connect()
 
-      const unsubscribe = wsClient.subscribe((notif: any) => {
-        if (notif && notif.title) {
+      const unsubscribe = wsClient.subscribe((evt: any) => {
+        if (evt && evt.event === 'ALERT_CREATED' && evt.data) {
           const item: NotificationItem = {
-            id: notif.id || Date.now().toString(),
-            title: notif.title,
-            body: notif.body || notif.details || '',
-            priority: notif.priority || 'medium',
+            id: evt.data.id || Date.now().toString(),
+            title: evt.data.title,
+            body: evt.data.description || '',
+            priority: evt.data.severity || 'medium',
             read: false,
             timestamp: 'Just now',
-            category: notif.category || 'Incident'
+            category: evt.data.category || 'Alert'
           }
           setNotifications(prev => [item, ...prev])
+        } else if (evt && evt.event === 'ALERT_STATUS_CHANGED' && evt.data) {
+          setNotifications(prev => prev.map(n => {
+            if (n.id === evt.data.id) {
+              return {
+                ...n,
+                title: `[${evt.data.status.toUpperCase()}] ${evt.data.title || n.title}`,
+                read: evt.data.status === 'resolved' || evt.data.status === 'expired' ? true : n.read
+              }
+            }
+            return n
+          }))
         }
       })
 

@@ -201,12 +201,31 @@ gantt
 
 ---
 
-### PHASE 11 — Security, Rate-Limiting & Auditing
+---
+
+### PHASE 11 — Real-Time Visakhapatnam Data Integration [COMPLETE]
+- **Objective**: Establish keyless Open-Meteo and OpenStreetMap Overpass client integration pipelines for Visakhapatnam.
+- **Tasks**:
+  1. Build weather, AQI, and Overpass facility adapters.
+  2. Implement `DataSyncService` handling timeouts, deduplication, and caching to seeded weather digital twin nodes.
+  3. Support manual and scheduled synchronization.
+  4. Persist sync stats in database `AuditLog` table.
+  5. Implement `GET /api/v1/dashboard/overview` compiling metrics with geographic bounds checking.
+  6. Add unit and integration tests.
+- **Dependencies**: Phase 10 completed.
+- **APIs**: `GET /api/v1/dashboard/overview`, `GET /api/v1/admin/data-ingestion/status`, `POST /api/v1/admin/data-ingestion/sync`.
+- **Database Changes**: Seeding "Vizag Weather & Air Quality Monitoring Station" node.
+- **Testing**: Added `tests/test_realtime_integration.py` covering mock responses, RBAC limits, and scope boundaries.
+- **Completion Criteria**: 100% test success with previous regression checks preserved.
+
+---
+
+### PHASE 12 — Security, Rate-Limiting & Auditing
 - **Objective**: Production security hardening.
 - **Tasks**:
   1. Configure CORS policies and rate-limiting.
   2. Wire up audit logging for critical operations.
-- **Dependencies**: Phase 10 completed.
+- **Dependencies**: Phase 11 completed.
 - **APIs**: None.
 - **Database Changes**: None.
 - **Testing**: Simulate brute-force requests to verify rate limits.
@@ -214,25 +233,27 @@ gantt
 
 ---
 
-### PHASE 12 — Frontend Integration
-- **Objective**: Connect the Next.js client to the local FastAPI backend.
+### PHASE 13 — Real-Time Integration & Operational Intelligence [COMPLETED]
+- **Objective**: Connect the Next.js client to the local FastAPI backend with dynamic authenticated WebSockets.
 - **Tasks**:
-  1. Point `NEXT_PUBLIC_API_URL` to local endpoints.
-  2. Enable WebSocket listeners in UI elements (telemetry grids, dashboard cards).
-- **Dependencies**: Phase 11 completed.
-- **APIs**: All endpoints verified.
+  1. Centralize WebSocket connections via `/ws/dashboard?token=<JWT>`.
+  2. Implement backend scoped routing with `ActiveConnection` container scopes.
+  3. Formulate synchronous DB commit pipeline triggers mapping to asynchronous WS event dispatchers.
+  4. Build Zustand `useRealtimeStore` supporting backoff reconnects and REST polling fallbacks.
+- **Dependencies**: Phase 12 completed.
+- **APIs**: `/ws/dashboard`, `/ws/incidents`, `/ws/sensors`, `/ws/notifications`.
 - **Database Changes**: None.
-- **Testing**: Complete end-to-end user flows (report incident -> AI triage -> auto-dispatch -> real-time status update).
-- **Completion Criteria**: Mock data fallbacks are disabled, and live data renders on the UI.
+- **Testing**: Run `pytest tests/test_realtime_ws.py -q` (all 8 tests pass) and full backend regression (79 passed).
+- **Completion Criteria**: Polling is reduced when WebSockets connect, automatic fallback polling remains active, and live Leaflet/KPI events render in real-time.
 
 ---
 
-### PHASE 13 — Deployment & Operations
+### PHASE 14 — Deployment & Operations
 - **Objective**: Deployment to staging and production.
 - **Tasks**:
   1. Build Docker images for web and workers.
   2. Set up automated CI/CD deployment pipelines.
-- **Dependencies**: Phase 12 completed.
+- **Dependencies**: Phase 13 completed.
 - **APIs**: None.
 - **Database Changes**: None.
 - **Testing**: Health check validation on staging server.

@@ -170,7 +170,7 @@ export default function RightAIPanel() {
           {!collapsed && (
             <div>
               <h3 className="text-xs font-extrabold text-white tracking-wider uppercase font-mono-data">Multi-Agent AI Engine</h3>
-              <p className="text-[10px] text-purple-400 font-mono-data">Gemini 2.5 Pro + LangGraph</p>
+              <p className="text-[10px] text-purple-400 font-mono-data">Gemini 2.5 Pro • DEMO SCENARIO</p>
             </div>
           )}
         </div>

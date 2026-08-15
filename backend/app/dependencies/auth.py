@@ -10,6 +10,7 @@ from app.db.session import get_db
 from app.models.models import User, Role, State, District, City
 
 security = HTTPBearer()
+security_optional = HTTPBearer(auto_error=False)
 
 supabase_client: Client = create_client(
     settings.SUPABASE_URL,
@@ -40,6 +41,21 @@ def get_supabase_user(credentials: HTTPAuthorizationCredentials = Depends(securi
             detail=f"Authentication failed: {str(e)}"
         )
 
+def get_supabase_user_optional(credentials: Optional[HTTPAuthorizationCredentials] = Depends(security_optional)) -> Optional[dict]:
+    if not credentials:
+        return None
+    token = credentials.credentials
+    try:
+        user_response = supabase_client.auth.get_user(token)
+        if not user_response or not user_response.user:
+            return None
+        return {
+            "id": user_response.user.id,
+            "email": user_response.user.email
+        }
+    except Exception:
+        return None
+
 def get_current_user(
     supabase_user: dict = Depends(get_supabase_user),
     db: Session = Depends(get_db)
@@ -59,6 +75,20 @@ def get_current_user(
             detail="User profile not registered in PostgreSQL database."
         )
     return db_user
+
+def get_current_user_optional(
+    supabase_user: Optional[dict] = Depends(get_supabase_user_optional),
+    db: Session = Depends(get_db)
+) -> Optional[User]:
+    if not supabase_user:
+        return None
+    try:
+        user_uuid = uuid.UUID(supabase_user["id"])
+    except ValueError:
+        return None
+    
+    return db.query(User).filter(User.id == user_uuid).first()
+
 
 class RoleChecker:
     def __init__(self, allowed_roles: List[str]):

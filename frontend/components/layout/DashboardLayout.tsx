@@ -9,6 +9,8 @@ import Header from '../navigation/Header'
 import RightAIPanel from '../navigation/RightAIPanel'
 import StatusBar from '../navigation/StatusBar'
 import { useShellStore } from '../../store/useShellStore'
+import { useAuthStore } from '../../store/useAuthStore'
+import { useRealtimeStore } from '../../store/useRealtimeStore'
 import { ChevronRight, Home, MapPin, Minimize2, Terminal } from 'lucide-react'
 
 interface DashboardLayoutProps {
@@ -31,6 +33,17 @@ export default function DashboardLayout({
   const pathname = usePathname()
   const presentationMode = useShellStore((state) => state.presentationMode)
   const setPresentationMode = useShellStore((state) => state.setPresentationMode)
+
+  const token = useAuthStore((state) => state.token)
+  const connect = useRealtimeStore((state) => state.connect)
+
+  React.useEffect(() => {
+    if (token) {
+      connect(token)
+    } else {
+      useRealtimeStore.getState().disconnect()
+    }
+  }, [token, connect])
 
   // Dynamically generate high-fidelity Breadcrumbs based on the router path
   const getBreadcrumbs = () => {

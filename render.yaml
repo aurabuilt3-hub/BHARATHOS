@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: bharatos-backend
+    env: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: APP_NAME
+        value: BharatOS API
+      - key: APP_ENV
+        value: production
+      - key: DEBUG
+        value: "false"
+      - key: DATABASE_URL
+        sync: false
+      - key: SUPABASE_URL
+        value: https://giwyyghzgqbygrsdncit.supabase.co
+      - key: SUPABASE_ANON_KEY
+        value: sb_publishable_lyl98mUjnuTtbWe5IGCEqA_Wfy8lwaa
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: SUPABASE_JWT_SECRET
+        sync: false
+      - key: CORS_ORIGINS
+        value: http://localhost:3000
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: WEATHER_API_URL
+        value: https://api.open-meteo.com/v1

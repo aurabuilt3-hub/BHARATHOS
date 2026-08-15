@@ -2,7 +2,7 @@
 
 import React from 'react'
 import dynamic from 'next/dynamic'
-import { MapMarker, MapPolygon, MapHeatPoint } from './MapInner'
+import { MapMarker, MapPolygon, MapHeatPoint, MapPolyline } from './MapInner'
 
 // Load Leaflet MapInner asynchronously on client-side only
 const DynamicMap = dynamic(() => import('./MapInner'), {
@@ -21,6 +21,7 @@ interface MapContainerProps {
   markers?: MapMarker[]
   polygons?: MapPolygon[]
   heatpoints?: MapHeatPoint[]
+  polylines?: MapPolyline[]
   onMarkerClick?: (marker: MapMarker) => void
 }
 
@@ -30,6 +31,7 @@ export default function MapContainer({
   markers = [],
   polygons = [],
   heatpoints = [],
+  polylines = [],
   onMarkerClick
 }: MapContainerProps) {
   return (
@@ -40,10 +42,11 @@ export default function MapContainer({
         markers={markers} 
         polygons={polygons} 
         heatpoints={heatpoints} 
+        polylines={polylines}
         onMarkerClick={onMarkerClick}
       />
     </div>
   )
 }
 
-export type { MapMarker, MapPolygon, MapHeatPoint }
+export type { MapMarker, MapPolygon, MapHeatPoint, MapPolyline }
