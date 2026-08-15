@@ -42,8 +42,8 @@ export default function AreaChart({
   }
 
   return (
-    <div className="h-full w-full min-h-[250px]">
-      <ResponsiveContainer width="100%" height="100%">
+    <div className="h-[250px] min-h-[250px] w-full relative">
+      <ResponsiveContainer width="100%" height={250}>
         <RechartsAreaChart data={data} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
           <defs>
             {series.map((s, idx) => (

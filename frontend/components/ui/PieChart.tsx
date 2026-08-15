@@ -34,8 +34,8 @@ export default function PieChart({ data }: PieChartProps) {
   }
 
   return (
-    <div className="h-full w-full min-h-[250px] flex items-center justify-center">
-      <ResponsiveContainer width="100%" height="100%">
+    <div className="h-[250px] min-h-[250px] w-full relative flex items-center justify-center">
+      <ResponsiveContainer width="100%" height={250}>
         <RechartsPieChart>
           <RechartsTooltip
             contentStyle={{

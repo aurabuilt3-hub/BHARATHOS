@@ -57,7 +57,12 @@ export const apiService = {
       if (!res.ok) {
         throw new Error(`API Error: ${res.statusText}`)
       }
-      return await res.json()
+      const data = await res.json()
+      if (Array.isArray(data)) return data
+      if (data && Array.isArray(data.items)) return data.items
+      if (data && Array.isArray(data.data)) return data.data
+      if (data && Array.isArray(data.incidents)) return data.incidents
+      return []
     } catch (err) {
       console.warn('Backend API connection failed. Using fallback mock incidents.', err)
       return []

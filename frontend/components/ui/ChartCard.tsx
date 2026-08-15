@@ -29,7 +29,7 @@ export default function ChartCard({
         )}
       </div>
 
-      <div className="flex-1 w-full min-h-[280px] flex items-center justify-center">
+      <div className="w-full h-[260px] min-h-[260px] relative flex items-center justify-center">
         {children}
       </div>
     </div>

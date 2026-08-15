@@ -13,8 +13,29 @@ import {
   LayerGroup,
   ScaleControl,
   ZoomControl,
-  useMapEvents
+  useMapEvents,
+  useMap
 } from 'react-leaflet'
+
+// Helper component to invalidate container bounds and sync view on center/zoom prop changes
+function MapViewController({ center, zoom }: { center: [number, number]; zoom: number }) {
+  const map = useMap()
+  useEffect(() => {
+    map.invalidateSize()
+    const timer1 = setTimeout(() => {
+      map.invalidateSize()
+    }, 100)
+    const timer2 = setTimeout(() => {
+      map.invalidateSize()
+    }, 500)
+    map.setView(center, zoom)
+    return () => {
+      clearTimeout(timer1)
+      clearTimeout(timer2)
+    }
+  }, [map, center, zoom])
+  return null
+}
 
 // Import Leaflet styles
 import 'leaflet/dist/leaflet.css'
@@ -119,19 +140,27 @@ export default function MapInner({
       <LeafletMap 
         center={center} 
         zoom={zoom} 
-        style={{ height: '100%', width: '100%', background: '#050816' }}
+        style={{ height: '100%', width: '100%', minHeight: '450px', background: '#050816' }}
         zoomControl={false}
       >
         <ScaleControl position="bottomleft" imperial={false} />
         <ZoomControl position="bottomleft" />
         <CoordinateTracker />
-
-        <TileLayer
-          attribution='&copy; <a href="https://carto.com/attributions">CARTO</a>'
-          url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-        />
+        <MapViewController center={center} zoom={zoom} />
 
         <LayersControl position="topright">
+          <LayersControl.BaseLayer checked name="Dark Command View">
+            <TileLayer
+              attribution='&copy; <a href="https://carto.com/attributions">CARTO</a>'
+              url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+            />
+          </LayersControl.BaseLayer>
+          <LayersControl.BaseLayer name="Street View">
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+          </LayersControl.BaseLayer>
           <LayersControl.Overlay checked name="Assets & Incidents">
             <LayerGroup>
               {markers.map((marker) => (

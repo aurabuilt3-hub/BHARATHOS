@@ -39,8 +39,21 @@ import {
   Droplets,
   HelpCircle,
   FileText,
-  Cpu
+  Cpu,
+  MapPin
 } from 'lucide-react'
+
+const cityMapMarkers: MapMarker[] = [
+  { id: 'm-1', position: [17.7289, 83.3214], title: 'MVP Colony Waterlogging', description: 'Beach Road Sector 4 | Drain Sump Alert', category: 'critical' },
+  { id: 'm-2', position: [17.7202, 83.3156], title: 'Siripuram Electrical Incident', description: 'Commercial Complex 2nd Floor', category: 'high' },
+  { id: 'm-3', position: [17.6812, 83.2104], title: 'Gajuwaka Highway Collision', description: 'Gajuwaka Flyover | Traffic escorts on scene', category: 'critical' },
+  { id: 'm-4', position: [17.8105, 83.3421], title: 'Madhurawada Pipeline Rupture', description: 'Zone 2 Main Line Breach', category: 'medium' },
+  { id: 'm-5', position: [17.7250, 83.3320], title: 'NTR General Hospital', description: 'Level 1 Trauma | 42 ICU Beds Standby', category: 'low' },
+  { id: 'm-6', position: [17.7120, 83.3050], title: 'Seven Hills Clinic', description: 'Emergency Health Node', category: 'low' },
+  { id: 'm-7', position: [17.7200, 83.3150], title: 'Police Patrol Unit P-101', description: 'MVP Sector 2 Patrol | Speed 32km/h', category: 'info' },
+  { id: 'm-8', position: [17.6850, 83.2200], title: 'Hazmat Tender FT-12', description: 'Gajuwaka Industrial Response', category: 'high' },
+  { id: 'm-9', position: [17.7240, 83.3250], title: 'Ambulance A-21', description: 'En Route MVP -> NTR Hospital', category: 'high' }
+]
 
 type AdminLevel = 'national' | 'state' | 'district' | 'city' | 'ward'
 
@@ -181,47 +194,38 @@ export default function CityDashboardPage() {
           {/* MAIN WORKSPACE ROW */}
           <section className="grid grid-cols-1 xl:grid-cols-4 gap-4 items-stretch flex-1 min-h-[420px]">
             
-            {/* COLUMN 1: LIVE WEATHER RADAR */}
+            {/* COLUMN 1: LIVE CITY MAP */}
             <div className="xl:col-span-1 rounded-2xl border border-slate-900 bg-[#0B0F19]/80 backdrop-blur-md p-4 flex flex-col justify-between min-w-0">
               <div className="flex items-center justify-between border-b border-slate-900 pb-2.5 mb-2.5 shrink-0">
                 <div className="flex items-center space-x-2">
-                  <CloudRain className="w-4 h-4 text-sky-400" />
-                  <h4 className="text-xs font-bold text-white uppercase tracking-wider font-mono">Live Weather Radar</h4>
+                  <MapPin className="w-4 h-4 text-sky-400 animate-pulse" />
+                  <h4 className="text-xs font-bold text-white uppercase tracking-wider font-mono">LIVE CITY MAP</h4>
                 </div>
-                <span className="text-[8px] text-slate-500 font-mono">CYCLONE TRACK</span>
+                <span className="text-[8px] font-bold text-emerald-400 font-mono uppercase tracking-wider">VISAKHAPATNAM</span>
               </div>
 
-              {/* RADAR CANVAS SCREEN */}
-              <div className="flex-1 relative rounded-xl border border-slate-950 bg-slate-950 overflow-hidden min-h-[220px] flex items-center justify-center">
-                {/* Simulated radar background & rotating line */}
-                <div className="absolute inset-0 opacity-20 border border-sky-500/30 rounded-full scale-[0.8] flex items-center justify-center">
-                  <div className="w-1/2 h-1/2 border border-sky-500/30 rounded-full" />
-                </div>
-                <div className="absolute w-[95%] h-[95%] border border-sky-500/10 rounded-full animate-pulse" />
-                <div className="absolute w-full h-[1px] bg-gradient-to-r from-transparent via-sky-500/40 to-sky-500 origin-center animate-spin duration-5000" style={{ animationDuration: '6s' }} />
-                
-                {/* Glowing alert dots */}
-                <span className="absolute top-[30%] left-[45%] h-2 w-2 rounded-full bg-red-500 animate-ping" />
-                <span className="absolute top-[30%] left-[45%] h-2 w-2 rounded-full bg-red-500" />
-                <span className="absolute top-[60%] left-[70%] h-1.5 w-1.5 rounded-full bg-orange-500" />
-                <span className="absolute top-[45%] left-[25%] h-1.5 w-1.5 rounded-full bg-yellow-500" />
-
-                <span className="absolute bottom-2.5 right-2.5 text-[8px] font-mono text-slate-500">SWEEP RADAR FEED v3</span>
+              {/* MAP CANVAS CONTAINER */}
+              <div className="flex-1 relative rounded-xl border border-slate-950 bg-slate-950 overflow-hidden min-h-[280px]">
+                <MapContainer
+                  center={[17.6868, 83.2185]}
+                  zoom={12}
+                  markers={cityMapMarkers}
+                />
               </div>
 
-              {/* METEOROLOGY STATS */}
+              {/* MAP SPATIAL FOOTER STATS */}
               <div className="grid grid-cols-3 gap-2 mt-3 text-center shrink-0 border-t border-slate-900/50 pt-2.5">
                 <div>
-                  <p className="text-[8px] font-mono text-slate-500 uppercase">Rainfall</p>
-                  <p className="text-xs font-bold text-sky-400 font-mono mt-0.5">78 mm</p>
+                  <p className="text-[8px] font-mono text-slate-500 uppercase">Sector</p>
+                  <p className="text-xs font-bold text-sky-400 font-mono mt-0.5">Vizag Urban</p>
                 </div>
                 <div>
-                  <p className="text-[8px] font-mono text-slate-500 uppercase">Wind</p>
-                  <p className="text-xs font-bold text-white font-mono mt-0.5">18 km/h</p>
+                  <p className="text-[8px] font-mono text-slate-500 uppercase">Active Markers</p>
+                  <p className="text-xs font-bold text-white font-mono mt-0.5">{cityMapMarkers.length} Nodes</p>
                 </div>
                 <div>
-                  <p className="text-[8px] font-mono text-slate-500 uppercase">Humidity</p>
-                  <p className="text-xs font-bold text-white font-mono mt-0.5">92%</p>
+                  <p className="text-[8px] font-mono text-slate-500 uppercase">Status</p>
+                  <p className="text-xs font-bold text-emerald-400 font-mono mt-0.5">Live Sync</p>
                 </div>
               </div>
             </div>
