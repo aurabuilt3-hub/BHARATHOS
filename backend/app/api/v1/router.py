@@ -17,6 +17,7 @@ from app.api.v1.command_centers import router as command_centers_router
 from app.api.v1.facilities import router as facilities_router
 from app.api.v1.admin import router as admin_router
 from app.api.v1.alerts import router as alerts_router
+from app.api.v1.rural import router as rural_router
 
 api_v1_router = APIRouter()
 
@@ -41,3 +42,4 @@ api_v1_router.include_router(facilities_router)
 api_v1_router.include_router(admin_router)
 api_v1_router.include_router(alerts_router)
 api_v1_router.include_router(digital_twin_router)
+api_v1_router.include_router(rural_router)

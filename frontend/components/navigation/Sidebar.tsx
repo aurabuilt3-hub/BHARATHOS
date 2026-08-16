@@ -82,7 +82,8 @@ export default function Sidebar() {
         { id: 'risk-map', label: 'Risk Map', path: '/dashboard/digital-twin#risk', icon: Waves, color: 'text-cyan-400' },
         { id: 'flood-incidents', label: 'Flood Incidents', path: '/dashboard/city#incidents', icon: AlertTriangle, color: 'text-red-400' },
         { id: 'early-warnings', label: 'Early Warnings', path: '/dashboard/national#warnings', icon: Wind, color: 'text-amber-400' },
-        { id: 'risk-analysis', label: 'Risk Analysis', path: '/dashboard/city#risk-analysis', icon: TrendingUp, color: 'text-teal-400' }
+        { id: 'risk-analysis', label: 'Risk Analysis', path: '/dashboard/city#risk-analysis', icon: TrendingUp, color: 'text-teal-400' },
+        { id: 'rural-intelligence', label: 'Rural Intelligence', path: '/dashboard/rural', icon: CloudRain, color: 'text-sky-300' }
       ]
     },
     {

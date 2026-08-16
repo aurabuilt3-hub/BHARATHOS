@@ -59,7 +59,7 @@ export default function StateDashboardPage() {
       <div className="space-y-6">
         <PageHeader
           title="State Operations Center - Andhra Pradesh"
-          description="State-wide emergency dispatches, district statistics, and inter-district asset deployments."
+          description="State-wide operations. VISAKHAPATNAM LIVE PILOT (Other districts: DATA COVERAGE PENDING)."
           breadcrumbs={[{ label: 'Home' }, { label: 'State Dashboard' }]}
         />
 

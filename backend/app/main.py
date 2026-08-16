@@ -82,6 +82,12 @@ async def startup_event():
                     db.add(mock_user)
                     db.commit()
                     print("Seeded mock user profile.")
+            
+            # Seed Historical Rainfall if table is empty
+            from app.models.models import HistoricalRainfall
+            if db.query(HistoricalRainfall).count() == 0:
+                from app.services.rural_flood_service import ingest_historical_rainfall
+                ingest_historical_rainfall(db)
         except Exception as e:
             db.rollback()
             print(f"Startup DB seeding error: {e}")

@@ -128,15 +128,57 @@ export default function CityDashboardPage() {
     }
   }
 
+  const [aiLoading, setAiLoading] = useState(false)
+  const [aiLoadingStep, setAiLoadingStep] = useState(0)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [aiResult, setAiResult] = useState<any | null>(null)
+  const [aiError, setAiError] = useState<string | null>(null)
+
   // E2E Dispatch & workflow handler actions
   const handleSelectIncident = async (item: { id: string }) => {
     try {
+      setSelectedIncident(null)
+      setAiResult(null)
+      setAiError(null)
       const inc = await apiService.getIncidentById(item.id)
       setSelectedIncident(inc)
       const res = await apiService.getIncidentResources(item.id)
       setIncidentResources(res || [])
     } catch (err) {
       console.error("Failed to load incident detail", err)
+    }
+  }
+
+  const handleRunAI = async () => {
+    if (!selectedIncident) return
+    setAiLoading(true)
+    setAiResult(null)
+    setAiError(null)
+    setAiLoadingStep(0)
+
+    const stepInterval = setInterval(() => {
+      setAiLoadingStep(prev => {
+        if (prev < 5) return prev + 1
+        return prev
+      })
+    }, 550)
+
+    try {
+      const res = await apiService.getAITriage(selectedIncident.description, selectedIncident.id)
+      await new Promise(resolve => setTimeout(resolve, 3000))
+      clearInterval(stepInterval)
+      setAiLoadingStep(6)
+      if (res) {
+        setAiResult(res)
+      } else {
+        setAiError("AI analysis unavailable. Verify your database connection and credentials.")
+      }
+    } catch (err: unknown) {
+      clearInterval(stepInterval)
+      const error = err as Error
+      setAiError(error.message || "An unexpected error occurred during multi-agent orchestration.")
+    } finally {
+      setAiLoading(false)
     }
   }
 
@@ -352,14 +394,14 @@ export default function CityDashboardPage() {
         {/* KPI Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           <div className="glass-panel border-l-4 border-l-red-500 rounded-xl p-4 flex flex-col justify-between">
-            <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider font-mono">Active Incidents</span>
+            <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider font-mono">Active Flood Incidents</span>
             <span className="text-xl font-extrabold text-white mt-2 font-mono">{stats?.active_incidents_count ?? 12}</span>
             <span className="text-[9px] text-red-400 mt-1 font-mono">● LIVE FEEDS ACTIVE</span>
           </div>
           <div className="glass-panel border-l-4 border-l-orange-500 rounded-xl p-4 flex flex-col justify-between">
-            <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider font-mono">High Risk Zones</span>
+            <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider font-mono">High-Risk Zones</span>
             <span className="text-xl font-extrabold text-white mt-2 font-mono">3</span>
-            <span className="text-[9px] text-orange-400 mt-1 font-mono">MVP Colony, Beach Road, Gajuwaka</span>
+            <span className="text-[9px] text-orange-400 mt-1 font-mono">MVP COLONY, BEACH ROAD, GAJUWAKA</span>
           </div>
           <div className="glass-panel border-l-4 border-l-yellow-500 rounded-xl p-4 flex flex-col justify-between">
             <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider font-mono">Active Warnings</span>
@@ -372,12 +414,12 @@ export default function CityDashboardPage() {
             <span className="text-[9px] text-emerald-400 mt-1 font-mono">PUMPS, DRAINAGE VANS</span>
           </div>
           <div className="glass-panel border-l-4 border-l-blue-500 rounded-xl p-4 flex flex-col justify-between">
-            <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider font-mono">Avg Response Time</span>
-            <span className="text-xl font-extrabold text-white mt-2 font-mono">14.2m</span>
-            <span className="text-[9px] text-blue-400 mt-1 font-mono">TARGET &lt; 15.0m</span>
+            <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider font-mono">IoT / Sensor Status</span>
+            <span className="text-xl font-extrabold text-white mt-2 font-mono">98.2%</span>
+            <span className="text-[9px] text-blue-400 mt-1 font-mono">48 SENSORS ONLINE</span>
           </div>
           <div className="glass-panel border-l-4 border-l-purple-500 rounded-xl p-4 flex flex-col justify-between">
-            <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider font-mono">Areas at Risk</span>
+            <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider font-mono">GIS Drain Gauges</span>
             <span className="text-xl font-extrabold text-white mt-2 font-mono">6</span>
             <span className="text-[9px] text-purple-400 mt-1 font-mono">LOW-LYING COASTAL BASINS</span>
           </div>
@@ -616,20 +658,194 @@ export default function CityDashboardPage() {
                 </div>
 
                 {/* AI Flood Response Advisor */}
-                <div className="p-3.5 rounded-xl border border-purple-900/40 bg-purple-950/15 space-y-2">
-                  <div className="flex items-center justify-between">
+                <div className="p-3.5 rounded-xl border border-purple-900 bg-purple-950/15 space-y-4">
+                  <div className="flex items-center justify-between border-b border-purple-900/40 pb-2">
                     <span className="text-[10px] font-bold text-purple-400 uppercase tracking-widest font-mono">AI Flood Response Advisor</span>
-                    <span className="text-[8px] font-mono font-bold bg-purple-950 px-2 py-0.5 rounded border border-purple-900/40 text-purple-300">ADVISORY MODE</span>
+                    <span className="text-[8px] font-mono font-bold bg-purple-950 px-2 py-0.5 rounded border border-purple-900/40 text-purple-300">LANGGRAPH ACTIVE</span>
                   </div>
-                  <p className="text-slate-350 leading-relaxed font-semibold">
-                    Triage Priority: <span className="font-bold text-purple-300 uppercase">{selectedIncident.severity}</span>. Recommended routing of dewatering pumps and municipal support to {selectedIncident.address || 'incident coordinates'}.
-                  </p>
-                  <div className="flex items-center justify-between pt-1 text-[8.5px] font-mono font-bold text-slate-500 uppercase tracking-wider">
-                    <span className="text-purple-400">AI Advisory</span>
+
+                  {!aiResult && !aiLoading && !aiError && (
+                    <div className="space-y-3">
+                      <p className="text-slate-350 leading-relaxed font-semibold">
+                        Invoke real-time LangGraph multi-agent analysis for developing flood risk assessment, resource optimization advice, and multilingual draft generation.
+                      </p>
+                      <button
+                        onClick={handleRunAI}
+                        className="w-full h-9 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center space-x-1.5 shadow-lg shadow-purple-900/20 transition-all cursor-pointer"
+                      >
+                        <span>Run AI Flood Analysis</span>
+                      </button>
+                    </div>
+                  )}
+
+                  {aiLoading && (
+                    <div className="space-y-3 font-mono text-[10.5px]">
+                      <div className="flex items-center space-x-2 text-purple-400">
+                        <div className="h-3 w-3 border-2 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
+                        <span className="font-bold tracking-wider uppercase">Running LangGraph Agent Pipeline</span>
+                      </div>
+                      
+                      <div className="space-y-2 mt-2">
+                        {[
+                          "Analyzing flood signals...",
+                          "Analyzing environmental risk...",
+                          "Checking incident intelligence...",
+                          "Evaluating available resources...",
+                          "Preparing response recommendation...",
+                          "Preparing multilingual advisory..."
+                        ].map((stepText, idx) => (
+                          <div key={idx} className="flex items-center space-x-2">
+                            {aiLoadingStep > idx ? (
+                              <span className="text-emerald-400 font-bold">✓</span>
+                            ) : aiLoadingStep === idx ? (
+                              <span className="text-purple-400 font-bold animate-pulse">●</span>
+                            ) : (
+                              <span className="text-slate-700">○</span>
+                            )}
+                            <span className={aiLoadingStep === idx ? "text-purple-300 font-bold" : aiLoadingStep > idx ? "text-slate-450" : "text-slate-650"}>
+                              {stepText}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {aiError && (
+                    <div className="space-y-2">
+                      <div className="text-red-400 font-bold uppercase tracking-wider font-mono text-[10px]">
+                        AI ANALYSIS FAILED
+                      </div>
+                      <p className="text-slate-400 text-[11px] leading-relaxed bg-red-950/10 border border-red-950 p-2 rounded">{aiError}</p>
+                      <button
+                        onClick={handleRunAI}
+                        className="px-3 py-1 rounded bg-slate-950 border border-slate-800 hover:border-slate-700 text-slate-350 font-bold hover:text-white transition-all cursor-pointer font-mono text-[10px]"
+                      >
+                        Retry Analysis
+                      </button>
+                    </div>
+                  )}
+
+                  {aiResult && !aiLoading && (
+                    <div className="space-y-3">
+                      {/* Telemetry Provenance */}
+                      <div className="flex items-center justify-between text-[9px] font-mono font-bold text-slate-500 uppercase tracking-wider">
+                        <span>Telemetry Source:</span>
+                        {aiResult.metadata?.response_recommendation?.provenance === 'REAL_IOT' ? (
+                          <span className="text-emerald-400">● LIVE IoT</span>
+                        ) : (
+                          <span className="text-purple-400">● SIMULATED</span>
+                        )}
+                      </div>
+
+                      {/* 1. Flood Detection */}
+                      <div className="space-y-1">
+                        <span className="text-[10px] font-bold text-purple-300 block font-mono">① FLOOD DETECTION</span>
+                        <div className="pl-3 text-[11px] text-slate-350 space-y-0.5 leading-relaxed">
+                          <div>Status: <span className="font-bold text-emerald-400">Complete</span></div>
+                          <div>Risk detected: <span className={`font-bold ${aiResult.metadata?.flood_detection?.risk_detected ? 'text-red-400' : 'text-emerald-400'}`}>
+                            {aiResult.metadata?.flood_detection?.risk_detected ? 'YES' : 'NO'}
+                          </span></div>
+                          {aiResult.metadata?.flood_detection?.evidence && (
+                            <div className="text-slate-500 italic">Evidence: {aiResult.metadata.flood_detection.evidence.join(', ')}</div>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* 2. Risk Analysis */}
+                      <div className="space-y-1 border-t border-slate-900 pt-2">
+                        <span className="text-[10px] font-bold text-purple-300 block font-mono">② RISK ANALYSIS</span>
+                        <div className="pl-3 text-[11px] text-slate-350 space-y-0.5 leading-relaxed">
+                          <div>Risk Level: <span className={`font-bold uppercase ${
+                            aiResult.metadata?.risk_analysis?.risk_level === 'critical' || aiResult.metadata?.risk_analysis?.risk_level === 'high' ? 'text-red-400' :
+                            aiResult.metadata?.risk_analysis?.risk_level === 'medium' ? 'text-yellow-400' : 'text-emerald-400'
+                          }`}>{aiResult.metadata?.risk_analysis?.risk_level || 'N/A'}</span></div>
+                          {aiResult.metadata?.risk_analysis?.drivers && (
+                            <div>Drivers: <span className="text-slate-400">{aiResult.metadata.risk_analysis.drivers.join(', ')}</span></div>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* 3. Incident Checking */}
+                      <div className="space-y-1 border-t border-slate-900 pt-2">
+                        <span className="text-[10px] font-bold text-purple-300 block font-mono">③ INCIDENT INTELLIGENCE</span>
+                        <div className="pl-3 text-[11px] text-slate-350 space-y-0.5 leading-relaxed">
+                          <div>Duplicate Check: <span className="font-bold">{aiResult.metadata?.incident_intelligence?.is_duplicate ? 'YES' : 'NO'}</span></div>
+                          {aiResult.metadata?.incident_intelligence?.matching_incident_id && (
+                            <div className="text-amber-400 font-mono text-[9px] truncate">Matches ID: {aiResult.metadata.incident_intelligence.matching_incident_id}</div>
+                          )}
+                          <div>Confidence: <span className="font-bold text-blue-450">{aiResult.metadata?.incident_intelligence?.confidence * 100}%</span></div>
+                        </div>
+                      </div>
+
+                      {/* 4. Resource recommendation */}
+                      <div className="space-y-1 border-t border-slate-900 pt-2">
+                        <span className="text-[10px] font-bold text-purple-300 block font-mono">④ RESOURCE ADVISOR</span>
+                        <div className="pl-3 text-[11px] text-slate-355 space-y-1.5 leading-relaxed">
+                          <div>Recommended Resource: <span className="font-bold text-sky-400 uppercase">{aiResult.metadata?.resource_recommendation?.recommended_resource_type || 'None'}</span></div>
+                          {aiResult.metadata?.resource_recommendation?.recommended_resource_id ? (
+                            <>
+                              <div className="font-mono text-[9px] text-slate-500 truncate">ID: {aiResult.metadata.resource_recommendation.recommended_resource_id}</div>
+                              <div className="text-slate-400 leading-normal">Reason: {aiResult.metadata.resource_recommendation.reason}</div>
+                              {resources.some(r => r.id === aiResult.metadata.resource_recommendation.recommended_resource_id && r.status === 'available') ? (
+                                <button
+                                  onClick={() => handleAllocateResource(aiResult.metadata.resource_recommendation.recommended_resource_id)}
+                                  disabled={allocatingResourceId !== null}
+                                  className="px-2.5 py-1 rounded bg-purple-900/60 border border-purple-700 hover:bg-purple-800 text-purple-300 font-bold transition-all cursor-pointer font-mono text-[9.5px]"
+                                >
+                                  Allocate Recommended Asset
+                                </button>
+                              ) : (
+                                <span className="text-[9.5px] font-mono font-bold text-slate-500 block">Asset Already Allocated or Unavailable</span>
+                              )}
+                            </>
+                          ) : (
+                            <div className="text-slate-500 italic">No resource recommended.</div>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* 5. Response recommendation */}
+                      <div className="space-y-1 border-t border-slate-900 pt-2">
+                        <span className="text-[10px] font-bold text-purple-300 block font-mono">⑤ RESPONSE ADVISOR</span>
+                        <div className="pl-3 text-[11px] text-slate-355 space-y-1.5 leading-relaxed">
+                          <div>Severity: <span className="font-bold uppercase text-red-400">{aiResult.metadata?.response_recommendation?.severity || 'N/A'}</span></div>
+                          <div className="font-semibold text-slate-200 bg-slate-950 p-2 rounded border border-slate-900">{aiResult.metadata?.response_recommendation?.recommended_action || 'N/A'}</div>
+                          
+                          <div className="flex items-center space-x-1.5 bg-red-950/20 border border-red-900/40 p-1.5 rounded mt-1.5">
+                            <span className="text-red-450 animate-pulse font-bold font-mono text-[9px] uppercase tracking-wider">⚠️ Human Approval Required</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* 6. Communication preview */}
+                      <div className="space-y-1 border-t border-slate-900 pt-2">
+                        <span className="text-[10px] font-bold text-purple-300 block font-mono">⑥ PUBLIC ADVISORY PREVIEW</span>
+                        <div className="pl-3 text-[10px] text-slate-400 space-y-2 mt-1 font-sans">
+                          <div className="border border-slate-900 bg-[#03060f] p-2 rounded">
+                            <span className="text-[8px] font-bold text-slate-500 block font-mono">ENGLISH</span>
+                            {aiResult.metadata?.communication?.english || 'N/A'}
+                          </div>
+                          <div className="border border-slate-900 bg-[#03060f] p-2 rounded">
+                            <span className="text-[8px] font-bold text-slate-500 block font-mono">తెలుగు (TELUGU)</span>
+                            {aiResult.metadata?.communication?.telugu || 'N/A'}
+                          </div>
+                          <div className="border border-slate-900 bg-[#03060f] p-2 rounded">
+                            <span className="text-[8px] font-bold text-slate-500 block font-mono">हिन्दी (HINDI)</span>
+                            {aiResult.metadata?.communication?.hindi || 'N/A'}
+                          </div>
+                          <span className="text-[8.5px] font-semibold text-slate-550 italic font-mono block">Draft advisory — pending operator approval. Not sent.</span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="flex items-center justify-between pt-2 border-t border-purple-900/30 text-[8.5px] font-mono font-bold text-slate-550 uppercase tracking-wider">
+                    <span className={aiResult ? "text-purple-400" : ""}>AI Advisory</span>
                     <span>➔</span>
-                    <span className="text-amber-400 text-slate-300 animate-pulse">Operator Review</span>
+                    <span className={aiResult ? "text-slate-350" : "animate-pulse text-amber-500"}>Operator Review</span>
                     <span>➔</span>
-                    <span className="text-emerald-400">Dispatch Decision</span>
+                    <span className="text-emerald-500">Dispatch Decision</span>
                   </div>
                 </div>
 

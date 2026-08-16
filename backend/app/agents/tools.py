@@ -1,6 +1,6 @@
 import uuid
 from typing import List, Dict, Any, Optional
-from sqlalchemy import select, and_
+from sqlalchemy import select, and_, func
 from sqlalchemy.orm import Session
 from fastapi import HTTPException, status
 from datetime import datetime
@@ -152,6 +152,13 @@ def get_facilities(db: Session, user: User, **filters) -> List[Dict[str, Any]]:
 def get_resources(db: Session, user: User, **filters) -> List[Dict[str, Any]]:
     """Retrieve response units (ambulance vehicles, fire engines, police patrols)."""
     resources = ResourceService.list_resources(db, user, **filters)
+    
+    # Filter by user's geographic scope to prevent cross-jurisdiction leakage
+    scoped_resources = []
+    for res in resources:
+        if verify_geographic_scope(user, None, None, res.city_id, db):
+            scoped_resources.append(res)
+
     return [
         {
             "id": str(res.id),
@@ -163,7 +170,7 @@ def get_resources(db: Session, user: User, **filters) -> List[Dict[str, Any]]:
             "city_id": str(res.city_id) if res.city_id else None,
             "department_id": str(res.department_id) if res.department_id else None,
         }
-        for res in resources
+        for res in scoped_resources
     ]
 
 def get_available_resources(db: Session, user: User, **filters) -> List[Dict[str, Any]]:

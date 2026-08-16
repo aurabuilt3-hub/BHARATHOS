@@ -1,0 +1,11 @@
+warning: in the working copy of 'frontend/components/navigation/RightAIPanel.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/components/widgets/IncidentQueueWidget.tsx', LF will be replaced by CRLF the next time Git touches it
+ backend/app/data_sources/ingestion_report.json     |   2 [32m+[m[31m-[m
+ frontend/app/dashboard/city/page.tsx               | 197 [32m+++++++++++++++++[m[31m----[m
+ frontend/app/dashboard/digital-twin/page.tsx       |   4 [32m+[m[31m-[m
+ frontend/app/dashboard/national/page.tsx           | 131 [32m++++++++++++++[m
+ frontend/components/navigation/RightAIPanel.tsx    |   2 [32m+[m[31m-[m
+ frontend/components/navigation/Sidebar.tsx         |  67 [32m++++[m[31m---[m
+ frontend/components/widgets/AISummaryWidget.tsx    |   2 [32m+[m[31m-[m
+ .../components/widgets/IncidentQueueWidget.tsx     |  92 [32m+++++++[m[31m---[m
+ 8 files changed, 407 insertions(+), 90 deletions(-)

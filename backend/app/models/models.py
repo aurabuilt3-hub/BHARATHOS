@@ -347,3 +347,21 @@ class Facility(Base):
     zone: Mapped[Optional[Zone]] = relationship("Zone")
     ward: Mapped[Optional[Ward]] = relationship("Ward")
 
+
+class HistoricalRainfall(Base):
+    __tablename__ = "historical_rainfall"
+
+    id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    state: Mapped[str] = mapped_column(String(100), nullable=False)
+    district: Mapped[str] = mapped_column(String(100), nullable=False, index=True)
+    original_district: Mapped[str] = mapped_column(String(100), nullable=False)
+    date: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False, index=True)
+    year: Mapped[int] = mapped_column(Integer, nullable=False, index=True)
+    month: Mapped[int] = mapped_column(Integer, nullable=False, index=True)
+    avg_rainfall: Mapped[float] = mapped_column(Double, nullable=False)
+    agency_name: Mapped[str] = mapped_column(String(100), nullable=False)
+    source_type: Mapped[str] = mapped_column(String(100), nullable=False, default="HISTORICAL_DATASET")
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=datetime.utcnow)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=datetime.utcnow, onupdate=datetime.utcnow)
+
+
