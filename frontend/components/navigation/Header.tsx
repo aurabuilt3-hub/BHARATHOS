@@ -134,10 +134,10 @@ export default function Header() {
   }
 
   return (
-    <header className="grid grid-cols-[auto_minmax(0,1fr)_auto] h-18 items-center border-b border-slate-900/60 bg-[#0B0F19]/80 px-4 lg:px-6 backdrop-blur-xl relative z-[30] select-none w-full max-w-full box-border gap-2 lg:gap-3">
+    <header className="grid grid-cols-[auto_minmax(0,1fr)_auto] h-18 items-center border-b border-slate-900/60 bg-[#0B0F19]/80 px-4 lg:px-6 backdrop-blur-xl relative z-[30] select-none w-full max-w-full box-border gap-3 lg:gap-4.5">
       
       {/* 1. LEFT ZONE: Search Terminal & National Command selector */}
-      <div className="flex items-center gap-2 lg:gap-3 shrink-0 min-w-0">
+      <div className="flex items-center gap-2.5 lg:gap-3.5 shrink min-w-0">
         {/* Logo shows ONLY if sidebar is collapsed */}
         {sidebarCollapsed && (
           <motion.div
@@ -150,7 +150,7 @@ export default function Header() {
         )}
 
         {/* Global Search Bar */}
-        <div className="w-32 sm:w-44 md:w-52 lg:w-60 shrink-0">
+        <div className="w-28 sm:w-36 md:w-40 lg:w-44 shrink">
           <GlobalSearch />
         </div>
 
@@ -161,7 +161,7 @@ export default function Header() {
             className="flex items-center space-x-1 lg:space-x-1.5 rounded-xl border border-slate-800 bg-slate-950/40 px-2 py-1.5 lg:px-3 lg:py-1.5 text-[10px] lg:text-xs font-bold text-slate-300 hover:border-slate-700 hover:text-white transition-all focus:outline-none min-w-0"
           >
             <Compass className="w-3.5 h-3.5 text-sky-400 shrink-0" />
-            <span className="truncate max-w-[50px] sm:max-w-[80px] lg:max-w-[120px]">{currentWorkspace}</span>
+            <span className="truncate max-w-[50px] sm:max-w-[70px] lg:max-w-[95px]">{currentWorkspace}</span>
             <ChevronDown className="w-3 h-3 text-slate-500 shrink-0" />
           </button>
 
@@ -205,7 +205,7 @@ export default function Header() {
       </div>
 
       {/* 2. MIDDLE ZONE: Location, Weather, Date/Time */}
-      <div className="grid grid-cols-[minmax(0,1fr)_auto_auto] gap-2 lg:gap-3 items-center min-w-0 w-full px-2">
+      <div className={`grid grid-cols-[minmax(0,1fr)_auto_auto] gap-3 lg:gap-5 items-center min-w-0 w-full px-2 ${sidebarCollapsed ? 'grid' : 'hidden 2xl:grid'}`}>
         {/* Geo Breadcrumb Selector */}
         <div className="flex items-center space-x-1 lg:space-x-1.5 bg-slate-950/30 border border-slate-900 rounded-xl p-1 text-[10px] lg:text-xs min-w-0 overflow-hidden flex-1">
           <span className="hidden lg:inline text-[9px] font-bold text-slate-500 uppercase tracking-widest px-1 lg:px-2 font-mono shrink-0">
@@ -298,7 +298,7 @@ export default function Header() {
       </div>
 
       {/* 3. RIGHT ZONE: Display, Notifications, Alert, Start Demo, Profile */}
-      <div className="flex items-center gap-2 lg:gap-2.5 shrink-0 ml-auto">
+      <div className="flex items-center gap-2.5 lg:gap-3.5 shrink ml-auto">
         {/* Presentation mode toggle */}
         <button
           onClick={() => setPresentationMode(!presentationMode)}
@@ -321,12 +321,12 @@ export default function Header() {
         </div>
 
         {/* Demo execution scenario trigger & controller (Alert Selector) */}
-        <div className="flex items-center space-x-1 lg:space-x-2 shrink-0">
+        <div className="flex items-center space-x-2.5 lg:space-x-3.5 shrink-0">
           <select
             value={selectedScenario}
             onChange={(e) => setSelectedScenario(e.target.value as DemoScenarioName)}
             disabled={demoRunning}
-            className="bg-slate-950 border border-slate-900 rounded-xl px-1.5 py-1 lg:px-2.5 lg:py-2 text-[10px] lg:text-xs font-bold text-slate-300 focus:outline-none focus:border-slate-700 select-none cursor-pointer disabled:opacity-50 max-w-[80px] sm:max-w-[150px] lg:max-w-[200px] truncate"
+            className="bg-slate-950 border border-slate-900 rounded-xl px-1.5 py-1 lg:px-2.5 lg:py-2 text-[10px] lg:text-xs font-bold text-slate-300 focus:outline-none focus:border-slate-700 select-none cursor-pointer disabled:opacity-50 max-w-[80px] sm:max-w-[120px] lg:max-w-[150px] truncate"
           >
             {DemoEngine.getScenarios().map((sc) => (
               <option key={sc} value={sc}>

@@ -14,7 +14,6 @@ router = APIRouter(prefix="/ai", tags=["Multi-Agent AI System"])
 class TriageRequest(BaseModel):
     incident_description: str = Field(..., example="Heavy waterlogging on Beach Road MVP Colony near Sector 4.")
     session_id: Optional[str] = "default_session"
-    incident_id: Optional[str] = None
 
 class TriageResponse(BaseModel):
     summary: str
@@ -35,22 +34,13 @@ class ChatRequest(BaseModel):
     history: Optional[List[Dict[str, str]]] = None
 
 @router.post("/triage", response_model=TriageResponse)
-def run_ai_triage(
-    request: TriageRequest,
-    current_user: User = Depends(get_current_user),
-    db: Session = Depends(get_db)
-):
+def run_ai_triage(request: TriageRequest):
     try:
         recommendation = ai_gateway.process_triage_request(
             incident_description=request.incident_description,
-            db=db,
-            user=current_user,
-            incident_id=request.incident_id,
             session_id=request.session_id or "default_session"
         )
         return TriageResponse(**recommendation)
-    except HTTPException as he:
-        raise he
     except Exception as e:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,

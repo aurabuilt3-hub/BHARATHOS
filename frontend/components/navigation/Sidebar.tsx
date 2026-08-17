@@ -45,20 +45,25 @@ export default function Sidebar() {
   const pathname = usePathname()
   const [hoveredItem, setHoveredItem] = useState<string | null>(null)
   const [level, setLevel] = useState<string>('')
+  const [hash, setHash] = useState<string>('')
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const checkLevel = () => {
         const params = new URLSearchParams(window.location.search)
         setLevel(params.get('level') || '')
+        setHash(window.location.hash || '')
       }
       checkLevel()
       // Listen to popstate and custom pushes
       window.addEventListener('popstate', checkLevel)
+      // Listen to hashchange events to track hash updates instantly
+      window.addEventListener('hashchange', checkLevel)
       // Check on periodic timer or click as well to keep sidebar synced
       const interval = setInterval(checkLevel, 800)
       return () => {
         window.removeEventListener('popstate', checkLevel)
+        window.removeEventListener('hashchange', checkLevel)
         clearInterval(interval)
       }
     }
@@ -70,7 +75,6 @@ export default function Sidebar() {
       items: [
         { id: 'national-command', label: 'National Command', path: '/dashboard/national', icon: Globe, color: 'text-sky-400' },
         { id: 'state-command', label: 'State Command', path: '/dashboard/state', icon: Building2, color: 'text-indigo-400' },
-        { id: 'district-command', label: 'District Command', path: '/dashboard/city?level=district', icon: MapPin, color: 'text-teal-400' },
         { id: 'city-command', label: 'City Command', path: '/dashboard/city', icon: Building, color: 'text-emerald-400' },
         { id: 'ward-command', label: 'Ward Operations', path: '/dashboard/city?level=ward', icon: Sliders, color: 'text-emerald-500' }
       ]
@@ -79,19 +83,18 @@ export default function Sidebar() {
       title: 'FLOOD INTELLIGENCE',
       items: [
         { id: 'flood-overview', label: 'Flood Overview', path: '/dashboard/national#overview', icon: Layers, color: 'text-blue-400' },
-        { id: 'risk-map', label: 'Risk Map', path: '/dashboard/digital-twin#risk', icon: Waves, color: 'text-cyan-400' },
-        { id: 'flood-incidents', label: 'Flood Incidents', path: '/dashboard/city#incidents', icon: AlertTriangle, color: 'text-red-400' },
+        { id: 'risk-map', label: 'Risk Map', path: '/dashboard/national#risk', icon: Waves, color: 'text-cyan-400' },
+        { id: 'flood-incidents', label: 'Flood Incidents', path: '/dashboard/national#incidents', icon: AlertTriangle, color: 'text-red-400' },
         { id: 'early-warnings', label: 'Early Warnings', path: '/dashboard/national#warnings', icon: Wind, color: 'text-amber-400' },
-        { id: 'risk-analysis', label: 'Risk Analysis', path: '/dashboard/city#risk-analysis', icon: TrendingUp, color: 'text-teal-400' },
-        { id: 'rural-intelligence', label: 'Rural Intelligence', path: '/dashboard/rural', icon: CloudRain, color: 'text-sky-300' }
+        { id: 'risk-analysis', label: 'Risk Analysis', path: '/dashboard/national#risk-analysis', icon: TrendingUp, color: 'text-teal-400' }
       ]
     },
     {
       title: 'RESPONSE',
       items: [
-        { id: 'dispatch', label: 'Dispatch', path: '/dashboard/city?action=dispatch', icon: PhoneCall, color: 'text-pink-400' },
-        { id: 'resources', label: 'Resources', path: '/dashboard/city#resources', icon: Truck, color: 'text-emerald-400' },
-        { id: 'response-teams', label: 'Response Teams', path: '/dashboard/city#resources', icon: Shield, color: 'text-indigo-400' }
+        { id: 'dispatch', label: 'Dispatch', path: '/dashboard/national?action=dispatch', icon: PhoneCall, color: 'text-pink-400' },
+        { id: 'resources', label: 'Resources', path: '/dashboard/national#resources', icon: Truck, color: 'text-emerald-400' },
+        { id: 'response-teams', label: 'Response Teams', path: '/dashboard/national#resources', icon: Shield, color: 'text-indigo-400' }
       ]
     },
     {
@@ -110,7 +113,7 @@ export default function Sidebar() {
     {
       title: 'CITIZEN',
       items: [
-        { id: 'report-flooding', label: 'Report Flooding', path: '/dashboard/city?report=citizen', icon: AlertTriangle, color: 'text-red-500' },
+        { id: 'report-flooding', label: 'Report Flooding', path: '/dashboard/national?report=citizen', icon: AlertTriangle, color: 'text-red-500' },
         { id: 'safety-alerts', label: 'Safety & Alerts', path: '/dashboard/national#safety', icon: BookOpen, color: 'text-sky-300' }
       ]
     },
@@ -152,25 +155,31 @@ export default function Sidebar() {
             
             <div className="space-y-1">
               {section.items.map((item) => {
-                const isDistrictItem = item.path.includes('level=district')
-                const isWardItem = item.path.includes('level=ward')
-                const isCityItem = item.path === '/dashboard/city'
-                
-                const queryStr = typeof window !== 'undefined' ? window.location.search : ''
-                const isActive = isDistrictItem 
-                  ? (pathname === '/dashboard/city' && level === 'district')
-                  : isWardItem
-                    ? (pathname === '/dashboard/city' && level === 'ward')
-                    : isCityItem 
-                      ? (pathname === '/dashboard/city' && level !== 'district' && level !== 'ward' && !queryStr.includes('report=citizen') && !queryStr.includes('action=dispatch'))
-                      : item.path.includes('report=citizen')
-                        ? (pathname === '/dashboard/city' && queryStr.includes('report=citizen'))
-                        : item.path.includes('action=dispatch')
-                          ? (pathname === '/dashboard/city' && queryStr.includes('action=dispatch'))
-                          : (pathname === item.path.split('#')[0])
-                
-                const isHovered = hoveredItem === item.id
-                const Icon = item.icon
+                 const isDistrictItem = item.path.includes('level=district')
+                 const isWardItem = item.path.includes('level=ward')
+                 const isCityItem = item.path === '/dashboard/city'
+                 
+                 const queryStr = typeof window !== 'undefined' ? window.location.search : ''
+                 const [itemPath, itemHash] = item.path.split('#')
+                 const cleanItemPath = itemPath.split('?')[0]
+                 const hasHash = !!itemHash
+
+                 const isActive = isDistrictItem 
+                   ? (pathname === '/dashboard/city' && level === 'district')
+                   : isWardItem
+                     ? (pathname === '/dashboard/city' && level === 'ward')
+                     : isCityItem 
+                       ? (pathname === '/dashboard/city' && level !== 'district' && level !== 'ward' && !queryStr.includes('report=citizen') && !queryStr.includes('action=dispatch'))
+                       : item.path.includes('report=citizen')
+                         ? (pathname === cleanItemPath && queryStr.includes('report=citizen'))
+                         : item.path.includes('action=dispatch')
+                           ? (pathname === cleanItemPath && queryStr.includes('action=dispatch'))
+                           : hasHash
+                             ? (pathname === cleanItemPath && hash === '#' + itemHash)
+                             : (pathname === cleanItemPath)
+                 
+                 const isHovered = hoveredItem === item.id
+                 const Icon = item.icon
 
                 return (
                   <Link

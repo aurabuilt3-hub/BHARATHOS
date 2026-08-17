@@ -1,6 +1,7 @@
 'use client'
 
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, Suspense } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   AlertTriangle,
@@ -185,7 +186,8 @@ const translations = {
   }
 }
 
-export default function NationalCommandPage() {
+function NationalCommandContent() {
+  const searchParams = useSearchParams()
   // DB Live States
   const [overview, setOverview] = useState<DashboardOverview | null>(null)
   const [incidents, setIncidents] = useState<BackendIncident[]>([])
@@ -198,6 +200,38 @@ export default function NationalCommandPage() {
 
   // Dispatch Drawer / Reporting state additions
   const [selectedIncident, setSelectedIncident] = useState<BackendIncident | null>(null)
+  const [activeSection, setActiveSection] = useState('overview')
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const currentHash = typeof window !== 'undefined' ? window.location.hash.replace('#', '') : ''
+      if (['overview', 'risk', 'incidents', 'warnings', 'risk-analysis', 'dispatch', 'resources', 'safety'].includes(currentHash)) {
+        setActiveSection(currentHash)
+      } else {
+        setActiveSection('overview')
+      }
+    }
+    handleHashChange()
+    window.addEventListener('hashchange', handleHashChange)
+    window.addEventListener('popstate', handleHashChange)
+    const interval = setInterval(handleHashChange, 200)
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange)
+      window.removeEventListener('popstate', handleHashChange)
+      clearInterval(interval)
+    }
+  }, [])
+
+  useEffect(() => {
+    const report = searchParams.get('report')
+    if (report === 'citizen') {
+      setShowReportModal(true)
+    }
+    const action = searchParams.get('action')
+    if (action === 'dispatch' && incidents.length > 0 && !selectedIncident) {
+      setSelectedIncident(incidents[0])
+    }
+  }, [searchParams, incidents])
   const [incidentResources, setIncidentResources] = useState<BackendResource[]>([])
   const [allDepartments, setAllDepartments] = useState<any[]>([])
   const [showReportModal, setShowReportModal] = useState(false)
@@ -733,7 +767,7 @@ export default function NationalCommandPage() {
 
   return (
     <DashboardLayout>
-      <div className="space-y-5 text-slate-200">
+      <div id="overview" className="space-y-5 text-slate-200">
         
         {/* ACTION FLASHING NOTIFICATION */}
         <AnimatePresence>
@@ -751,7 +785,8 @@ export default function NationalCommandPage() {
         </AnimatePresence>
 
         {/* Multilingual Early Warning & Pilot Banner */}
-        <div className="glass-panel border border-slate-800 rounded-2xl p-5 space-y-4">
+        <div id="safety" />
+        <div id="warnings" className={`glass-panel border border-slate-800 rounded-2xl p-5 space-y-4 ${(activeSection === 'overview' || activeSection === 'warnings' || activeSection === 'safety') ? '' : 'hidden'}`}>
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-900 pb-4">
             <div className="space-y-1">
               <div className="flex items-center space-x-2">
@@ -833,7 +868,7 @@ export default function NationalCommandPage() {
         </div>
 
         {/* 1. TOP PREMIUM DENSE KPI CARDS */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 xl:grid-cols-10 gap-3">
+        <div className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 xl:grid-cols-10 gap-3 ${activeSection === 'overview' ? '' : 'hidden'}`}>
           
           {/* KPI 1 */}
           <div className="p-3 rounded-xl border border-red-900/60 bg-red-950/20 shadow-[0_0_15px_rgba(239,68,68,0.06)] flex flex-col justify-between h-[115px] min-w-0 transition-all duration-200">
@@ -973,7 +1008,7 @@ export default function NationalCommandPage() {
           </div>
 
           {/* KPI 10 */}
-          <div className="p-3 rounded-xl border border-slate-900 bg-[#0B0F19]/60 flex flex-col justify-between h-[115px] min-w-0 transition-all duration-200">
+          <div id="sensors" className="p-3 rounded-xl border border-slate-900 bg-[#0B0F19]/60 flex flex-col justify-between h-[115px] min-w-0 transition-all duration-200">
             <div className="flex items-center justify-between">
               <Users className="w-4 h-4 text-teal-400 shrink-0" />
               <span className="text-[7.5px] font-bold text-teal-400 uppercase tracking-wider bg-teal-500/10 px-1.5 py-0.5 rounded border border-teal-500/20 shrink-0">MUNICIPAL</span>
@@ -989,10 +1024,10 @@ export default function NationalCommandPage() {
 
         </div>
         {/* 2. DYNAMIC WORKSPACE GRID */}
-        <div className="grid grid-cols-1 xl:grid-cols-4 gap-4 items-stretch">
+        <div className={`grid grid-cols-1 xl:grid-cols-4 gap-4 items-stretch ${(activeSection === 'overview' || activeSection === 'risk' || activeSection === 'incidents') ? '' : 'hidden'}`}>
           
           {/* A. LEFT COLUMN: AI OPERATIONS PANEL */}
-          <div className="xl:col-span-1 rounded-2xl border border-slate-900 bg-[#0B0F19]/80 backdrop-blur-md p-4 flex flex-col justify-between max-h-[580px] min-w-0">
+          <div className={`xl:col-span-1 rounded-2xl border border-slate-900 bg-[#0B0F19]/80 backdrop-blur-md p-4 flex flex-col justify-between max-h-[580px] min-w-0 ${activeSection === 'overview' ? '' : 'hidden'}`}>
             <div className="flex items-center justify-between border-b border-slate-900 pb-3.5 mb-3.5 shrink-0">
               <div className="flex items-center space-x-2">
                 <Cpu className="w-4.5 h-4.5 text-purple-400 animate-pulse" />
@@ -1064,7 +1099,7 @@ export default function NationalCommandPage() {
           </div>
 
           {/* B. CENTER COLUMN: LARGE DIGITAL TWIN MAP */}
-          <div className="xl:col-span-2 rounded-2xl border border-slate-900 bg-[#0B0F19]/80 backdrop-blur-md p-4 flex flex-col justify-between max-h-[580px] min-w-0">
+          <div id="risk" className={`${activeSection === 'overview' ? 'xl:col-span-2' : activeSection === 'risk' ? 'xl:col-span-4' : 'hidden'} rounded-2xl border border-slate-900 bg-[#0B0F19]/80 backdrop-blur-md p-4 flex flex-col justify-between max-h-[580px] min-w-0`}>
             <div className="flex items-center justify-between border-b border-slate-900 pb-3 mb-3 text-xs shrink-0">
               <div className="flex items-center space-x-2">
                 <Layers className="w-4 h-4 text-sky-400 animate-bounce" />
@@ -1110,7 +1145,7 @@ export default function NationalCommandPage() {
           </div>
 
           {/* C. RIGHT COLUMN: NATIONAL ALERTS, RECOMMENDATIONS, LOGS, SECURE CHAT */}
-          <div className="xl:col-span-1 rounded-2xl border border-slate-900 bg-[#0B0F19]/80 backdrop-blur-md p-4 flex flex-col justify-between max-h-[580px] min-w-0">
+          <div id="incidents" className={`${activeSection === 'overview' ? 'xl:col-span-1' : activeSection === 'incidents' ? 'xl:col-span-4' : 'hidden'} rounded-2xl border border-slate-900 bg-[#0B0F19]/80 backdrop-blur-md p-4 flex flex-col justify-between max-h-[580px] min-w-0`}>
             <div className="space-y-3.5 shrink-0">
               
               {/* National Alert */}
@@ -1229,7 +1264,7 @@ export default function NationalCommandPage() {
         </div>
 
         {/* 3. CENTER BOTTOM CHARTS */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+        <div id="risk-analysis" className={`grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 ${(activeSection === 'overview' || activeSection === 'risk-analysis') ? '' : 'hidden'}`}>
           
           <div className="rounded-xl border border-slate-900 bg-[#0B0F19]/70 p-4 relative overflow-hidden flex flex-col justify-between min-w-0">
             <div>
@@ -1347,7 +1382,8 @@ export default function NationalCommandPage() {
         </div>
 
         {/* 4. EMERGENCY QUICK ACTIONS */}
-        <div className="rounded-xl border border-slate-900 bg-[#0B0F19]/60 p-4 space-y-3">
+        <div id="resources" />
+        <div id="dispatch" className={`rounded-xl border border-slate-900 bg-[#0B0F19]/60 p-4 space-y-3 ${(activeSection === 'overview' || activeSection === 'dispatch' || activeSection === 'resources') ? '' : 'hidden'}`}>
           <span className="text-[9px] font-bold text-slate-500 uppercase tracking-widest font-mono block">Emergency Quick dispatch control board</span>
           
           <div className="flex flex-wrap items-center gap-2">
@@ -1687,5 +1723,17 @@ export default function NationalCommandPage() {
 
       </div>
     </DashboardLayout>
+  )
+}
+
+export default function NationalCommandPage() {
+  return (
+    <Suspense fallback={
+      <div className="h-screen w-full flex items-center justify-center bg-[#050816] text-slate-400 font-mono text-xs uppercase tracking-wider">
+        Loading National Command Center...
+      </div>
+    }>
+      <NationalCommandContent />
+    </Suspense>
   )
 }

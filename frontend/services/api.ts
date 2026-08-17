@@ -390,16 +390,12 @@ export const apiService = {
     })
   },
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  async getAITriage(incidentDescription: string, incidentId?: string): Promise<any> {
+  // 6. Query Multi-Agent AI Triage
+  async getAITriage(incidentDescription: string): Promise<any> {
     try {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       return await apiFetch<any>(`${API_BASE_URL}/ai/triage`, {
         method: 'POST',
-        body: JSON.stringify({ 
-          incident_description: incidentDescription,
-          incident_id: incidentId
-        })
+        body: JSON.stringify({ incident_description: incidentDescription })
       })
     } catch (err) {
       console.warn('AI Triage API offline. Using built-in agent fallback.', err)
@@ -560,21 +556,5 @@ export const apiService = {
   // 17. Telemetry alias
   async getTelemetry(nodeId: string, limit: number = 100): Promise<any> {
     return this.getDigitalTwinTelemetry(nodeId, { limit })
-  },
-
-  // 18. GET Rural Baseline
-  async getRuralBaseline(): Promise<unknown> {
-    return apiFetch<unknown>(`${API_BASE_URL}/rural/baseline`)
-  },
-
-  // 19. POST Rural Simulation
-  async runRuralSimulation(month: number, rainfallMm: number): Promise<unknown> {
-    return apiFetch<unknown>(`${API_BASE_URL}/rural/simulate`, {
-      method: 'POST',
-      body: JSON.stringify({
-        month,
-        rainfall_mm: rainfallMm
-      })
-    })
   }
 }
