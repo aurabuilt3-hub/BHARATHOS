@@ -1,6 +1,7 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Suspense } from 'react'
+import { useSearchParams } from 'next/navigation'
 import DashboardLayout from '../../../components/layout/DashboardLayout'
 import PageHeader from '../../../components/ui/PageHeader'
 import WeatherWidget from '../../../components/widgets/WeatherWidget'
@@ -65,8 +66,21 @@ const cityMapMarkers: MapMarker[] = [
 
 type AdminLevel = 'national' | 'state' | 'district' | 'city' | 'ward'
 
-export default function CityDashboardPage() {
+function CityDashboardContent() {
+  const searchParams = useSearchParams()
   const [level, setLevel] = useState<AdminLevel>('city')
+
+  useEffect(() => {
+    const lvl = searchParams.get('level') as AdminLevel
+    if (lvl && ['national', 'state', 'district', 'city', 'ward'].includes(lvl)) {
+      setLevel(lvl)
+    }
+    const report = searchParams.get('report')
+    if (report === 'citizen') {
+      setShowReportModal(true)
+    }
+  }, [searchParams])
+
   const city = visakhapatnamCityData
 
   const [currentTime, setCurrentTime] = useState('')
@@ -854,16 +868,16 @@ export default function CityDashboardPage() {
 
         {/* 2. Middle Row: Resource, Sensor & Flood Risk Widgets */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <ResourceWidget />
+          <div id="resources"><ResourceWidget /></div>
           <SensorWidget />
-          <FloodRiskWidget />
+          <div id="risk-analysis"><FloodRiskWidget /></div>
         </div>
 
         {/* 3. Incidents Queue & Analytics */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2 space-y-6">
             <CommandWorkflowWidget />
-            <IncidentQueueWidget onSelectIncident={handleSelectIncident} />
+            <div id="incidents"><IncidentQueueWidget onSelectIncident={handleSelectIncident} /></div>
           </div>
 
           <div className="space-y-6">
@@ -1175,5 +1189,17 @@ export default function CityDashboardPage() {
 
       </div>
     </DashboardLayout>
+  )
+}
+
+export default function CityDashboardPage() {
+  return (
+    <Suspense fallback={
+      <div className="h-screen w-full flex items-center justify-center bg-[#050816] text-slate-400 font-mono text-xs uppercase tracking-wider">
+        Loading City Command Center...
+      </div>
+    }>
+      <CityDashboardContent />
+    </Suspense>
   )
 }

@@ -37,6 +37,8 @@ export default function DashboardLayout({
   const token = useAuthStore((state) => state.token)
   const connect = useRealtimeStore((state) => state.connect)
 
+  const mainRef = React.useRef<HTMLElement>(null)
+
   React.useEffect(() => {
     if (token) {
       connect(token)
@@ -44,6 +46,48 @@ export default function DashboardLayout({
       useRealtimeStore.getState().disconnect()
     }
   }, [token, connect])
+
+  // Set history scroll restoration to manual on mount to prevent browser scroll fights
+  React.useEffect(() => {
+    if (typeof window !== 'undefined' && window.history) {
+      window.history.scrollRestoration = 'manual'
+    }
+  }, [])
+
+  // Reset window, body and main scroll container scroll positions on route changes
+  React.useEffect(() => {
+    const handleScrollReset = () => {
+      if (typeof window !== 'undefined') {
+        window.scrollTo(0, 0)
+        if (document.documentElement) document.documentElement.scrollTop = 0
+        if (document.body) document.body.scrollTop = 0
+      }
+      
+      // Recursively reset scroll position of main and all parent layout containers
+      if (mainRef.current) {
+        mainRef.current.scrollTop = 0
+        let parent = mainRef.current.parentElement
+        while (parent && parent !== document.body && parent !== document.documentElement) {
+          if (parent.scrollTop > 0) {
+            parent.scrollTop = 0
+          }
+          parent = parent.parentElement
+        }
+      }
+    }
+
+    // Run immediately
+    handleScrollReset()
+
+    // Also run on slight delay to override any late browser / Next.js scroll restoration
+    const timer1 = setTimeout(handleScrollReset, 0)
+    const timer2 = setTimeout(handleScrollReset, 100)
+
+    return () => {
+      clearTimeout(timer1)
+      clearTimeout(timer2)
+    }
+  }, [pathname])
 
   // Dynamically generate high-fidelity Breadcrumbs based on the router path
   const getBreadcrumbs = () => {
@@ -65,7 +109,7 @@ export default function DashboardLayout({
     <div className="flex h-screen w-screen overflow-hidden bg-[#030712] text-slate-100 font-sans relative">
       
       {/* 1. Left Sidebar Navigation Panel (Collapsed if Presentation Mode is active) */}
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         {!presentationMode && (
           <motion.div
             initial={{ width: 0, opacity: 0 }}
@@ -80,10 +124,17 @@ export default function DashboardLayout({
       </AnimatePresence>
 
       {/* 2. Main Area Container */}
-      <div className="flex-1 flex flex-col min-w-0 overflow-hidden relative">
+      <div 
+        onScroll={(e) => {
+          if (e.currentTarget.scrollTop !== 0) {
+            e.currentTarget.scrollTop = 0
+          }
+        }}
+        className="flex-1 flex flex-col min-w-0 overflow-hidden relative"
+      >
         
         {/* Top Header navbar (Hidden if Presentation Mode is active) */}
-        <AnimatePresence>
+        <AnimatePresence initial={false}>
           {!presentationMode && !hideHeader && (
             <motion.div
               initial={{ height: 0, opacity: 0 }}
@@ -101,7 +152,10 @@ export default function DashboardLayout({
         <div className="flex-1 flex min-h-0 min-w-0 relative">
           
           {/* Scrollable Main Workspace Content */}
-          <main className="flex-1 overflow-y-auto px-6 py-5 min-w-0 bg-[#030712] flex flex-col justify-between">
+          <main 
+            ref={mainRef}
+            className="flex-1 overflow-y-auto px-6 py-5 min-w-0 bg-[#030712] flex flex-col justify-between"
+          >
             
             {/* Main Content Workspace wrapper */}
             <div className="space-y-4 flex-1">
@@ -159,7 +213,7 @@ export default function DashboardLayout({
           </main>
 
           {/* 3. Right AI Advisor Alerts panel (Hidden if Presentation Mode is active) */}
-          <AnimatePresence>
+          <AnimatePresence initial={false}>
             {!presentationMode && !hideRightPanel && (
               <motion.div
                 initial={{ width: 0, opacity: 0 }}
@@ -175,7 +229,7 @@ export default function DashboardLayout({
         </div>
 
         {/* Persistent Bottom Status Bar (Hidden if Presentation Mode is active) */}
-        <AnimatePresence>
+        <AnimatePresence initial={false}>
           {!presentationMode && !hideStatusBar && (
             <motion.div
               initial={{ height: 0, opacity: 0 }}

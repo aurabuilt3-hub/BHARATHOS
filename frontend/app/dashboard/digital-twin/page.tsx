@@ -173,7 +173,7 @@ export default function DigitalTwinPage() {
         />
 
         {/* Global Map Filters Bar */}
-        <div className="glass-panel rounded-xl p-3 flex flex-wrap items-center justify-between gap-3 text-xs shrink-0">
+        <div id="sensors" className="glass-panel rounded-xl p-3 flex flex-wrap items-center justify-between gap-3 text-xs shrink-0">
           <div className="flex flex-wrap items-center gap-3">
             <span className="text-slate-500 font-bold uppercase tracking-wider text-[10px]">Filters:</span>
             
@@ -215,7 +215,7 @@ export default function DigitalTwinPage() {
         </div>
 
         {/* Leaflet Dynamic Spatial Map Canvas Workspace */}
-        <div className="flex-1 min-h-0 relative">
+        <div id="risk" className="flex-1 min-h-0 relative">
           <MapContainer
             center={[17.6868, 83.2185]}
             zoom={13}
