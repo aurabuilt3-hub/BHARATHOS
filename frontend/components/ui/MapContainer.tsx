@@ -8,9 +8,9 @@ import { MapMarker, MapPolygon, MapHeatPoint, MapPolyline } from './MapInner'
 const DynamicMap = dynamic(() => import('./MapInner'), {
   ssr: false,
   loading: () => (
-    <div className="h-full w-full min-h-[400px] flex flex-col items-center justify-center bg-[#050816] text-slate-400 space-y-3">
+    <div className="h-full w-full min-h-[380px] flex flex-col items-center justify-center bg-[#050816] text-slate-400 space-y-3">
       <div className="h-8 w-8 animate-spin rounded-full border-2 border-blue-600 border-t-transparent"></div>
-      <p className="text-xs uppercase tracking-wider">Loading Spatial Canvas...</p>
+      <p className="text-xs uppercase tracking-wider">Loading Evacuation Spatial Canvas...</p>
     </div>
   )
 })
@@ -22,28 +22,34 @@ interface MapContainerProps {
   polygons?: MapPolygon[]
   heatpoints?: MapHeatPoint[]
   polylines?: MapPolyline[]
+  fitBoundsPoints?: [number, number][]
   onMarkerClick?: (marker: MapMarker) => void
+  showMyLocationButton?: boolean
 }
 
 export default function MapContainer({
-  center = [17.6868, 83.2185], // Visakhapatnam center
+  center = [17.6868, 83.2185],
   zoom = 12,
   markers = [],
   polygons = [],
   heatpoints = [],
   polylines = [],
-  onMarkerClick
+  fitBoundsPoints,
+  onMarkerClick,
+  showMyLocationButton = true
 }: MapContainerProps) {
   return (
-    <div className="w-full h-full min-h-[400px] overflow-hidden rounded-2xl border border-slate-800 relative">
-      <DynamicMap 
-        center={center} 
-        zoom={zoom} 
-        markers={markers} 
-        polygons={polygons} 
-        heatpoints={heatpoints} 
+    <div className="w-full h-full min-h-[380px] md:min-h-[440px] overflow-hidden rounded-2xl border border-slate-800 relative">
+      <DynamicMap
+        center={center}
+        zoom={zoom}
+        markers={markers}
+        polygons={polygons}
+        heatpoints={heatpoints}
         polylines={polylines}
+        fitBoundsPoints={fitBoundsPoints}
         onMarkerClick={onMarkerClick}
+        showMyLocationButton={showMyLocationButton}
       />
     </div>
   )

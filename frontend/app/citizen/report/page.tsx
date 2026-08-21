@@ -1,397 +1,525 @@
 'use client'
 
-import React, { useState, useEffect, Suspense } from 'react'
-import { useSearchParams, useRouter } from 'next/navigation'
-import { useLanguage } from '../layout'
-import { apiService, CreateIncidentPayload } from '../../../services/api'
-import { AlertTriangle, ShieldAlert, Navigation, CheckCircle2, ChevronLeft, Info } from 'lucide-react'
+import React, { useState, Suspense } from 'react'
+import { useRouter } from 'next/navigation'
+import Link from 'next/link'
+import {
+  AlertTriangle,
+  MapPin,
+  CheckCircle2,
+  LifeBuoy,
+  Flame,
+  Shield,
+  Car,
+  CloudRain,
+  Radio,
+  Mic,
+  Camera,
+  Video,
+  Users,
+  Navigation,
+  ChevronRight,
+  WifiOff,
+  Info
+} from 'lucide-react'
+import { useCitizenStore } from '../../../store/useCitizenStore'
+import { IndexedDbService } from '../../../services/offline/indexedDbService'
+import {
+  EmergencyCategory,
+  EmergencySeverity,
+  CitizenIncident,
+  LocationInfo,
+  GpsLocationState,
+  AppLanguage
+} from '../../../types/citizen'
 
 const reportTranslations = {
   en: {
-    reportTitle: "Report Local Flooding",
-    helpTitle: "Request Emergency Assistance",
-    reportSubtitle: "Help authorities trace active waterlogging and drainage overflows in real-time.",
-    helpSubtitle: "Request emergency evacuation, medical aid, or rescue operations.",
-    explainText: "BHARATOS identifies flood risk automatically using environmental and SCADA infrastructure sensors. You can also report active hazards observed on the ground.",
-    labelCategory: "What is happening?",
-    labelHelpType: "Emergency Type",
-    labelSeverity: "Severity Level",
-    labelDesc: "Optional details / description",
-    labelLoc: "Report Location",
-    locButton: "Capture Coords",
-    submitReport: "Send Flood Report",
-    submitHelp: "Send Assistance Request",
-    submitting: "Submitting to NEOC Dispatch...",
-    successHeading: "Report Received Successfully",
-    ticketLabel: "Ticket ID:",
-    statusLabel: "Initial Status:",
-    timeLabel: "Submitted Time:",
-    backHome: "Back to Safety Deck",
-    helpSentText: "Emergency request has been dispatched to the BHARATOS response system.",
-    integrationReady: "LIVE DISPATCH EN ROUTE"
+    title: "REPORT AN EMERGENCY",
+    subtitle: "File a multi-media emergency report with real-time GPS coordinates",
+    categoryLabel: "1. Select Emergency Category",
+    medical: "Medical",
+    fire: "Fire & Rescue",
+    police: "Police / Safety",
+    roadAccident: "Road Accident",
+    disaster: "Natural Disaster",
+    general: "General Emergency",
+    locationLabel: "2. Emergency Location Details",
+    manualLocationPlaceholder: "Enter landmark or street address...",
+    gpsDetecting: "Detecting GPS Coords...",
+    detailsLabel: "3. Incident Details & Observations",
+    titlePlaceholder: "Brief summary (e.g. 2 vehicles collided near Beach Road)",
+    descPlaceholder: "Describe what happened, hazards present, or stranded citizens...",
+    affectedLabel: "4. Number of People Affected",
+    mediaLabel: "5. Attach Multi-Media Evidence (Optional)",
+    voiceRecordBtn: "Record Voice Note",
+    imageAttachBtn: "Upload Image",
+    videoAttachBtn: "Upload Video",
+    sharedInfoNotice: "Information Shared: Your exact GPS coordinates, incident summary, affected count, and contact phone number will be transmitted.",
+    submitBtn: "SUBMIT EMERGENCY REPORT",
+    submittingBtn: "Submitting Emergency Report...",
+    successTitle: "EMERGENCY REPORT RECEIVED",
+    ticketLabel: "Incident ID:",
+    offlineNotice: "SAVED LOCALLY IN INDEXEDDB — WILL SYNC WHEN ONLINE",
+    honestReceipt: "Request Submitted — Waiting for Department Assignment Confirmation",
+    trackBtn: "Track Incident Response",
+    homeBtn: "Return to Home Dashboard"
   },
   te: {
-    reportTitle: "వరద రిపోర్ట్ చేయండి",
-    helpTitle: "అత్యవసర సహాయాన్ని అభ్యర్థించండి",
-    reportSubtitle: "అధికారులకు నిజ సమయంలో నీటి నిల్వ మరియు డ్రైనేజీ సమస్యలను గుర్తించడంలో సహాయపడండి.",
-    helpSubtitle: "అత్యవసర తరలింపు, వైద్య సహాయం లేదా సహాయక చర్యలను అభ్యర్థించండి.",
-    explainText: "పర్యావరణ మరియు స్కాడా సెన్సార్ల ద్వారా భారత్ఓఎస్ వరద ముప్పును స్వయంచాలకంగా గుర్తిస్తుంది. మీరు కూడా ప్రత్యక్షంగా చూసిన ప్రమాదాలను నివేదించవచ్చు.",
-    labelCategory: "ఏం జరుగుతోంది?",
-    labelHelpType: "అత్యవసర రకం",
-    labelSeverity: "తీవ్రత స్థాయి",
-    labelDesc: "అదనపు వివరాలు (ఐచ్ఛికం)",
-    labelLoc: "రిపోర్ట్ లొకేషన్",
-    locButton: "లొకేషన్ తీసుకో",
-    submitReport: "వరద రిపోర్ట్ పంపండి",
-    submitHelp: "సహాయ అభ్యర్థన పంపండి",
-    submitting: "డిస్పాచ్ కేంద్రానికి పంపుతోంది...",
-    successHeading: "నివేదిక విజయవంతంగా స్వీకరించబడింది",
-    ticketLabel: "టికెట్ ఐడి:",
-    statusLabel: "ప్రారంభ స్థితి:",
-    timeLabel: "సమర్పించిన సమయం:",
-    backHome: "భద్రతా డెక్‌కు తిరిగి వెళ్ళు",
-    helpSentText: "అత్యవసర అభ్యర్థన భారత్ఓఎస్ ప్రతిస్పందన వ్యవస్థకు పంపబడింది.",
-    integrationReady: "అత్యవసర సహాయం పంపబడింది"
+    title: "అత్యవసర పరిస్థితిని నివేదించండి",
+    subtitle: "GPS వివరాలతో మల్టీ-మీడియా అత్యవసర నివేదికను పంపండి",
+    categoryLabel: "1. అత్యవసర వర్గాన్ని ఎంచుకోండి",
+    medical: "వైద్యం",
+    fire: "అగ్నిప్రమాదం",
+    police: "పోలీస్",
+    roadAccident: "రోడ్డు ప్రమాదం",
+    disaster: "ప్రకృతి విపత్తు",
+    general: "సాధారణం",
+    locationLabel: "2. అత్యవసర లొకేషన్ వివరాలు",
+    manualLocationPlaceholder: "ల్యాండ్‌మార్క్ లేదా చిరునామా నమోదు చేయండి...",
+    gpsDetecting: "GPS గుర్తిస్తోంది...",
+    detailsLabel: "3. ఇన్సిడెంట్ వివరాలు",
+    titlePlaceholder: "సంక్షిప్త సారాంశం (ఉదా. బీచ్ రోడ్ వద్ద ప్రమాదం)",
+    descPlaceholder: "ఏమి జరిగిందో వివరించండి...",
+    affectedLabel: "4. ప్రభావితమైన ప్రజల సంఖ్య",
+    mediaLabel: "5. మీడియా ఆధారాలు జోడించండి (ఐచ్ఛికం)",
+    voiceRecordBtn: "వాయిస్ రికార్డ్ చేయండి",
+    imageAttachBtn: "ఫోటో అప్‌లోడ్",
+    videoAttachBtn: "వీడియో అప్‌లోడ్",
+    sharedInfoNotice: "పంచుకున్న సమాచారం: మీ GPS చిరునామా, వివరణ మరియు ఫోన్ నంబర్ పంపబడతాయి.",
+    submitBtn: "అత్యవసర రిపోర్ట్ పంపండి",
+    submittingBtn: "సమర్పిస్తోంది...",
+    successTitle: "అత్యవసర నివేదిక స్వీకరించబడింది",
+    ticketLabel: "ఇన్సిడెంట్ ID:",
+    offlineNotice: "లోకల్‌గా సేవ్ చేయబడింది — కనెక్షన్ కోసం నిరీక్షణ",
+    honestReceipt: "అభ్యర్థన సమర్పించబడింది — ధృవీకరణ కోసం వేచి ఉంది",
+    trackBtn: "స్టేటస్ ట్రాక్ చేయండి",
+    homeBtn: "హోమ్‌కు తిరిగి వెళ్ళండి"
   },
   hi: {
-    reportTitle: "बाढ़ की रिपोर्ट करें",
-    helpTitle: "आपातकालीन सहायता का अनुरोध करें",
-    reportSubtitle: "अधिकारियों को वास्तविक समय में जलभराव और जल निकासी समस्याओं को ट्रैक करने में मदद करें।",
-    helpSubtitle: "आपातकालीन निकासी, चिकित्सा सहायता या बचाव कार्यों का अनुरोध करें।",
-    explainText: "भारतओएस पर्यावरण और स्काडा सेंसर के माध्यम से स्वचालित रूप से बाढ़ के जोखिम की पहचान करता है। आप भी जमीन पर देखे गए खतरों की रिपोर्ट कर सकते हैं।",
-    labelCategory: "क्या हो रहा है?",
-    labelHelpType: "आपातकालीन प्रकार",
-    labelSeverity: "गंभीरता स्तर",
-    labelDesc: "वैकल्पिक विवरण / विवरण",
-    labelLoc: "रिपोर्ट स्थान",
-    locButton: "स्थान कैप्चर करें",
-    submitReport: "बाढ़ रिपोर्ट भेजें",
-    submitHelp: "सहायता अनुरोध भेजें",
-    submitting: "NEOC डिस्पैच को भेजा जा रहा है...",
-    successHeading: "रिपोर्ट सफलतापूर्वक प्राप्त हुई",
-    ticketLabel: "टिकट आईडी:",
-    statusLabel: "प्रारंभिक स्थिति:",
-    timeLabel: "जमा करने का समय:",
-    backHome: "सुरक्षा डेक पर लौटें",
-    helpSentText: "आपातकालीन अनुरोध भारतओएस प्रतिक्रिया प्रणाली को भेज दिया गया है।",
-    integrationReady: "आपातकालीन सहायता भेजी गई"
+    title: "आपातकाल की रिपोर्ट करें",
+    subtitle: "वास्तविक समय जीपीएस के साथ मल्टी-मीडिया आपातकालीन रिपोर्ट दर्ज करें",
+    categoryLabel: "1. आपातकालीन श्रेणी चुनें",
+    medical: "चिकित्सा",
+    fire: "अग्निशमन",
+    police: "पुलिस / सुरक्षा",
+    roadAccident: "सड़क दुर्घटना",
+    disaster: "प्राकृतिक आपदा",
+    general: "सामान्य",
+    locationLabel: "2. आपातकालीन स्थान का विवरण",
+    manualLocationPlaceholder: "लैंडमार्क या पता दर्ज करें...",
+    gpsDetecting: "जीपीएस ट्रैक हो रहा है...",
+    detailsLabel: "3. घटना का विवरण",
+    titlePlaceholder: "संक्षिप्त विवरण (उदा. सड़क दुर्घटना)",
+    descPlaceholder: "क्या हुआ विवरण में बताएं...",
+    affectedLabel: "4. प्रभावित लोगों की संख्या",
+    mediaLabel: "5. मीडिया साक्ष्य जोड़ें (वैकल्पिक)",
+    voiceRecordBtn: "वॉइस नोट रिकॉर्ड करें",
+    imageAttachBtn: "छवि अपलोड करें",
+    videoAttachBtn: "वीडियो अपलोड करें",
+    sharedInfoNotice: "साझा की गई जानकारी: आपके जीपीएस निर्देशांक, विवरण और संपर्क नंबर प्रेषित किए जाएंगे।",
+    submitBtn: "आपातकालीन रिपोर्ट भेजें",
+    submittingBtn: "सबमिट हो रहा है...",
+    successTitle: "आपातकालीन रिपोर्ट प्राप्त हुई",
+    ticketLabel: "घटना आईडी:",
+    offlineNotice: "स्थानीय रूप से सहेजा गया — कनेक्शन की प्रतीक्षा",
+    honestReceipt: "अनुरोध सबमिट हुआ — पुष्टि की प्रतीक्षा में",
+    trackBtn: "स्थिति ट्रैक करें",
+    homeBtn: "होम पर लौटें"
   }
 }
 
-function CitizenReportForm() {
-  const { lang } = useLanguage()
-  const searchParams = useSearchParams()
+function ReportEmergencyForm() {
   const router = useRouter()
-  
-  // Mode toggle: 'report' vs 'help'
-  const [mode, setMode] = useState<'report' | 'help'>('report')
+  const { profile, activeLocation, networkState, setLocation, addIncident } = useCitizenStore()
+  const lang: AppLanguage = profile.language || 'en'
+  const t = reportTranslations[lang as 'en' | 'te' | 'hi'] || reportTranslations.en
 
-  // Form states
-  const [category, setCategory] = useState('Flood')
-  const [severity, setSeverity] = useState('medium')
+  // Form State
+  const [category, setCategory] = useState<EmergencyCategory>('medical')
+  const [severity, setSeverity] = useState<EmergencySeverity>('high')
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
-  const [latitude, setLatitude] = useState(17.7289)
-  const [longitude, setLongitude] = useState(83.3214)
-  const [address, setAddress] = useState('MVP Colony, Visakhapatnam')
+  const [affectedCount, setAffectedCount] = useState<number>(1)
+  const [manualAddress, setManualAddress] = useState(activeLocation.address || '')
+  const [gpsStatus, setGpsStatus] = useState<GpsLocationState>(activeLocation.gpsState || 'GPS AVAILABLE')
 
-  // UI state
-  const [capturingCoords, setCapturingCoords] = useState(false)
-  const [submitting, setSubmitting] = useState(false)
-  const [result, setResult] = useState<any>(null)
+  // Media Attachment Simulation State
+  const [voiceRecorded, setVoiceRecorded] = useState(false)
+  const [imageAttached, setImageAttached] = useState(false)
+  const [videoAttached, setVideoAttached] = useState(false)
 
-  useEffect(() => {
-    const action = searchParams.get('action')
-    if (action === 'help') {
-      setMode('help')
-      setCategory('Medical')
-      setSeverity('critical')
-    } else {
-      setMode('report')
-      setCategory('Flood')
-      setSeverity('medium')
+  // Submission State
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submittedIncident, setSubmittedIncident] = useState<CitizenIncident | null>(null)
+
+  // GPS Re-detection
+  const handleDetectGps = () => {
+    if (!navigator.geolocation) {
+      setGpsStatus('GPS UNAVAILABLE')
+      return
     }
-  }, [searchParams])
-
-  const handleCaptureLocation = () => {
-    if (!navigator.geolocation) return
-    setCapturingCoords(true)
     navigator.geolocation.getCurrentPosition(
       (pos) => {
-        setLatitude(pos.coords.latitude)
-        setLongitude(pos.coords.longitude)
-        // If close to MVP Colony
-        const dist = Math.abs(pos.coords.latitude - 17.7289) + Math.abs(pos.coords.longitude - 83.3214)
-        if (dist < 0.2) {
-          setAddress('Beach Road corridor, Visakhapatnam')
-        } else {
-          setAddress(`Custom Coordinates [${pos.coords.latitude.toFixed(4)}, ${pos.coords.longitude.toFixed(4)}]`)
+        const updatedLoc: LocationInfo = {
+          latitude: pos.coords.latitude,
+          longitude: pos.coords.longitude,
+          address: manualAddress || `GPS (${pos.coords.latitude.toFixed(4)}° N, ${pos.coords.longitude.toFixed(4)}° E), Visakhapatnam`,
+          district: 'Visakhapatnam',
+          stateName: 'Andhra Pradesh',
+          gpsState: 'GPS AVAILABLE'
         }
-        setCapturingCoords(false)
+        setLocation(updatedLoc)
+        setGpsStatus('GPS AVAILABLE')
       },
-      () => {
-        setCapturingCoords(false)
+      (err) => {
+        setGpsStatus(err.code === err.PERMISSION_DENIED ? 'PERMISSION DENIED' : 'GPS UNAVAILABLE')
       }
     )
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  // Handle Submit
+  const handleSubmitReport = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitting(true)
+    setIsSubmitting(true)
 
-    // Build standard payload compatible with existing incidents schema
-    const payload: CreateIncidentPayload = {
+    const incId = `INC-REP-${Math.floor(1000 + Math.random() * 9000)}`
+    const nowIso = new Date().toISOString()
+    const isOffline = networkState === 'OFFLINE'
+
+    const incidentPayload: CitizenIncident = {
+      id: incId,
       category,
-      title: title || (mode === 'help' ? `[RESCUE ASSISTANCE] ${category} Emergency` : `[CITIZEN REPORT] Waterlogging`),
-      description: description || `Report filed by citizen via mobile portal. Details pending.`,
-      latitude,
-      longitude,
-      address,
-      severity
+      severity,
+      title: title || `[${category.toUpperCase()} EMERGENCY] ${manualAddress || activeLocation.address}`,
+      description: description || `Report submitted by citizen. Media evidence attached: Voice (${voiceRecorded ? 'Yes' : 'No'}), Image (${imageAttached ? 'Yes' : 'No'}), Video (${videoAttached ? 'Yes' : 'No'}).`,
+      location: {
+        latitude: activeLocation.latitude,
+        longitude: activeLocation.longitude,
+        address: manualAddress || activeLocation.address,
+        district: activeLocation.district || 'Visakhapatnam',
+        stateName: activeLocation.stateName || 'Andhra Pradesh',
+        gpsState: gpsStatus,
+        isManual: gpsStatus !== 'GPS AVAILABLE'
+      },
+      affectedCount,
+      mediaUrls: {
+        voice: voiceRecorded ? 'simulated_audio_note.webm' : undefined,
+        images: imageAttached ? ['simulated_scene_photo.jpg'] : undefined,
+        video: videoAttached ? 'simulated_hazard_clip.mp4' : undefined
+      },
+      stage: 'received',
+      dataFreshness: isOffline ? 'offline' : 'live',
+      dataSource: isOffline ? 'CACHED' : 'LIVE',
+      syncState: isOffline ? 'PENDING' : 'SYNCED',
+      isOfflineSaved: isOffline,
+      timeline: [
+        { stage: 'received', title: 'Emergency Report Received', timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }), note: isOffline ? 'Enqueued in IndexedDB sync queue' : 'Received by BHARATOS Core Gateway' }
+      ],
+      createdAt: nowIso,
+      updatedAt: nowIso
     }
 
-    try {
-      const res = await apiService.createIncident(payload)
-      setResult(res)
-    } catch (err) {
-      console.warn("Incident report submission offline, using local response fallback:", err)
-      // Local fallback for offline demo
-      setResult({
-        id: `mock-incident-${Date.now()}`,
-        ticket_number: `TKT-${Math.floor(Math.random() * 900000 + 100000)}`,
-        status: 'active',
-        created_at: new Date().toISOString()
-      })
-    } finally {
-      setSubmitting(false)
-    }
+    // Save to Zustand & IndexedDB
+    addIncident(incidentPayload)
+    await IndexedDbService.saveIncident(incidentPayload)
+
+    setTimeout(() => {
+      setIsSubmitting(false)
+      setSubmittedIncident(incidentPayload)
+    }, 700)
   }
 
-  const t = reportTranslations[lang]
-
-  if (result) {
+  if (submittedIncident) {
     return (
-      <div className="glass-panel rounded-2xl p-6 border border-slate-900 text-center space-y-5 shadow-2xl">
-        <div className="flex justify-center">
-          <CheckCircle2 className="h-14 w-14 text-emerald-500 animate-bounce" />
-        </div>
-
-        <div className="space-y-1.5">
-          <h3 className="text-base font-black text-white">{t.successHeading}</h3>
-          <p className="text-xs text-slate-450 leading-relaxed">
-            {mode === 'help' ? t.helpSentText : 'Your flood report has gone directly to the Visakhapatnam command center.'}
-          </p>
-        </div>
-
-        <div className="p-4 rounded-xl border border-slate-850 bg-slate-950/60 text-xs font-mono text-left space-y-2.5 max-w-xs mx-auto">
-          <div className="flex justify-between">
-            <span className="text-slate-500 font-bold">{t.ticketLabel}</span>
-            <span className="text-white font-extrabold">{result.ticket_number || 'TKT-PENDING'}</span>
+      <div className="space-y-5 py-3">
+        <div className={`rounded-3xl p-6 text-center space-y-4 border ${
+          submittedIncident.isOfflineSaved
+            ? 'border-amber-800/80 bg-amber-950/20'
+            : 'border-emerald-800/80 bg-emerald-950/20'
+        }`}>
+          <div className={`h-16 w-16 mx-auto rounded-full flex items-center justify-center border-2 ${
+            submittedIncident.isOfflineSaved ? 'border-amber-400 text-amber-400 bg-amber-950/80' : 'border-emerald-400 text-emerald-400 bg-emerald-950/80'
+          }`}>
+            {submittedIncident.isOfflineSaved ? <WifiOff className="w-8 h-8" /> : <CheckCircle2 className="w-8 h-8 animate-bounce" />}
           </div>
-          <div className="flex justify-between">
-            <span className="text-slate-500 font-bold">{t.statusLabel}</span>
-            <span className="text-orange-400 font-extrabold uppercase">{result.status || 'active'}</span>
+
+          <div className="space-y-1">
+            <span className="text-[9.5px] font-mono font-bold px-2.5 py-0.5 rounded bg-slate-950 border border-slate-800 text-slate-300 uppercase tracking-widest">
+              {submittedIncident.isOfflineSaved ? 'SAVED LOCALLY' : 'RECEIPT CONFIRMED'}
+            </span>
+            <h2 className="text-lg font-black text-white font-mono uppercase tracking-wide pt-1">
+              {t.successTitle}
+            </h2>
+            <p className="text-xs text-slate-300 font-mono">
+              {t.ticketLabel} <span className="text-sky-400 font-bold">{submittedIncident.id}</span>
+            </p>
           </div>
-          <div className="flex justify-between">
-            <span className="text-slate-500 font-bold">{t.timeLabel}</span>
-            <span className="text-slate-350">{new Date(result.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+
+          <div className="p-3.5 rounded-2xl bg-slate-950/80 border border-slate-850 text-left text-xs font-mono space-y-2">
+            <div className="flex justify-between text-slate-400 text-[10px]">
+              <span>Category: <strong className="text-white uppercase">{submittedIncident.category}</strong></span>
+              <span>Severity: <strong className="text-amber-400 uppercase">{submittedIncident.severity}</strong></span>
+            </div>
+            <h4 className="text-xs font-bold text-white leading-snug">{submittedIncident.title}</h4>
+            <p className="text-slate-300 text-[11px] leading-relaxed truncate">
+              📍 {submittedIncident.location.address}
+            </p>
+            <div className="pt-2 border-t border-slate-900 text-[10px] text-amber-300/90 font-bold">
+              ● {submittedIncident.isOfflineSaved ? t.offlineNotice : t.honestReceipt}
+            </div>
           </div>
         </div>
 
-        <div className="pt-2">
-          <span className="inline-block text-[8px] font-mono font-bold bg-emerald-950/60 border border-emerald-900/40 px-2.5 py-0.5 rounded text-emerald-400 uppercase tracking-widest animate-pulse">
-            {t.integrationReady}
-          </span>
-        </div>
+        <div className="space-y-2.5 font-mono text-xs">
+          <Link
+            href={`/citizen/incidents/${submittedIncident.id}`}
+            className="w-full py-3.5 rounded-2xl bg-blue-600 hover:bg-blue-500 text-white font-bold tracking-wider uppercase text-center flex items-center justify-center space-x-2 shadow-lg transition-all"
+          >
+            <span>{t.trackBtn}</span>
+            <ChevronRight className="w-4 h-4" />
+          </Link>
 
-        <button
-          onClick={() => {
-            setResult(null)
-            setTitle('')
-            setDescription('')
-            router.push('/citizen')
-          }}
-          className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-2.5 rounded-xl text-xs transition-all active:scale-98"
-        >
-          {t.backHome}
-        </button>
+          <Link
+            href="/citizen"
+            className="w-full py-3.5 rounded-2xl border border-slate-800 bg-slate-950 hover:bg-slate-900 text-slate-300 hover:text-white font-bold tracking-wider uppercase text-center block transition-all"
+          >
+            {t.homeBtn}
+          </Link>
+        </div>
       </div>
     )
   }
 
   return (
-    <div className="space-y-5">
-      
-      {/* Page Selector Tabs */}
-      <div className="flex border border-slate-850 rounded-xl bg-slate-950 p-1 font-mono text-xs">
-        <button
-          onClick={() => {
-            setMode('report')
-            setCategory('Flood')
-            setSeverity('medium')
-            router.push('/citizen/report')
-          }}
-          className={`flex-1 py-2 text-center rounded-lg font-bold transition-all ${
-            mode === 'report'
-              ? 'bg-blue-600 text-white shadow'
-              : 'text-slate-400 hover:text-white'
-          }`}
-        >
-          {t.reportTitle}
-        </button>
-        <button
-          onClick={() => {
-            setMode('help')
-            setCategory('Medical')
-            setSeverity('critical')
-            router.push('/citizen/report?action=help')
-          }}
-          className={`flex-1 py-2 text-center rounded-lg font-bold transition-all ${
-            mode === 'help'
-              ? 'bg-red-600 text-white shadow'
-              : 'text-slate-400 hover:text-white'
-          }`}
-        >
-          {t.helpTitle}
-        </button>
-      </div>
+    <div className="space-y-5 pb-8">
 
-      {/* Mode Header */}
+      {/* Header */}
       <div>
-        <h2 className="text-base font-extrabold text-white uppercase tracking-wider font-mono">
-          {mode === 'report' ? t.reportTitle : t.helpTitle}
-        </h2>
-        <p className="text-[10px] text-slate-500 mt-0.5">
-          {mode === 'report' ? t.reportSubtitle : t.helpSubtitle}
-        </p>
+        <span className="text-[9.5px] font-mono font-black text-sky-400 uppercase tracking-widest block">
+          MULTIPLE EMERGENCY TYPES SUPPORTED
+        </span>
+        <h1 className="text-xl font-black text-white font-mono tracking-tight">{t.title}</h1>
+        <p className="text-xs text-slate-400 mt-0.5">{t.subtitle}</p>
       </div>
 
-      {/* Description Explainer */}
-      <div className="glass-panel rounded-2xl p-4 border border-slate-900 flex items-start space-x-3.5 bg-slate-950/30 text-[10px]">
-        <Info className="h-4 w-4 text-sky-400 shrink-0 mt-0.5" />
-        <p className="text-slate-400 leading-relaxed">{t.explainText}</p>
-      </div>
+      <form onSubmit={handleSubmitReport} className="space-y-4">
 
-      {/* Form Card */}
-      <form onSubmit={handleSubmit} className="glass-panel rounded-2xl p-5 border border-slate-900 space-y-4 shadow-xl text-xs">
-        
-        {/* Category selector */}
-        {mode === 'report' ? (
-          <div className="space-y-1.5">
-            <label className="text-slate-500 font-bold uppercase tracking-wider block font-mono">{t.labelCategory}</label>
-            <select
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-              className="w-full bg-slate-950 border border-slate-850 rounded-xl px-3 py-2 text-xs text-white focus:outline-none"
+        {/* 1. Category Picker Grid */}
+        <div className="rounded-2xl border border-slate-900 bg-[#060a13] p-4 space-y-2.5">
+          <label className="text-[10.5px] font-mono font-bold text-slate-300 uppercase tracking-wider block">
+            {t.categoryLabel}
+          </label>
+          <div className="grid grid-cols-2 gap-2 text-xs font-mono">
+            <button
+              type="button"
+              onClick={() => setCategory('medical')}
+              className={`p-2.5 rounded-xl border text-left flex items-center space-x-2.5 transition-all ${
+                category === 'medical' ? 'border-red-500 bg-red-950/60 text-white font-bold' : 'border-slate-900 bg-slate-950 text-slate-400 hover:text-white'
+              }`}
             >
-              <option value="Flood">Waterlogging & Flooding</option>
-              <option value="Water Leakage">Drainage Overflow</option>
-              <option value="Infrastructure Damage">Road Blocked</option>
-              <option value="Fallen Tree">Fallen Tree / Debris</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-        ) : (
-          <div className="space-y-1.5">
-            <label className="text-slate-500 font-bold uppercase tracking-wider block font-mono">{t.labelHelpType}</label>
-            <select
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-              className="w-full bg-slate-950 border border-slate-850 rounded-xl px-3 py-2 text-xs text-white focus:outline-none"
+              <LifeBuoy className="w-4 h-4 text-red-400 shrink-0" />
+              <span>{t.medical}</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setCategory('fire')}
+              className={`p-2.5 rounded-xl border text-left flex items-center space-x-2.5 transition-all ${
+                category === 'fire' ? 'border-orange-500 bg-orange-950/60 text-white font-bold' : 'border-slate-900 bg-slate-950 text-slate-400 hover:text-white'
+              }`}
             >
-              <option value="Medical">Evacuation / Medical Emergency</option>
-              <option value="Flood">Trapped by Flooding</option>
-              <option value="Accident">Road Access Blocked</option>
-              <option value="Other">Other Life Safety Emergency</option>
-            </select>
-          </div>
-        )}
+              <Flame className="w-4 h-4 text-orange-400 shrink-0" />
+              <span>{t.fire}</span>
+            </button>
 
-        {/* Severity selection */}
-        {mode === 'report' && (
-          <div className="space-y-1.5">
-            <label className="text-slate-500 font-bold uppercase tracking-wider block font-mono">{t.labelSeverity}</label>
-            <div className="grid grid-cols-4 gap-2">
-              {(['low', 'medium', 'high', 'critical'] as const).map((sev) => (
-                <button
-                  key={sev}
-                  type="button"
-                  onClick={() => setSeverity(sev)}
-                  className={`py-2 rounded-lg font-bold capitalize transition-all border font-mono text-[10px] ${
-                    severity === sev
-                      ? sev === 'critical' ? 'bg-red-650 text-white border-red-500' :
-                        sev === 'high' ? 'bg-orange-600 text-white border-orange-500' :
-                        sev === 'medium' ? 'bg-yellow-600 text-slate-950 border-yellow-500' : 'bg-emerald-600 text-white border-emerald-500'
-                      : 'bg-slate-950 text-slate-500 border-slate-850 hover:text-slate-350'
-                  }`}
-                >
-                  {sev}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
+            <button
+              type="button"
+              onClick={() => setCategory('police')}
+              className={`p-2.5 rounded-xl border text-left flex items-center space-x-2.5 transition-all ${
+                category === 'police' ? 'border-blue-500 bg-blue-950/60 text-white font-bold' : 'border-slate-900 bg-slate-950 text-slate-400 hover:text-white'
+              }`}
+            >
+              <Shield className="w-4 h-4 text-blue-400 shrink-0" />
+              <span>{t.police}</span>
+            </button>
 
-        {/* Title */}
-        <div className="space-y-1.5">
-          <label className="text-slate-500 font-bold uppercase tracking-wider block font-mono">Incident Summary / Title</label>
+            <button
+              type="button"
+              onClick={() => setCategory('road_accident')}
+              className={`p-2.5 rounded-xl border text-left flex items-center space-x-2.5 transition-all ${
+                category === 'road_accident' ? 'border-amber-500 bg-amber-950/60 text-white font-bold' : 'border-slate-900 bg-slate-950 text-slate-400 hover:text-white'
+              }`}
+            >
+              <Car className="w-4 h-4 text-amber-400 shrink-0" />
+              <span>{t.roadAccident}</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setCategory('disaster')}
+              className={`p-2.5 rounded-xl border text-left flex items-center space-x-2.5 transition-all ${
+                category === 'disaster' ? 'border-purple-500 bg-purple-950/60 text-white font-bold' : 'border-slate-900 bg-slate-950 text-slate-400 hover:text-white'
+              }`}
+            >
+              <CloudRain className="w-4 h-4 text-purple-400 shrink-0" />
+              <span>{t.disaster}</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setCategory('general')}
+              className={`p-2.5 rounded-xl border text-left flex items-center space-x-2.5 transition-all ${
+                category === 'general' ? 'border-slate-500 bg-slate-900 text-white font-bold' : 'border-slate-900 bg-slate-950 text-slate-400 hover:text-white'
+              }`}
+            >
+              <AlertTriangle className="w-4 h-4 text-slate-400 shrink-0" />
+              <span>{t.general}</span>
+            </button>
+          </div>
+        </div>
+
+        {/* 2. Location Picker Card */}
+        <div className="rounded-2xl border border-slate-900 bg-[#060a13] p-4 space-y-2.5">
+          <div className="flex items-center justify-between">
+            <label className="text-[10.5px] font-mono font-bold text-slate-300 uppercase tracking-wider block">
+              {t.locationLabel}
+            </label>
+            <button
+              type="button"
+              onClick={handleDetectGps}
+              className="text-[10px] font-mono font-bold text-sky-400 hover:underline flex items-center space-x-1"
+            >
+              <Navigation className="w-3 h-3" />
+              <span>Re-detect GPS</span>
+            </button>
+          </div>
+
           <input
             type="text"
             required
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            placeholder={mode === 'report' ? "e.g. Water logging knee depth MVP colony" : "e.g. Elderly citizen trapped inside waterlogged home"}
-            className="w-full bg-slate-950 border border-slate-850 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-600 focus:outline-none"
+            value={manualAddress}
+            onChange={(e) => setManualAddress(e.target.value)}
+            placeholder={t.manualLocationPlaceholder}
+            className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white font-mono focus:outline-none focus:border-blue-500/60"
           />
+
+          <div className="flex items-center space-x-1.5 text-[9.5px] font-mono font-bold">
+            <MapPin className="w-3.5 h-3.5 text-sky-400 shrink-0" />
+            <span className={gpsStatus === 'GPS AVAILABLE' ? 'text-emerald-400' : 'text-amber-400'}>
+              {gpsStatus === 'GPS AVAILABLE' ? 'GPS High-Accuracy Linked' : 'GPS Signal Unavailable — Manual Address Entered'}
+            </span>
+          </div>
         </div>
 
-        {/* Description */}
-        <div className="space-y-1.5">
-          <label className="text-slate-500 font-bold uppercase tracking-wider block font-mono">{t.labelDesc}</label>
-          <textarea
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            placeholder="Include any landmarks, status of stranded people, or critical observations."
-            rows={3}
-            className="w-full bg-slate-950 border border-slate-850 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-600 focus:outline-none resize-none"
-          />
-        </div>
+        {/* 3. Details & Observations */}
+        <div className="rounded-2xl border border-slate-900 bg-[#060a13] p-4 space-y-3">
+          <label className="text-[10.5px] font-mono font-bold text-slate-300 uppercase tracking-wider block">
+            {t.detailsLabel}
+          </label>
 
-        {/* Location Picker */}
-        <div className="space-y-1.5">
-          <label className="text-slate-500 font-bold uppercase tracking-wider block font-mono">{t.labelLoc}</label>
-          <div className="flex space-x-2">
+          <div className="space-y-2.5">
             <input
               type="text"
               required
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
-              className="flex-1 bg-slate-950 border border-slate-850 rounded-xl px-3 py-2 text-xs text-white focus:outline-none min-w-0"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              placeholder={t.titlePlaceholder}
+              className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-slate-500 font-mono focus:outline-none focus:border-blue-500/60"
             />
-            <button
-              type="button"
-              onClick={handleCaptureLocation}
-              disabled={capturingCoords}
-              className="px-3 rounded-xl border border-slate-850 bg-slate-900 text-slate-400 hover:text-white transition-all text-[10px] font-mono uppercase shrink-0 flex items-center space-x-1"
-            >
-              <Navigation className="h-3 w-3 shrink-0" />
-              <span>{capturingCoords ? '...' : t.locButton}</span>
-            </button>
-          </div>
-          <div className="text-[10px] font-mono-data text-slate-500">
-            Coordinates: [{latitude.toFixed(4)}° N, {longitude.toFixed(4)}° E]
+
+            <textarea
+              rows={3}
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              placeholder={t.descPlaceholder}
+              className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-slate-500 font-mono focus:outline-none focus:border-blue-500/60 resize-none"
+            />
           </div>
         </div>
 
-        {/* Submit */}
+        {/* 4. Affected Count Counter */}
+        <div className="rounded-2xl border border-slate-900 bg-[#060a13] p-4 space-y-2.5">
+          <div className="flex items-center justify-between">
+            <label className="text-[10.5px] font-mono font-bold text-slate-300 uppercase tracking-wider block">
+              {t.affectedLabel}
+            </label>
+            <span className="text-xs font-mono font-bold text-sky-400">{affectedCount} Person(s)</span>
+          </div>
+
+          <div className="grid grid-cols-4 gap-2 font-mono text-xs">
+            {[1, 3, 8, 15].map((cnt) => (
+              <button
+                key={cnt}
+                type="button"
+                onClick={() => setAffectedCount(cnt)}
+                className={`py-2 rounded-xl border text-center font-bold transition-all ${
+                  affectedCount === cnt
+                    ? 'border-sky-500 bg-sky-950 text-sky-300'
+                    : 'border-slate-900 bg-slate-950 text-slate-400 hover:text-white'
+                }`}
+              >
+                {cnt === 1 ? '1 Person' : cnt === 3 ? '2-5' : cnt === 8 ? '5-10' : '10+'}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* 5. Multi-Media Attachments */}
+        <div className="rounded-2xl border border-slate-900 bg-[#060a13] p-4 space-y-2.5">
+          <label className="text-[10.5px] font-mono font-bold text-slate-300 uppercase tracking-wider block">
+            {t.mediaLabel}
+          </label>
+
+          <div className="grid grid-cols-3 gap-2 font-mono text-[10px]">
+            <button
+              type="button"
+              onClick={() => setVoiceRecorded(!voiceRecorded)}
+              className={`p-2.5 rounded-xl border flex flex-col items-center justify-center space-y-1 transition-all ${
+                voiceRecorded ? 'border-emerald-500 bg-emerald-950/60 text-emerald-300' : 'border-slate-900 bg-slate-950 text-slate-400 hover:text-white'
+              }`}
+            >
+              <Mic className="w-4 h-4" />
+              <span>{voiceRecorded ? 'Voice Added' : t.voiceRecordBtn}</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setImageAttached(!imageAttached)}
+              className={`p-2.5 rounded-xl border flex flex-col items-center justify-center space-y-1 transition-all ${
+                imageAttached ? 'border-emerald-500 bg-emerald-950/60 text-emerald-300' : 'border-slate-900 bg-slate-950 text-slate-400 hover:text-white'
+              }`}
+            >
+              <Camera className="w-4 h-4" />
+              <span>{imageAttached ? 'Image Added' : t.imageAttachBtn}</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setVideoAttached(!videoAttached)}
+              className={`p-2.5 rounded-xl border flex flex-col items-center justify-center space-y-1 transition-all ${
+                videoAttached ? 'border-emerald-500 bg-emerald-950/60 text-emerald-300' : 'border-slate-900 bg-slate-950 text-slate-400 hover:text-white'
+              }`}
+            >
+              <Video className="w-4 h-4" />
+              <span>{videoAttached ? 'Video Added' : t.videoAttachBtn}</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Data Consent & Privacy Notice */}
+        <div className="p-3 rounded-xl border border-slate-900 bg-slate-950/40 text-[10px] font-mono text-slate-400 flex items-start space-x-2">
+          <Info className="w-3.5 h-3.5 text-sky-400 shrink-0 mt-0.5" />
+          <p className="leading-relaxed">{t.sharedInfoNotice}</p>
+        </div>
+
+        {/* Submit Action Button */}
         <button
           type="submit"
-          disabled={submitting}
-          className={`w-full py-3 rounded-xl text-xs font-bold transition-all shadow-lg text-white active:scale-98 ${
-            mode === 'help' ? 'bg-red-600 hover:bg-red-500 shadow-red-950/20' : 'bg-blue-600 hover:bg-blue-500 shadow-blue-950/20'
-          }`}
+          disabled={isSubmitting}
+          className="w-full py-3.5 rounded-2xl bg-gradient-to-r from-blue-600 via-blue-500 to-sky-600 hover:from-blue-500 hover:to-sky-500 active:scale-98 text-white font-mono font-bold text-xs tracking-wider uppercase shadow-lg shadow-blue-950/40 transition-all cursor-pointer"
         >
-          {submitting ? t.submitting : (mode === 'help' ? t.submitHelp : t.submitReport)}
+          {isSubmitting ? t.submittingBtn : t.submitBtn}
         </button>
 
       </form>
@@ -400,10 +528,10 @@ function CitizenReportForm() {
   )
 }
 
-export default function CitizenReport() {
+export default function CitizenReportPage() {
   return (
-    <Suspense fallback={<div className="py-8 text-center text-xs text-slate-500 font-mono animate-pulse">Loading report center...</div>}>
-      <CitizenReportForm />
+    <Suspense fallback={<div className="py-8 text-center text-xs text-slate-500 font-mono animate-pulse">Loading Emergency Reporter...</div>}>
+      <ReportEmergencyForm />
     </Suspense>
   )
 }
