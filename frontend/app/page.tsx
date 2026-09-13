@@ -3,31 +3,31 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { 
-  Shield, 
-  Flame, 
-  HeartPulse, 
-  Activity, 
-  CloudRain, 
-  Database, 
-  Map, 
-  Cpu, 
-  Building, 
-  Network, 
-  ArrowRight, 
-  Lock, 
-  User, 
-  CheckCircle2, 
-  Zap, 
-  Settings, 
-  Layers, 
-  Video, 
-  Train, 
-  Plane, 
-  Power, 
-  Radio, 
-  FileText, 
-  ExternalLink, 
+import {
+  Shield,
+  Flame,
+  HeartPulse,
+  Activity,
+  CloudRain,
+  Database,
+  Map,
+  Cpu,
+  Building,
+  Network,
+  ArrowRight,
+  Lock,
+  User,
+  CheckCircle2,
+  Zap,
+  Settings,
+  Layers,
+  Video,
+  Train,
+  Plane,
+  Power,
+  Radio,
+  FileText,
+  ExternalLink,
   Eye,
   Check,
   Building2,
@@ -50,7 +50,7 @@ export default function HomeLandingPage() {
 
   return (
     <div className="min-h-screen bg-[#030712] text-slate-100 font-sans relative overflow-x-hidden selection:bg-sky-500/30 selection:text-white">
-      
+
       {/* 1. AMBIENT GLOW BACKDROPS */}
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-600/5 rounded-full filter blur-[120px] pointer-events-none z-0" />
       <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-sky-500/5 rounded-full filter blur-[140px] pointer-events-none z-0" />
@@ -62,12 +62,12 @@ export default function HomeLandingPage() {
       {/* 2. STICKY STYLED GOVERNMENT HEADER */}
       <header className="sticky top-0 z-50 w-full border-b border-slate-900/60 bg-[#030712]/80 backdrop-blur-xl select-none">
         <div className="max-w-[1700px] mx-auto px-6 lg:px-12 h-28 flex items-center justify-between">
-          
+
           {/* Header Left Branding Block */}
           <BrandLogo size="md" />
 
           {/* Center Navigation Links */}
-          <nav className="hidden md:flex items-center space-x-12 text-[11px] font-semibold tracking-[0.15em] text-slate-400 font-mono antialiased">
+          <nav className="hidden md:flex items-center space-x-8 xl:space-x-10 text-[11px] font-semibold tracking-[0.15em] text-slate-400 font-mono antialiased">
             <Link href="/" className="text-sky-400 border-b-2 border-sky-500 pb-1.5 px-0.5 transition-all duration-300">HOME</Link>
             <a href="#supported-domains" className="hover:text-white transition-colors py-1">DOMAINS</a>
             <a href="#national-stats" className="hover:text-white transition-colors py-1">STATISTICS</a>
@@ -76,25 +76,37 @@ export default function HomeLandingPage() {
               <span>COMMAND DECK</span>
               <ExternalLink className="w-3.5 h-3.5 opacity-60" />
             </Link>
+            <Link href="/citizen" className="hover:text-sky-400 transition-colors py-1 flex items-center space-x-1.5">
+              <span>CITIZEN PORTAL</span>
+              <ExternalLink className="w-3.5 h-3.5 opacity-60" />
+            </Link>
           </nav>
 
           {/* Right Controls Area */}
-          <div className="flex items-center space-x-3.5">
+          <div className="flex items-center space-x-3">
             <div className="hidden lg:flex items-center space-x-1.5 px-3 h-7 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold tracking-wider font-mono uppercase select-none">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
               <span>All Systems Operational</span>
             </div>
 
-            <Link 
-              href="/dashboard/national" 
-              className="hidden sm:inline-flex items-center justify-center space-x-1.5 px-4 h-10 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 hover:text-white hover:border-slate-700 text-xs font-bold shadow-[0_4px_12px_rgba(0,0,0,0.25)] hover:shadow-[0_6px_20px_rgba(30,41,59,0.4),0_0_12px_rgba(148,163,184,0.1)] transition-all duration-200 hover:-translate-y-[2px] backdrop-blur-md bg-opacity-40"
+            <Link
+              href="/citizen"
+              className="hidden sm:inline-flex items-center justify-center space-x-1.5 px-3.5 h-10 rounded-xl bg-sky-950/40 border border-sky-800/60 text-sky-300 hover:text-white hover:border-sky-500 text-xs font-bold transition-all duration-200 hover:-translate-y-[2px] backdrop-blur-md"
             >
               <User className="w-3.5 h-3.5" />
-              <span>Guest Preview</span>
+              <span>Citizen Portal</span>
             </Link>
 
-            <Link 
-              href="/login" 
+            <Link
+              href="/dashboard/national"
+              className="hidden sm:inline-flex items-center justify-center space-x-1.5 px-4 h-10 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 hover:text-white hover:border-slate-700 text-xs font-bold shadow-[0_4px_12px_rgba(0,0,0,0.25)] hover:shadow-[0_6px_20px_rgba(30,41,59,0.4),0_0_12px_rgba(148,163,184,0.1)] transition-all duration-200 hover:-translate-y-[2px] backdrop-blur-md bg-opacity-40"
+            >
+              <Building2 className="w-3.5 h-3.5 text-sky-400" />
+              <span>Command Deck</span>
+            </Link>
+
+            <Link
+              href="/login"
               className="inline-flex items-center justify-center space-x-1.5 px-4 h-10 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white text-xs font-bold shadow-[0_4px_12px_rgba(59,130,246,0.25)] hover:shadow-[0_6px_20px_rgba(59,130,246,0.45),0_0_12px_rgba(59,130,246,0.35)] transition-all duration-200 hover:-translate-y-[2px]"
             >
               <Lock className="w-3.5 h-3.5" />
@@ -106,17 +118,17 @@ export default function HomeLandingPage() {
 
       {/* 3. HERO CONTAINER - THREE PANEL LAYOUT */}
       <main className="max-w-[1700px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-16 relative z-10">
-        
+
         <section className="grid grid-cols-1 lg:grid-cols-[28fr_44fr_28fr] gap-8 items-start lg:h-[780px]">
-          
+
           {/* LEFT PANEL */}
           <div className="h-full flex flex-col justify-start py-2 lg:pt-0 lg:-mt-4">
-            <div className="space-y-6 lg:max-w-[340px]">
+            <div className="space-y-6 w-full lg:max-w-[380px] xl:max-w-[420px]">
               <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-[#3B82F6] text-[10px] font-bold tracking-wider font-mono uppercase">
                 <Shield className="w-3 h-3" />
                 <span>Government of India AI Platform</span>
               </div>
-              
+
               <h1 className="text-3xl sm:text-4xl lg:text-[2.3rem] font-black tracking-tight leading-[1.15] text-white">
                 One Platform.<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Every Emergency.</span><br />
@@ -148,27 +160,70 @@ export default function HomeLandingPage() {
                 </div>
               </div>
 
-              {/* Launch Buttons block */}
-              <div className="pt-4 space-y-4">
-                <div className="flex flex-col gap-3 w-[78%]">
-                  <Link 
-                    href="/dashboard/national" 
-                    className="w-full inline-flex items-center justify-center space-x-2 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white text-xs font-bold shadow-[0_4px_12px_rgba(59,130,246,0.25)] hover:shadow-[0_6px_20px_rgba(59,130,246,0.45),0_0_12px_rgba(59,130,246,0.35)] transition-all duration-200 hover:-translate-y-[2px] group"
+              {/* Access Portal Dual Entry CTA Block */}
+              <div className="pt-2 space-y-3 w-full">
+                <div className="flex items-center space-x-2 text-[10px] font-mono uppercase tracking-widest text-slate-400 font-bold select-none">
+                  <span className="text-sky-400">CHOOSE ACCESS TYPE</span>
+                  <div className="h-px flex-1 bg-slate-800/80" />
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2.5 w-full">
+                  {/* 🏛 GOVERNMENT COMMAND CENTER */}
+                  <Link
+                    href="/dashboard/national"
+                    className="w-full group relative flex items-center justify-between p-3.5 rounded-2xl bg-gradient-to-r from-blue-900/50 via-blue-950/40 to-slate-900/80 border border-blue-600/40 hover:border-blue-500 text-left shadow-[0_4px_16px_rgba(30,58,138,0.25)] hover:shadow-[0_8px_24px_rgba(59,130,246,0.35)] transition-all duration-200 hover:-translate-y-[2px]"
                   >
-                    <span>Continue as Guest</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                    <div className="flex items-center space-x-3 min-w-0">
+                      <div className="w-10 h-10 rounded-xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center text-blue-400 text-lg shrink-0 shadow-inner">
+                        🏛
+                      </div>
+                      <div className="space-y-0.5 min-w-0">
+                        <div className="text-xs sm:text-[13px] font-black tracking-wide text-white font-mono uppercase truncate">
+                          GOVERNMENT COMMAND CENTER
+                        </div>
+                        <p className="text-[10px] sm:text-[10.5px] text-slate-400 font-mono font-medium truncate">
+                          Monitor • Coordinate • Respond
+                        </p>
+                      </div>
+                    </div>
+                    <div className="w-7 h-7 rounded-lg bg-blue-500/10 group-hover:bg-blue-500/25 border border-blue-500/20 flex items-center justify-center text-blue-400 shrink-0 ml-2 transition-colors">
+                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                    </div>
                   </Link>
-                  <Link 
-                    href="/dashboard/national" 
-                    className="w-full inline-flex items-center justify-center space-x-2 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 hover:text-white hover:border-slate-700 text-xs font-bold shadow-[0_4px_12px_rgba(0,0,0,0.25)] hover:shadow-[0_6px_20px_rgba(30,41,59,0.4),0_0_12px_rgba(148,163,184,0.1)] transition-all duration-200 hover:-translate-y-[2px] backdrop-blur-md bg-opacity-40"
+
+                  {/* 👤 CITIZEN PORTAL */}
+                  <Link
+                    href="/citizen"
+                    className="w-full group relative flex items-center justify-between p-3.5 rounded-2xl bg-gradient-to-r from-sky-950/60 via-slate-900/80 to-slate-900/90 border border-sky-600/40 hover:border-sky-400 text-left shadow-[0_4px_16px_rgba(14,165,233,0.2)] hover:shadow-[0_8px_24px_rgba(14,165,233,0.35)] transition-all duration-200 hover:-translate-y-[2px]"
                   >
-                    <Compass className="w-3.5 h-3.5 text-sky-400" />
-                    <span>Enter Command Center</span>
+                    <div className="flex items-center space-x-3 min-w-0">
+                      <div className="w-10 h-10 rounded-xl bg-sky-500/20 border border-sky-500/30 flex items-center justify-center text-sky-400 text-lg shrink-0 shadow-inner">
+                        👤
+                      </div>
+                      <div className="space-y-0.5 min-w-0">
+                        <div className="text-xs sm:text-[13px] font-black tracking-wide text-white font-mono uppercase truncate">
+                          CITIZEN PORTAL
+                        </div>
+                        <p className="text-[10px] sm:text-[10.5px] text-slate-400 font-mono font-medium truncate">
+                          Report • Receive Alerts • Stay Safe
+                        </p>
+                      </div>
+                    </div>
+                    <div className="w-7 h-7 rounded-lg bg-sky-500/10 group-hover:bg-sky-500/25 border border-sky-500/20 flex items-center justify-center text-sky-400 shrink-0 ml-2 transition-colors">
+                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                    </div>
                   </Link>
                 </div>
-                <div className="flex items-center justify-between text-[9px] font-mono text-slate-500 px-1 pt-1 select-none w-[78%]">
-                  <span>Explore public guest scenarios</span>
-                  <span>Secondary entry bypass</span>
+
+                <div className="flex items-center justify-between text-[9.5px] font-mono text-slate-500 px-1 pt-1 select-none">
+                  <Link href="/login" className="hover:text-sky-400 transition-colors flex items-center space-x-1">
+                    <Lock className="w-2.5 h-2.5" />
+                    <span>Official Login</span>
+                  </Link>
+                  <Link href="/citizen/sos" className="text-red-400/90 hover:text-red-400 font-bold transition-colors flex items-center space-x-1">
+                    <AlertTriangle className="w-2.5 h-2.5" />
+                    <span>Emergency 1-Tap SOS</span>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -177,7 +232,7 @@ export default function HomeLandingPage() {
           {/* CENTER PANEL: HUGE DIGITAL TWIN CARD & STATUS STRIP */}
           <div className="flex flex-col justify-between space-y-5 py-2 h-full w-full max-w-[965px] mx-auto">
             <IndiaDigitalTwin />
-            
+
             {/* Compact glass status strip below the map */}
             <div className="w-full flex flex-wrap items-center justify-between gap-3 px-5 py-3 rounded-xl border border-slate-900 bg-slate-950/75 backdrop-blur-md text-[9px] font-mono font-bold text-slate-300">
               <div className="flex items-center space-x-1.5">
@@ -238,7 +293,7 @@ export default function HomeLandingPage() {
               { name: 'Power Grid Registry', status: 'Connected', sync: 'Just Now', latency: '8ms', health: '99.9%' },
               { name: 'Digital India API', status: 'Connected', sync: '1m ago', latency: '14ms', health: '99.9%' }
             ].map((api) => (
-              <div 
+              <div
                 key={api.name}
                 className="rounded-2xl border border-slate-900 bg-slate-950/20 p-5 hover:border-slate-800/85 hover:bg-[#0B0F19]/40 hover:shadow-lg transition-all duration-200 select-none text-left flex flex-col justify-between h-[155px]"
               >
@@ -278,7 +333,7 @@ export default function HomeLandingPage() {
           </div>
 
           <div className="relative grid grid-cols-1 md:grid-cols-7 gap-4 items-center">
-            
+
             {/* Animated network routing pipeline connecting the nodes */}
             <div className="hidden md:block absolute top-[44px] left-[6%] right-[6%] h-[8px] pointer-events-none z-0">
               <svg className="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 10">
@@ -301,7 +356,7 @@ export default function HomeLandingPage() {
               { step: '06', title: 'Live Tracking', desc: 'GIS location & drone monitoring', status: 'STANDBY', glow: 'border-indigo-500/20 shadow-[0_0_15px_rgba(99,102,241,0.1)]' },
               { step: '07', title: 'Resolved', desc: 'Case closing & logs archived', status: 'STANDBY', glow: 'border-emerald-500/20 shadow-[0_0_15px_rgba(16,185,129,0.1)]' }
             ].map((node) => (
-              <div 
+              <div
                 key={node.title}
                 className={`relative z-10 rounded-2xl border bg-[#0B0F19]/85 p-4 space-y-3 transition-all duration-300 hover:-translate-y-0.5 select-none ${node.glow}`}
               >
@@ -348,7 +403,7 @@ export default function HomeLandingPage() {
               { id: 'fire', title: 'Fire & Hazmat Response', time: '6 mins', depts: 'Fire, Health, Power Grid', agents: 'Coord, Rescue, Medical' },
               { id: 'earthquake', title: 'Earthquake Response', time: '15 mins', depts: 'NDMA, Health, Police', agents: 'Coord, Struct, Rescue' }
             ].map((scenario) => (
-              <div 
+              <div
                 key={scenario.id}
                 onClick={() => setSelectedScenario(scenario.id)}
                 className={`cursor-pointer group relative rounded-2xl border p-5 transition-all duration-350 select-none flex flex-col justify-between h-[210px] ${
@@ -431,7 +486,7 @@ export default function HomeLandingPage() {
               { name: 'Blood Banks', avail: 95, busy: 5, offline: 0, update: '2m ago' },
               { name: 'Disaster Responders', avail: 4800, busy: 1200, offline: 40, update: '10s ago' }
             ].map((res) => (
-              <div 
+              <div
                 key={res.name}
                 className="rounded-2xl border border-slate-900 bg-slate-950/20 p-5 hover:border-slate-800/80 hover:bg-[#0B0F19]/45 hover:shadow-lg transition-all duration-200 select-none text-left flex flex-col justify-between h-[155px]"
               >
@@ -483,7 +538,7 @@ export default function HomeLandingPage() {
               { value: '13', label: 'AI Cognition Agents', status: 'ONLINE', color: 'text-indigo-500', bg: 'bg-indigo-500/10 border-indigo-500/20' },
               { value: '4,280', label: 'Emergency Calls Today', status: 'TRACKING', color: 'text-rose-500', bg: 'bg-rose-500/10 border-rose-500/20' }
             ].map((stat) => (
-              <div 
+              <div
                 key={stat.label}
                 className="rounded-2xl border border-slate-900 bg-slate-950/20 p-6 flex flex-col justify-between hover:border-slate-800/80 hover:bg-[#0B0F19]/45 hover:shadow-lg transition-all duration-200 select-none group h-[145px]"
               >
@@ -525,7 +580,7 @@ export default function HomeLandingPage() {
               { name: 'Power Grid API', status: 'Connected', latency: '8ms', sync: 'Just Now', version: 'v3.0', health: '99.9%' },
               { name: 'Railways API', status: 'Connected', latency: '45ms', sync: '15s ago', version: 'v1.9', health: '99.8%' }
             ].map((api) => (
-              <div 
+              <div
                 key={api.name}
                 className="rounded-2xl border border-slate-900 bg-slate-950/20 p-5 hover:border-slate-800/80 hover:bg-[#0B0F19]/45 hover:shadow-lg transition-all duration-200 select-none text-left flex flex-col justify-between h-[155px]"
               >
@@ -567,7 +622,7 @@ export default function HomeLandingPage() {
               { name: 'Dispatch Agent', status: 'Running', cpu: '6.5%', mem: '0.6GB', inf: '30 inf/s', health: '100.0%' },
               { name: 'Analytics Agent', status: 'Running', cpu: '18.1%', mem: '1.9GB', inf: '72 inf/s', health: '99.9%' }
             ].map((agent) => (
-              <div 
+              <div
                 key={agent.name}
                 className="rounded-2xl border border-slate-900 bg-slate-950/20 p-5 hover:border-slate-800/80 hover:bg-[#0B0F19]/45 hover:shadow-lg transition-all duration-200 select-none text-left flex flex-col justify-between h-[155px]"
               >
@@ -594,9 +649,9 @@ export default function HomeLandingPage() {
       {/* 9. SIMPLE GOVERNMENT FOOTER */}
       <footer className="border-t border-slate-900/60 bg-[#060a13] mt-24 py-12 relative overflow-hidden z-10 select-none">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-            
+
             {/* Footer Left Branding */}
             <div className="md:col-span-4 space-y-4">
               <BrandLogo size="md" />
@@ -614,10 +669,10 @@ export default function HomeLandingPage() {
                 <p className="hover:text-white transition-colors cursor-pointer font-sans leading-none uppercase">Government API References</p>
               </div>
               <div className="space-y-2">
-                <h5 className="text-[9px] text-slate-600 font-extrabold tracking-[0.2em] uppercase">RESOURCES</h5>
-                <p className="hover:text-white transition-colors cursor-pointer">COMMAND SCENARIOS</p>
-                <p className="hover:text-white transition-colors cursor-pointer">GITHUB REPOSITORY</p>
-                <p className="hover:text-white transition-colors cursor-pointer">SMART INDIA HACKATHON</p>
+                <h5 className="text-[9px] text-slate-600 font-extrabold tracking-[0.2em] uppercase">ACCESS PORTALS</h5>
+                <Link href="/dashboard/national" className="hover:text-white transition-colors block">COMMAND CENTER</Link>
+                <Link href="/citizen" className="hover:text-sky-400 transition-colors block">CITIZEN PORTAL</Link>
+                <Link href="/login" className="hover:text-white transition-colors block">OFFICIAL LOGIN</Link>
               </div>
             </div>
 
